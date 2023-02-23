@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="service.subtitles.translate" name="tranlatepyplus" version="0.1.0-alpha" provider-name="Dimitri Kroon">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.requests"/>
+  </requires>
+  <extension point="xbmc.service" library="service.py" start="startup" />
+  <extension point="xbmc.python.module" library="libs"/>
+  <extension>
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en_GB">Automatically translate subtitles using translatepy</summary>
+    <description lang="en_GB">
+      This is translatepy and dependencies packed for Kodi plus a view extras to perform automatic translation subtitles from various online translation services.
+    </description>
+    <disclaimer lang="en_GB">
+      This addon is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    </disclaimer>
+    <language>en</language>
+    <license>GPL-2.0-or-later</license>
+    <forum />
+    <source>https://github.com/dimkroon/translate_subs</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart />
+    </assets>
+    <news>
+    </news>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+  </extension>
+</addon>
