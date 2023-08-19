@@ -7,19 +7,14 @@
 
 import logging
 
-from codequick import Script
-from codequick.support import addon_data, logger_id
-
-
 from resources.lib import kodi_utils
 from resources.lib import addon_log
-from resources.lib import errors
+from resources.lib import utils
 
-logger = logging.getLogger('.'.join((logger_id, __name__)))
+logger = logging.getLogger('.'.join((utils.logger_id, __name__)))
 
 
-@Script.register()
-def change_logger(_):
+def change_logger():
     """Callback for settings->generic->log_to.
     Let the user choose between logging to kodi log, to our own file, or no logging at all.
 
@@ -35,4 +30,8 @@ def change_logger(_):
     handler_type = handlers[new_hndlr_idx]
 
     addon_log.set_log_handler(handler_type)
-    addon_data.setSettingString('log-handler', handler_name)
+    utils.addon_info.addon.setSetting('log-handler', handler_name)
+
+
+def clear_cache():
+    pass
