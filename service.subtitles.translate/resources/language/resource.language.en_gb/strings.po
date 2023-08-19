@@ -18,34 +18,46 @@ msgstr ""
 
 # Settings
 msgctxt "#30100"
-msgid "General"
+msgid "Translation"
+msgstr ""
+
+msgctxt "#30101"
+msgid "Filter subtitles"
+msgstr ""
+
+msgctxt "#30102"
+msgid "Enable automatic translation."
 msgstr ""
 
 msgctxt "#30103"
-msgid "Use coloured subtitles"
+msgid "Remove colours"
 msgstr ""
 
-msgctxt "#30107"
-msgid "Translate subtitles."
+msgctxt "#30104"
+msgid "Filter sounds enclosed in brackets"
 msgstr ""
 
-msgctxt "#30108"
-msgid "Filter non spoken texts"
+msgctxt "#30105"
+msgid "Filter sounds in all uppercase letters"
 msgstr ""
 
-msgctxt "#30110"
+msgctxt "#30106"
+msgid "Filter music between hashtags"
+msgstr ""
+
+msgctxt "#30190"
 msgid "Logging"
 msgstr ""
 
-msgctxt "#30111"
+msgctxt "#30191"
 msgid "Log to:"
 msgstr ""
 
-msgctxt "#30112"
+msgctxt "#30192"
 msgid "Kodi log,File,No logging"
 msgstr ""
 
-msgctxt "#30113"
+msgctxt "#30193"
 msgid "Log level"
 msgstr ""
 
@@ -53,24 +65,39 @@ msgstr ""
 # Help texts
 
 msgctxt "#30302"
-msgid "These settings only apply to catchup programs. Live programs may have embedded subtitles."
+msgid "When enabled subtitles will, whenever possible, automatically be translated after a video is started.\n"
+"The playing addon must have been build with support for automatic translation."
 msgstr ""
 
 msgctxt "#30303"
-msgid "If enabled subtitles will have different colours for different speakers, wherever possible.\n"
-"If disabled all subtitles are shown in white."
+msgid "Subtitles for hearing impaired usually display text for each person in a different colour.\n"
+"If this filter is enabled all subtitles are shown in white."
 msgstr ""
 
+msgctxt "#30304"
+msgid "Some subtitles display non-spoken sounds in brackets.\n"
+"If this filter is enabled an attempt is made to remove this."
+msgstr ""
 
-msgctxt "#30311"
-msgid "Target of logging.\n"
-"Default is the standard 'Kodi log' - nothing will be logged until 'debug logging' is enabled in Kodi's settings.\n"
-"'File' logs to the add-on's s own log file stored in the user data directory. Only of use if you know where to "
-"find that file.\n"
-"'No logging' if you want to ensure the addon spends as little time on logging as possible."
+msgctxt "#30305"
+msgid "Some subtitles display non-spoken sounds in all uppercase letters.\n"
+"If this filter is enabled an attempt is made to remove this."
+msgstr ""
+
+msgctxt "#30306"
+msgid "Some subtitles display music and lyrics between hashtags.\n"
+"If this filter is enabled an attempt is made to remove this."
+msgstr ""
+
+msgctxt "#30391"
+msgid "Select whether the addon logs to 'Kodi log' (default) its own log file stored in the user data directory,\n"
+"or doesn't log at all. A restart of Kodi is required befor new settings take effect."
 msgstr ""
 
 # Script texts
+msgctxt "#30501"
+msgid "translated"
+msgstr ""
 
 # Texts in dialogs
 msgctxt "#30604"
@@ -98,34 +125,6 @@ msgctxt "#30793"
 msgid "NO"
 msgstr ""
 
-# Menu texts
-msgctxt "#30801"
-msgid ""
-msgstr ""
-
-msgctxt "#30802"
-msgid ""
-msgstr ""
-
-msgctxt "#30803"
-msgid ""
-msgstr ""
-
-msgctxt "#30804"
-msgid ""
-msgstr ""
-
-msgctxt "#30805"
-msgid ""
-msgstr ""
-
-msgctxt "#30806"
-msgid ""
-msgstr ""
-
-msgctxt "#30807"
-msgid "Search"
-msgstr ""
 
 # Error texts
 msgctxt "#30901"
