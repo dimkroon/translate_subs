@@ -412,7 +412,7 @@ def translate_file(video_file: str,
         # Use a different file name to pass on to Kodi to get more informative
         # descriptions in subtitle dialogs in the UI.
         kodi_file_name = os.path.join(utils.addon_info.temp_dir,
-                                      '.'.join((utils.localise(TXT_TRANSLATED), trans_lang.id, 'srt')))
+                                      '.'.join((utils.addon_info.localise(TXT_TRANSLATED), trans_lang.id, 'srt')))
         if os.path.isfile(cache_file_name):
             logger.info("Used translation from cache: '%s'", cache_file_name)
             shutil.copy(cache_file_name, kodi_file_name)

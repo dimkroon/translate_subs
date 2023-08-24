@@ -43,8 +43,9 @@ class PlayerMonitor(Player):
         if not file_name:
             return
 
+        utils.addon_info.initialise()
         if not utils.addon_info.addon.getSettingBool('subtitles_translate'):
-            logger.debug("Automatic translation disabled in settings")
+            logger.debug("Automatic translation disabled in settings.")
             return
 
         base_name, file_extension = os.path.splitext(file_name)
@@ -54,7 +55,7 @@ class PlayerMonitor(Player):
 
         logger.info("Property file: '%s'", file_name)
         logger.info("Property type: '%s'", subs_type)
-        logger.info("Property original language: '%'", orig_lang)
+        logger.info("Property original language: '%s'", orig_lang)
         logger.info("Property filter_flags: '%s'", filter_flags)
 
         if not subs_type:
@@ -87,7 +88,7 @@ class PlayerMonitor(Player):
             return
         # Translating can take some time, check if the file is still playing
         if video_file not in self.getPlayingFile():
-            logger.info("Abort. It looks like another file as been started while translation was in progress.")
+            logger.info("Abort. It looks like another file has been started while translation was in progress.")
             return
         logger.debug("Using translated subtitles: '%s'", translated_fname)
         self.setSubtitles(translated_fname)
@@ -95,7 +96,6 @@ class PlayerMonitor(Player):
 
 if __name__ == '__main__':
     logger.debug("Running translate service from thead %s", threading.current_thread().native_id)
-    utils.addon_info.initialise()
     translate.cleanup_cached_files()
     system_monitor = xbmc.Monitor()
     while system_monitor.abortRequested() is False:
