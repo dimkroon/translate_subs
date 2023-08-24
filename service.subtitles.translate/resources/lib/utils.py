@@ -18,21 +18,20 @@ import xbmcaddon
 class AddonInfo:
     def __init__(self):
         self.initialise()
-
-    # noinspection PyAttributeOutsideInit
-    def initialise(self):
-        self.addon = addon = xbmcaddon.Addon()
-        self.name = addon.getAddonInfo("name")
-        self.id = addon.getAddonInfo("id")
-        self.localise = addon.getLocalizedString
-        self.profile = translatePath(addon.getAddonInfo('profile'))
+        self.name = self.addon.getAddonInfo("name")
+        self.id = self.addon.getAddonInfo("id")
+        self.profile = translatePath(self.addon.getAddonInfo('profile'))
         self.addon_dir = os.path.join(translatePath('special://home'), self.id)
         self.temp_dir = os.path.join(translatePath('special://temp'), 'translated_subs')
         os.makedirs(self.temp_dir, exist_ok=True)
 
+    # noinspection PyAttributeOutsideInit
+    def initialise(self):
+        self.addon = addon = xbmcaddon.Addon()
+        self.localise = addon.getLocalizedString
+
 
 addon_info = AddonInfo()
-localise = addon_info.localise
 logger_id = addon_info.name.replace(' ', '-').replace('.', '-')
 logger = logging.getLogger(logger_id + '.utils')
 
