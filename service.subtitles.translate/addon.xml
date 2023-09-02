@@ -14,7 +14,10 @@
     <platform>all</platform>
     <summary lang="en_GB">Automatically translate subtitles using translatepy</summary>
     <description lang="en_GB">
-      This is the python package translatepy and it's dependencies packed for Kodi plus a view extras to perform automatic translation subtitles from various online translation services.
+      This is the python package translatepy and it's dependencies packed for Kodi plus a view extras to perform automatic
+      translation subtitles from various online translation services.[CR]
+      Automatic translation translates to the preferred subtitle language as set in Settings > Player > Language,
+      section Subtitles
     </description>
     <disclaimer lang="en_GB">
       This addon is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
