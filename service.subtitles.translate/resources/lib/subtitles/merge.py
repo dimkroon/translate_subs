@@ -16,7 +16,7 @@ from .subtitle import SrtFrase
 MAX_CHARS_PER_LINE = 42
 
 class Sentence:
-    """Object to hold one or more SrtLines forming one complete sentence."""
+    """Object to hold one or more SrtFrases forming one complete sentence."""
     def __init__(self, *args):
         self.orig_frases = list(args) if args else []
 
@@ -66,7 +66,7 @@ class MergedDoc:
         idx = 1
         new_sentence = Sentence()
         sentence_map = self._sentences
-        for frase in self._srt_doc:
+        for frase in self._srt_doc.frases():
             new_sentence.append_frase(frase)
             if frase.text[-1] in ".!?":
                 sentence_map[str(idx)] = new_sentence
