@@ -23,7 +23,7 @@ from resources.lib.translatepy.exceptions import UnknownLanguage, TranslatepyExc
 from resources.lib.translatepy.exceptions import NoResult
 
 from resources.lib import utils
-
+from resources.lib.subtitles import subtitle, merge
 from .convert import convert_subs
 
 import xbmc
@@ -306,10 +306,9 @@ def _split_on_word(line: str, pos: int):
         return line[:pos_after], line[pos_after + 1:]
 
 
-def split_srt_doc(src_txt: str, max_len):
-    """Split string `src_txt` into pieces of text with no more than `max_len` characters. Split only
-    on a double newline sequence closest to `max_len`, thus ensuring the split parts contain complete
-    blocks of an srt or vtt file.
+def split_doc(src_txt: str, max_len):
+    """Split string `src_txt` into pieces of text with no more than `max_len` characters in such a way that
+    each part contains full sentences.
 
     Returns a list of strings.
 
@@ -322,7 +321,7 @@ def split_srt_doc(src_txt: str, max_len):
     start_pos = 0
 
     while txt_len - start_pos > max_len:
-        split_pos = src_txt.rfind('\n\n', start_pos, start_pos + max_len)
+        split_pos = src_txt.rfind('\n', start_pos, start_pos + max_len)
         if split_pos <= start_pos:
             raise ValueError("No position to split available in src_str")
         splits.append(src_txt[start_pos:split_pos])
@@ -348,10 +347,10 @@ def translate_text(subs: str,
             logger.info("No translator returned any results for text starting with '%s'", txt[:100])
 
     with futures.ThreadPoolExecutor() as executor:  # optimally defined number of threads
-        res = [executor.submit(send_translate, txt) for txt in split_srt_doc(subs, 3500)]
+        res = [executor.submit(send_translate, txt) for txt in split_doc(subs, 3500)]
         futures.wait(res)
 
-    translation = '\n\n'.join((r.result() for r in res))
+    translation = '\n'.join((r.result() for r in res))
     # Re-insert spaces after punctuation marks that are lost in translation.
     translation = re.sub(r'([a-z][.?!])([A-Z])', r'\1 \2', translation)
     # Remove the space the translator inserted in an html encode ampersand
@@ -429,8 +428,9 @@ def translate_file(video_file: str,
         with open(os.path.join(SUBS_CACHE_DIR, 'srt_filtered.txt'), 'w') as f:
             f.write(filtered_subs)
 
-        orig_subs_obj = SrtDoc(filtered_subs, bool(filter_flags & FILTER_COLOURS))
-        orig_plain_txt = orig_subs_obj.text
+        orig_subs_obj = subtitle.SrtDoc(filtered_subs, bool(filter_flags & FILTER_COLOURS))
+        merged_obj = merge.MergedDoc(orig_subs_obj)
+        orig_plain_txt = merged_obj.text
         with open(os.path.join(SUBS_CACHE_DIR, 'orig.txt'), 'w') as f:
             f.write(orig_plain_txt)
 
@@ -441,8 +441,7 @@ def translate_file(video_file: str,
             logger.info("No translation received.")
             return
 
-        translated_subs_obj = TransDoc(new_txt)
-        orig_subs_obj.text = translated_subs_obj
+        merged_obj.text = new_txt
         translated_srt = str(orig_subs_obj)
         with open(cache_file_name, 'w') as f:
             f.write(translated_srt)
@@ -502,8 +501,9 @@ def get_preferred_subtitle_lang():
 def get_kodi_ui_language():
     """Return the 2-letter language code of the language used in the Kodi user interface.
 
-    Translatepy can handle a variety of language identifiers, but cannot handle
-    language_Region type of id's like 'en_GB' used in Kodi.
+    The region part is stripped from the ID returned by Kodi, because translatepy can
+    handle a variety of language identifiers, but cannot handle language_Region type of
+    id's used in Kodi, like 'en_GB'.
 
     """
     response = xbmc.executeJSONRPC(
