@@ -19,6 +19,7 @@ import requests
 import xbmcvfs
 
 from resources.lib.translatepy import Translator, Language
+from resources.lib.translatepy.translators.google import GoogleTranslateV2
 from resources.lib.translatepy.exceptions import UnknownLanguage, TranslatepyException
 from resources.lib.translatepy.exceptions import NoResult
 
@@ -339,7 +340,8 @@ def translate_text(subs: str,
 
     def send_translate(txt):
         try:
-            translator = Translator()
+            # translator = Translator()
+            translator = GoogleTranslateV2()
             trans_result = translator.translate(txt, target_lang, src_lang)
             logger.debug("%s characters translated by %s", len(txt), trans_result.service)
             return trans_result.result.strip()
