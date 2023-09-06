@@ -1,2 +1,8 @@
+v0.1.0-alpha
+- use Googlev2v; seems to provide better translation
+- New Sentence merger; much improves translation when a sentence covers multiple blocks
+- Handle multiple speakers on the same line.
+- Only keep colours, remove all other markup.
+
 v0.0.0-alpha
 - Proof of concept
