@@ -66,7 +66,9 @@ class SrtLine:
     def _parse_text(self, text, ignor_col):
         for match in line_regex.finditer(text):
             text = match.group(4) or match.group(2)
-            self._frases.append((SrtFrase(text, match.group(1), match.group(3), ignor_col)))
+            text = text.strip()
+            if text:
+                self._frases.append((SrtFrase(text, match.group(1), match.group(3), ignor_col)))
 
     def __str__(self):
         if self._frases:
@@ -85,7 +87,8 @@ class SrtBlock:
     def __init__(self, block_str, ignore_colours=False):
         self.idx = ''
         self._time = ''
-        self.lines = self._parse(block_str, ignore_colours)
+        self.lines = []
+        self._parse(block_str, ignore_colours)
 
     def _parse(self, block_str: str, no_col):
         lines = block_str.strip().split('\n')
@@ -98,10 +101,10 @@ class SrtBlock:
                     self.lines.append(line_obj)
         except IndexError:
             # A block with index, (possibly empty) time, but no text. Does happen...
-            return []
+            pass
 
     def __str__(self):
-        if self.idx and self._time:
+        if self:
             return '\n'.join((self.idx, self._time, *(str(line) for line in self.lines if line), '\n'))
         else:
             return ''
@@ -110,6 +113,8 @@ class SrtBlock:
         for line in self.lines:
             yield from line
 
+    def __bool__(self):
+        return bool(self.lines)
 
 class SrtDoc:
     def __init__(self, srt_doc: str, ignore_colours=False):
@@ -126,9 +131,18 @@ class SrtDoc:
             orig.text = trans
 
     def __str__(self):
-        return ''.join(str(block) for block in self.blocks)
+        def block_iter():
+            # re-index and return all non-empty blocks as string
+            idx = 1
+            for block in self.blocks:
+                if block:
+                    block.idx = str(idx)
+                    idx += 1
+                    yield str(block)
 
-    def __iter__(self):
+        return ''.join(block_str for block_str in block_iter())
+
+    def frases(self):
         """Iterate over all frases in the document."""
         for block in self.blocks:
             for line in block.lines:
