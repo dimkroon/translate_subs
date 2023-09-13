@@ -32,5 +32,5 @@ if you encounter issues with a particular language, or file an issue at
 
 ## Support
 Head to [https://github.com/dimkroon/translate_subs/discussions](https://github.com/dimkroon/translate_subs/discussions)
-for question remarks, ideas, or anything else you want to discus regarding this
+for question remarks, ideas, or anything else you want to discuss regarding this
 addon.

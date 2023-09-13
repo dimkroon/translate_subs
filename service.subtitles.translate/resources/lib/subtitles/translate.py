@@ -427,17 +427,17 @@ def translate_file(video_file: str,
             orig_subs = convert_subs(orig_subs, file_type)
 
         filtered_subs = filter_doc(orig_subs, filter_flags)
-        with open(os.path.join(SUBS_CACHE_DIR, 'srt_filtered.txt'), 'w') as f:
+        with open(os.path.join(SUBS_CACHE_DIR, 'srt_filtered.txt'), 'w', encoding='utf8') as f:
             f.write(filtered_subs)
 
         orig_subs_obj = subtitle.SrtDoc(filtered_subs, bool(filter_flags & FILTER_COLOURS))
         merged_obj = merge.MergedDoc(orig_subs_obj)
         orig_plain_txt = merged_obj.text
-        with open(os.path.join(SUBS_CACHE_DIR, 'orig.txt'), 'w') as f:
+        with open(os.path.join(SUBS_CACHE_DIR, 'orig.txt'), 'w', encoding='utf8') as f:
             f.write(orig_plain_txt)
 
         new_txt = translate_text(orig_plain_txt, trans_lang, src_lang)
-        with open(os.path.join(SUBS_CACHE_DIR, 'translated.txt'), 'w') as f:
+        with open(os.path.join(SUBS_CACHE_DIR, 'translated.txt'), 'w', encoding='utf8') as f:
             f.write(new_txt)
         if not new_txt:
             logger.info("No translation received.")
@@ -445,11 +445,11 @@ def translate_file(video_file: str,
 
         merged_obj.text = new_txt
         translated_srt = str(orig_subs_obj)
-        with open(cache_file_name, 'w') as f:
+        with open(cache_file_name, 'w', encoding='utf8') as f:
             f.write(translated_srt)
         logger.info("Translated subtitles in '%s' sec, output: '%s'", time.monotonic() - t_start, cache_file_name)
 
-        with open(kodi_file_name, 'w') as f:
+        with open(kodi_file_name, 'w', encoding='utf8') as f:
             f.write(translated_srt)
         return kodi_file_name
     except:
