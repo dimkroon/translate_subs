@@ -543,7 +543,7 @@ def get_filter_flags(init_flags: int) -> int:
         if f_hashtags == 'true':
             filter_flags |= FILTER_HASHTAGS
 
-    f_colour = addon.getSetting('subtitles_color')
+    f_colour = addon.getSetting('filter_colour')
     logger.debug("Filter colour = %s", f_colour)
     if f_colour == 'true':
         filter_flags |= FILTER_COLOURS
