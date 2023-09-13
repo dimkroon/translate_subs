@@ -1,3 +1,7 @@
+v0.1.1-alpha
+- Fixed: Failure to translate on some systems due to incompatible default file encoding.
+- Fixed: Setting 'Filter colour' had no effect.
+
 v0.1.0-alpha
 - use Googlev2v; seems to provide better translation
 - New Sentence merger; much improves translation when a sentence covers multiple blocks
