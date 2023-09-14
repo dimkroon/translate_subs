@@ -78,7 +78,7 @@ class PlayerMonitor(Player):
 
         logger.info("Subtitles file: '%s'", file_name)
         logger.info("Subtitles type: '%s'", subs_type)
-        logger.info("Subtitles original language: '%'", orig_lang)
+        logger.info("Subtitles original language: '%s'", orig_lang)
         logger.info("Subtitles filter_flags: '%s'", filter_flags)
         logger.info("Video ID: %s", video_file)
 
