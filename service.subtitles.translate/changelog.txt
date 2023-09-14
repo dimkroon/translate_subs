@@ -1,3 +1,6 @@
+v0.1.3-alpha
+- Fixed: Logging error, sometimes causing an error message when a video starts.
+
 v0.1.2-alpha
 - Fixed: Failure to translate on some systems due to incompatible default file encoding.
 - Fixed: Setting 'Filter colour' had no effect.
