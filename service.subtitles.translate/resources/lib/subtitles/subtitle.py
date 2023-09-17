@@ -147,29 +147,3 @@ class SrtDoc:
         for block in self.blocks:
             for line in block.lines:
                 yield from line
-
-
-def split_srt_doc(src_txt: str, max_len):
-    """Split string `src_txt` into pieces of text with no more than `max_len` characters. Split only
-    on a double newline sequence closest to `max_len`, thus ensuring the split parts contain complete
-    blocks of an srt or vtt file.
-
-    Returns a list of strings.
-
-    """
-    txt_len = len(src_txt)
-    if txt_len <= max_len:
-        return [src_txt]
-
-    splits = []
-    start_pos = 0
-
-    while txt_len - start_pos > max_len:
-        split_pos = src_txt.rfind('\n', start_pos, start_pos + max_len)
-        if split_pos <= start_pos:
-            raise ValueError("No position to split available in src_str")
-        splits.append(src_txt[start_pos:split_pos])
-        start_pos = split_pos
-    splits.append(src_txt[start_pos:])
-    return splits
-

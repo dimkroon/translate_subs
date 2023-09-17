@@ -34,6 +34,6 @@
     <news>
       * Fixed: Logging error, sometimes causing an error message when a video starts.
     </news>
-    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <reuselanguageinvoker>false</reuselanguageinvoker>
   </extension>
 </addon>
