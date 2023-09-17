@@ -217,19 +217,21 @@ def filter_doc(srt_txt: str, filter_flags: int = 0) -> str:
     filter_patterns = []
     if filter_flags & FILTER_BRACKETS:
         # Pattern to remove everything enclosed in brackets, including the brackets.
-        filter_patterns.append(r'(\([^)]*\)(?:$|\W?))')
+        # Includes dummy groups at the start and end to ensure it has the 3 groups
+        # re.sub() expects later on.
+        filter_patterns.append(r'(\([^)]*\)(?:$|[ :;-]?))')
     if filter_flags & FILTER_CAPS:
         # Pattern to remove lines written entirely in uppercase letters.
-        filter_patterns.append(r'(^[A-Z :,]{3,}$)')
+        filter_patterns.append(r'(?<=\n|>)([A-Z :,]{3,})(?=$|<)')
     if filter_flags & FILTER_HASHTAGS:
-        # Pattern to remove text between hashtags, or from a hashtag to the end of the line.
+        # Pattern to remove text between hashtags.
         # Often used to show the lyrics of a song.
-        filter_patterns.append(r'(^#+.*?#$)')
+        filter_patterns.append(r'(?<=\n|>)(#+.*?#)(?=$|<)')
     pattern = '|'.join(filter_patterns)
     if pattern:
         # Replace with a space to prevent sounds collapsing into double new-lines,
         # which will mess up splitting the doc into srt blocks later on.
-        new_txt = re.sub(pattern, ' ', srt_txt, flags=re.MULTILINE | re.S)
+        new_txt = re.sub(pattern, r' ', srt_txt, flags=re.MULTILINE | re.S)
         # Cleanup artifacts by removing lines consisting only of non-word characters
         new_txt = re.sub(r'(^\W+?$)', ' ', new_txt, flags=re.MULTILINE)
         logger.info("Filter '%s' applied", filter_flags)

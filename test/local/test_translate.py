@@ -280,9 +280,11 @@ Oh damn. (phone ringing)
         srt = '\noh (grunted)\n'
         self.assertEqual('\noh  \n', translate.filter_doc(srt, translate.FILTER_BRACKETS))
         srt = '\n(grunted) (rings)\n'
-        self.assertEqual('\n  \n', translate.filter_doc(srt, translate.FILTER_BRACKETS))
-        srt = '\n(whispers):\nhow are you?'
-        self.assertEqual('\n \nhow are you?', translate.filter_doc(srt, translate.FILTER_BRACKETS))
+        self.assertEqual(' \n', translate.filter_doc(srt, translate.FILTER_BRACKETS))
+        srt = '\n(whispers):\nhow are you?\n'
+        self.assertEqual(' \nhow are you?\n', translate.filter_doc(srt, translate.FILTER_BRACKETS))
+        srt = '\n<font color="#ffffff">(whispers)</font>\n'
+        self.assertEqual('\n<font color="#ffffff"> </font>\n', translate.filter_doc(srt, translate.FILTER_BRACKETS))
 
     def test_filter_all_caps(self):
         srt = '1\nDOOR SLAMMED\n\n2\nthis is a string'
@@ -290,9 +292,15 @@ Oh damn. (phone ringing)
         srt = '\noh GRUNTED\n'
         self.assertEqual('\noh GRUNTED\n', translate.filter_doc(srt, translate.FILTER_CAPS))
         srt = '\nGRUNTED RINGS\n'
-        self.assertEqual('\n \n', translate.filter_doc(srt, translate.FILTER_CAPS))
+        self.assertEqual(' \n', translate.filter_doc(srt, translate.FILTER_CAPS))
         srt = '\nGRUNTED, RINGS:\n'
-        self.assertEqual('\n \n', translate.filter_doc(srt, translate.FILTER_CAPS))
+        self.assertEqual(' \n', translate.filter_doc(srt, translate.FILTER_CAPS))
+        srt = '\n<font color="#ffffff">GRUNTED</font>\n'
+        self.assertEqual('\n<font color="#ffffff"> </font>\n', translate.filter_doc(srt, translate.FILTER_CAPS))
+        srt = '\nMAN: <font color="#ffffff">What is this?</font>\n'
+        self.assertEqual('\n <font color="#ffffff">What is this?</font>\n', translate.filter_doc(srt, translate.FILTER_CAPS))
+        srt = '<font color="#ffffff">What is this?</font> SHOUTING\n'
+        self.assertEqual('<font color="#ffffff">What is this?</font> \n', translate.filter_doc(srt, translate.FILTER_CAPS))
 
     def test_filter_both(self):
         flags = translate.FILTER_BRACKETS | translate.FILTER_CAPS
@@ -305,9 +313,9 @@ Oh damn. (phone ringing)
         srt = '\noh GRUNTED\n'
         self.assertEqual('\noh GRUNTED\n', translate.filter_doc(srt, flags))
         srt = '\n(grunted) (rings)\n'
-        self.assertEqual('\n   \n', translate.filter_doc(srt, flags))
+        self.assertEqual(' \n', translate.filter_doc(srt, flags))
         srt = '\nGRUNTED RINGS\n'
-        self.assertEqual('\n \n', translate.filter_doc(srt, flags))
+        self.assertEqual(' \n', translate.filter_doc(srt, flags))
 
     def test_filter_hashtags(self):
         flags = translate.FILTER_HASHTAGS
@@ -319,9 +327,37 @@ Oh damn. (phone ringing)
         self.assertEqual('1\n \nthis is a string', translate.filter_doc(srt, flags))
         srt = '1\n# I Love You\n\n2\n so much #\nthis is a string'
         self.assertEqual('1\n \nthis is a string', translate.filter_doc(srt, flags))
+        srt = '\n<font color="#ffffff"># I Love You</font>\n<font color="#ffffff"> so much #</font>\n'
+        self.assertEqual('\n<font color="#ffffff"> </font>\n', translate.filter_doc(srt, flags))
+
+    def test_filter_all(self):
+        flags = translate.FILTER_BRACKETS | translate.FILTER_CAPS | translate.FILTER_HASHTAGS
+        srt = '1\nDOOR SLAMMED\n\n2\nthis is a string'
+        self.assertEqual('1\n \n\n2\nthis is a string', translate.filter_doc(srt, flags))
+        srt = '1\n(Door slamed)\n\n2\nthis is a string'
+        self.assertEqual('1\n \n\n2\nthis is a string', translate.filter_doc(srt, flags))
+        srt = '\noh (grunted)\n'
+        self.assertEqual('\noh  \n', translate.filter_doc(srt, flags))
+        srt = '\noh GRUNTED\n'
+        self.assertEqual('\noh GRUNTED\n', translate.filter_doc(srt, flags))
+        srt = '\n(grunted) (rings)\n'
+        self.assertEqual(' \n', translate.filter_doc(srt, flags))
+        srt = '\nGRUNTED RINGS\n'
+        self.assertEqual(' \n', translate.filter_doc(srt, flags))
+        srt = '\nMAN: <font color="#ffffff">What is this?</font>\n'
+        self.assertEqual('\n <font color="#ffffff">What is this?</font>\n', translate.filter_doc(srt, translate.FILTER_CAPS))
+        srt = '''
+
+1
+00:00:26,960 --> 00:00:28,960
+LILY THOMAS: <font color="yellow">January the 8th, 1963.</font>
+'''
+        self.assertEqual('\n1\n00:00:26,960 --> 00:00:28,960\n <font color="yellow">January the 8th, 1963.</font>\n',
+                         translate.filter_doc(srt, translate.FILTER_CAPS))
 
     def test_filter_whole_file(self):
-        srt_doc = open_doc('srt/atomic blonde.en.srt')()
+        # srt_doc = open_doc('srt/atomic blonde.en.srt')()
+        srt_doc = open_doc('srt/spy_among_friends.en.srt')()
         filtered = translate.filter_doc(srt_doc, translate.FILTER_CAPS)
         filtered = translate.filter_doc(srt_doc, translate.FILTER_BRACKETS)
         filtered = translate.filter_doc(srt_doc, translate.FILTER_HASHTAGS)

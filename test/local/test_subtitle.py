@@ -34,6 +34,26 @@ class TestLine(unittest.TestCase):
         self.assertEqual('This is text', frase.text)
         self.assertEqual('</font>', frase.closing_tags)
 
+    def test_text_before_colour(self):
+        txt = 'Something else <font color="cyan">This is text</font>'
+        l = subtitle.SrtLine(txt)
+        frase = l._frases[0]
+        self.assertEqual('', frase.open_tags)
+        self.assertEqual('Something else', frase.text)
+        self.assertEqual('', frase.closing_tags)
+        frase = l._frases[1]
+        self.assertEqual('<font color="cyan">', frase.open_tags)
+        self.assertEqual('This is text', frase.text)
+        self.assertEqual('</font>', frase.closing_tags)
+
+    def test_text_with_colour_not_at_start_of_line(self):
+        txt = ' <font color="cyan">This is text</font>'
+        l = subtitle.SrtLine(txt)
+        frase = l._frases[0]
+        self.assertEqual('<font color="cyan">', frase.open_tags)
+        self.assertEqual('This is text', frase.text)
+        self.assertEqual('</font>', frase.closing_tags)
+
     def test_line_strips_whitespace(self):
         l = subtitle.SrtLine(' This is text  ')
         self.assertEqual('This is text', l._frases[0].text)
