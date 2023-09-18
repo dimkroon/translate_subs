@@ -171,7 +171,7 @@ def translate_file(video_file: str,
 
     """
     # delete previously stored intermediate files
-    for fname in ('orig.txt', 'srt_filtered.txt', 'translated.txt'):
+    for fname in ('orig.txt', 'srt_filtered.txt', 'translated.txt', 'last_translation'):
         fpath = os.path.join(SUBS_CACHE_DIR, fname)
         try:
             os.remove(fpath)
@@ -205,6 +205,7 @@ def translate_file(video_file: str,
         if os.path.isfile(cache_file_name):
             logger.info("Used translation from cache: '%s'", cache_file_name)
             shutil.copy(cache_file_name, kodi_file_name)
+            save_last_translated_filename(cache_file_name)
             return kodi_file_name
 
         logger.info("Translating subtitles file %s from %s to %s", file_path, src_lang, trans_lang.id)
@@ -239,6 +240,7 @@ def translate_file(video_file: str,
 
         with open(kodi_file_name, 'w', encoding='utf8') as f:
             f.write(translated_srt)
+        save_last_translated_filename(cache_file_name)
         return kodi_file_name
     except:
         # Translating on free public services can fail for a number of reasons. Ensure not to crash the
@@ -313,3 +315,12 @@ def read_subtitles_file(file_path):
         with xbmcvfs.File(file_path, 'r') as f:
             subs_text = f.read()
     return subs_text
+
+
+def save_last_translated_filename(filepath):
+    """Store path to the last translated srt file.
+    To be used by error marker.
+
+    """
+    with open(os.path.join(SUBS_CACHE_DIR, 'last_translation'), 'w') as f:
+        f.write(filepath)

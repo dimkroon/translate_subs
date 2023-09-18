@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file contains custom key mapping to mark translation errors while you watch     -->
+<!-- using the red button of the remote control, or the 'a' key of a keyboard.            -->
+<!-- Change the mapping to another key of your remote does not have a red button.         -->
+<!--                                                                                      -->
+<!-- Copy this file to the keymaps folder in userdata.                                    -->
+<!--                                                                                      -->
+<!-- More documentation on keymaps can be found on http://kodi.wiki/view/keymaps          -->
+<keymap>
+  <FullscreenVideo>
+    <remote>
+      <red>RunScript(service.subtitles.translate, mark_error)</red>
+    </remote>
+    <keyboard>
+      <a>RunScript(service.subtitles.translate, mark_error)</a>
+    </keyboard>
+  </FullscreenVideo>
+</keymap>
