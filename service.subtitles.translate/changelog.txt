@@ -1,3 +1,7 @@
+v 0.2.0 - alpha
+- Filters now also operate on text between colour tags
+- Add possibility to mark errors for error reports while you watch, using the red button on the IR remote, or the 'a' key on a keyboard. (requires additional keymap)
+
 v0.1.3-alpha
 - Fixed: Logging error, sometimes causing an error message when a video starts.
 
