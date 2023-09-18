@@ -56,3 +56,38 @@ def get_system_setting(setting_id):
         msg = data.get('message') or "Failed to get setting"
         logger.error("Failed to get system setting '%s': '%s'", setting_id, msg)
         raise ValueError('System setting error: {}'.format(msg))
+
+
+def get_ui_language():
+    """Return the 2-letter language code of the language used in the Kodi user interface.
+
+    The region part is stripped from the ID returned by Kodi, because translatepy can
+    handle a variety of language identifiers, but cannot handle language_Region type of
+    id's used in Kodi, like 'en_GB'.
+
+    """
+    response = xbmc.executeJSONRPC(
+        '{"jsonrpc": "2.0", "method": "Settings.GetSettingValue", "params": ["locale.language"], "id": 1}')
+    data = json.loads(response)['result']['value']
+    # The data value returned is in a format like 'resources.language.en_GB'
+    return data.split('.')[-1].split('_')[0]
+
+
+def get_preferred_subtitle_lang():
+    """Get the preferred subtitle language from Kodi settings."""
+    response = xbmc.executeJSONRPC(
+        '{"jsonrpc": "2.0", "method": "Settings.GetSettingValue", "params": ["locale.subtitlelanguage"], "id": 1}')
+    try:
+        data = json.loads(response)['result']['value']
+    except:
+        logger.error("Error getting preferred subtitle language. Response='%s'", response)
+        raise
+    if data in ('none', 'forced_only', 'original'):
+        logger.debug("No subtitles translation, since preferred subtitle language is '%s'", data)
+        return None
+    if data == 'default':
+        lang_id = get_ui_language()
+        logger.debug("Using Kodi ui language '%s' for translated subtitles.", lang_id)
+        return lang_id
+    else:
+        return data

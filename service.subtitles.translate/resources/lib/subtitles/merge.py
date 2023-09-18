@@ -9,7 +9,6 @@ from __future__ import annotations
 import io
 import itertools
 
-
 from .subtitle import SrtFrase
 
 
@@ -67,6 +66,9 @@ class MergedDoc:
         new_sentence = Sentence()
         sentence_map = self._sentences
         for frase in self._srt_doc.frases():
+            if not frase:
+                # An SrtDoc should not produce emtpy frases, but better be sure.
+                continue
             new_sentence.append_frase(frase)
             if frase.text[-1] in ".!?":
                 sentence_map[str(idx)] = new_sentence
@@ -83,11 +85,13 @@ class MergedDoc:
             for line in line_iter:
                 line = line.rstrip()
                 try:
-                    idx = int(line)
+                    int(line)
                     text = next(line_iter)
                     self._sentences[line].text = text.rstrip()
                 except ValueError:
                     continue
+                except StopIteration:
+                    return
 
 
 def split_line(srt_frase: SrtFrase,
@@ -113,14 +117,15 @@ def _split_line_on_character(line: str,
     """Try to split on the occurrence of a character like ',', ':', ';' removing the trailing space.
     The split character is to be within a certain range of the intended split index.
 
-    Return the split part and remainder of the original string. If not split could be made split part is
+    Return the split part and remainder of the original string. If no split could be made split part is
     an empty string and the remainder is the original string.
 
     :param line: The line of text to split
     :param split_char: The character that separates the first part and the remainder.
-    :param split_pos: The preferred position in `line` to make the split.
+    :param split_idx: The preferred position in `line` to make the split.
     :param max_deviation: The number of character the actual position of `split_char` can
             deviate from the preferred `split_idx`. Defaults to half of `split_idx`.
+
     """
     if max_deviation is None:
         max_deviation = split_idx / 2

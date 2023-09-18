@@ -10,7 +10,6 @@ import os
 import re
 import shutil
 import time
-import json
 import logging
 from hashlib import md5
 from concurrent import futures
@@ -24,10 +23,10 @@ from resources.lib.translatepy.exceptions import UnknownLanguage, TranslatepyExc
 from resources.lib.translatepy.exceptions import NoResult
 
 from resources.lib import utils
+from resources.lib import kodi_utils
 from resources.lib.subtitles import subtitle, merge
 from .convert import convert_subs
 
-import xbmc
 import xbmcaddon
 
 
@@ -51,151 +50,6 @@ os.makedirs(SUBS_CACHE_DIR, exist_ok=True)
 supported_types = ('srt', '.srt')
 
 
-class SrtLine:
-    def __init__(self, lead: str, text: str, tail: str, ignore_colours: bool = False):
-        self._ignore_col = ignore_colours
-        if lead and tail:
-            self.lead = lead
-            self._text = text.strip()
-            self.tail = tail
-        else:
-            self.lead = ''
-            self._text = ''.join((lead, text.strip(), tail))
-            self.tail = ''
-        self.merged = False
-
-    @property
-    def text(self):
-        return self._text
-
-    @text.setter
-    def text(self, value):
-        self._text = value
-
-    def __str__(self):
-        if self._text:
-            if self._ignore_col:
-                return self._text
-            else:
-                return ''.join((self.lead, self._text, self.tail))
-        else:
-            return ''
-
-    def __bool__(self):
-        return bool(self._text)
-
-
-class SrtBlock:
-    def __init__(self, block_str, ignore_colours=False):
-        self._idx = ''
-        self._time = ''
-        self.lines = []
-        self._parse(block_str, ignore_colours)
-
-    def _parse(self, block_str: str, ignore_col):
-        lines = block_str.strip().split('\n', maxsplit=2)
-        self._idx = lines[0]
-        self._time = lines[1]
-        try:
-            matches = re.findall(r'(^<[^/<>]+>)?(.+?)(</[^<>]+>)?$', lines[2], re.MULTILINE)
-            self.lines = list(filter(None, (SrtLine(*match, ignore_colours=ignore_col) for match in matches)))
-        except IndexError:
-            # A block with index, (possibly empty) time, but no text. Does happen...
-            self.lines = []
-
-    def __str__(self):
-        if self._idx and self._time:
-            return '\n'.join((self._idx, self._time, *(str(line) for line in self.lines if line), '\n'))
-        else:
-            return ''
-
-    @property
-    def text(self):
-        # return '\n'.join((self._idx, *(line.text for line in self.lines),'\n'))
-        lines = self.lines
-        if not lines:
-            return '\n'.join((self._idx, '\n'))
-        texts = [lines[0].text]
-        for i in range(1, len(lines)):
-            prev_line = lines[i-1]
-            cur_line = lines[i]
-            # Merge lines of the same actor (same text colour) when the previous line was not the end of a sentence.
-            if cur_line.lead == prev_line.lead and prev_line.text[-1] not in ('.', '!', '?'):
-                cur_line.merged = True
-                texts[-1] = ' '.join((texts[-1], cur_line.text))
-            else:
-                texts.append(cur_line.text)
-        return '\n'.join((self._idx, *texts, '\n'))
-
-    @text.setter
-    def text(self, trans_block):
-        orig_lines = self.lines
-        num_orig_lines = len(orig_lines)
-        trans_lines = trans_block.lines
-
-        try:
-            if num_orig_lines == len(trans_lines):
-                for i in range(num_orig_lines):
-                    orig_lines[i].text = trans_lines[i]
-            else:
-                j = 0
-                for line in trans_lines:
-                    # find the all corresponding original lines
-                    lines_list = [orig_lines[j]]
-                    j += 1
-                    while j < num_orig_lines and orig_lines[j].merged:
-                        lines_list.append(orig_lines[j])
-                        j += 1
-                    # split the translated line into the same number of parts
-                    num_merged_lines = len(lines_list)
-                    new_texts = split_line(line, num_merged_lines)
-                    # and apply the translated text to the original line.
-                    for i in range(num_merged_lines):
-                        lines_list[i].text = new_texts[i]
-        except IndexError:
-            logger.error("Error applying translation to block %s: List index out of range", self._idx)
-
-    def __bool__(self):
-        return bool(self.lines)
-
-
-class SrtDoc:
-    def __init__(self, srt_doc: str, ignore_colours=False):
-        blocks = srt_doc.split('\n\n')
-        self.blocks = list(filter(None, (SrtBlock(block, ignore_colours) for block in blocks if block)))
-
-    @property
-    def text(self):
-        return ''.join(block.text for block in self.blocks)
-
-    @text.setter
-    def text(self, value):
-        for orig, trans in zip(self.blocks, value.blocks):
-            orig.text = trans
-
-    def __str__(self):
-        return ''.join(str(block) for block in self.blocks)
-
-
-class TransBlock:
-    def __init__(self, block_str):
-        self._idx = ''
-        self.lines = []
-        self._parse(block_str)
-
-    def _parse(self, block_str: str):
-        block_str = block_str.strip()
-        lines = block_str.split('\n')
-        if lines:
-            self._idx = lines[0]
-            self.lines = lines[1:]
-
-
-class TransDoc:
-    def __init__(self, doc_str: str):
-        self.blocks = [TransBlock(block) for block in doc_str.split('\n\n')]
-
-
 def filter_doc(srt_txt: str, filter_flags: int = 0) -> str:
     """Remove non-spoken items, like sound descriptions.
 
@@ -217,19 +71,21 @@ def filter_doc(srt_txt: str, filter_flags: int = 0) -> str:
     filter_patterns = []
     if filter_flags & FILTER_BRACKETS:
         # Pattern to remove everything enclosed in brackets, including the brackets.
-        filter_patterns.append(r'(\([^)]*\)(?:$|\W?))')
+        # Includes dummy groups at the start and end to ensure it has the 3 groups
+        # re.sub() expects later on.
+        filter_patterns.append(r'(\([^)]*\)(?:$|[ :;-]?))')
     if filter_flags & FILTER_CAPS:
         # Pattern to remove lines written entirely in uppercase letters.
-        filter_patterns.append(r'(^[A-Z :,]{3,}$)')
+        filter_patterns.append(r'(?<=\n|>)([A-Z :,]{3,})(?=$|<)')
     if filter_flags & FILTER_HASHTAGS:
-        # Pattern to remove text between hashtags, or from a hashtag to the end of the line.
+        # Pattern to remove text between hashtags.
         # Often used to show the lyrics of a song.
-        filter_patterns.append(r'(^#+.*?#$)')
+        filter_patterns.append(r'(?<=\n|>)(#+.*?#)(?=$|<)')
     pattern = '|'.join(filter_patterns)
     if pattern:
         # Replace with a space to prevent sounds collapsing into double new-lines,
         # which will mess up splitting the doc into srt blocks later on.
-        new_txt = re.sub(pattern, ' ', srt_txt, flags=re.MULTILINE | re.S)
+        new_txt = re.sub(pattern, r' ', srt_txt, flags=re.MULTILINE | re.S)
         # Cleanup artifacts by removing lines consisting only of non-word characters
         new_txt = re.sub(r'(^\W+?$)', ' ', new_txt, flags=re.MULTILINE)
         logger.info("Filter '%s' applied", filter_flags)
@@ -239,75 +95,7 @@ def filter_doc(srt_txt: str, filter_flags: int = 0) -> str:
         return srt_txt
 
 
-def split_line(line: str, splits: int):
-    result = _split_line_on_comma(line, splits)
-    if not result:
-        result = _split_line_equal(line, splits)
-    return result
-
-
-def _split_line_on_comma(line: str, splits: int):
-    # Try to split on the occurrence of ', ' keeping the comma and removing the space.
-    parts = re.split(r'(?<=,) ', line)
-
-    if len(parts) == 1:
-        return False
-
-    while len(parts) > splits:
-        # merge the smallest parts
-        min_len = MAX_CHARS_PER_LINE
-        merge_idx = 0
-        for i in range(len(parts) - 1):
-            new_len = len(parts[i]) + len(parts[i+1])
-            if new_len < min_len:
-                min_len = new_len
-                merge_idx = i
-        parts[merge_idx] = ' '.join(parts[merge_idx:merge_idx + 2])
-        parts.pop(merge_idx + 1)
-
-    for part in parts:
-        if len(part) > MAX_CHARS_PER_LINE:
-            return False
-
-    if len(parts) < splits:
-        parts += [''] * (splits - len(parts))
-    return parts
-
-
-def _split_line_equal(line: str, splits: int):
-    parts = []
-    while splits > 1:
-        part_len = len(line) // splits
-        part, line = _split_on_word(line, part_len)
-        parts.append(part)
-        splits -= 1
-    parts.append(line)
-    return parts
-
-
-def _split_on_word(line: str, pos: int):
-    """ Search for a word boundary closest to 'pos' and split the line there.
-
-    :param line: the line to be split
-    :param pos: the preferred position of the split
-    :return: tuple[str, str]
-
-    """
-    pos_before = line.rfind(' ', 0, pos + 1)
-    if pos_before == -1:
-        pos_before = 0
-
-    pos_after = line.find(' ', pos)
-    if pos_after == -1:
-        pos_after = len(line)
-
-    if pos_before and pos - pos_before < pos_after - pos:
-        return line[:pos_before], line[pos_before + 1:]
-    else:
-        return line[:pos_after], line[pos_after + 1:]
-
-
-def split_doc(src_txt: str, max_len):
+def split_doc(src_txt: str, max_len: int) -> list[str]:
     """Split string `src_txt` into pieces of text with no more than `max_len` characters in such a way that
     each part contains full sentences.
 
@@ -383,7 +171,7 @@ def translate_file(video_file: str,
 
     """
     # delete previously stored intermediate files
-    for fname in ('orig.txt', 'srt_filtered.txt', 'translated.txt'):
+    for fname in ('orig.txt', 'srt_filtered.txt', 'translated.txt', 'last_translation'):
         fpath = os.path.join(SUBS_CACHE_DIR, fname)
         try:
             os.remove(fpath)
@@ -393,7 +181,7 @@ def translate_file(video_file: str,
     # noinspection PyBroadException
     try:
         if target_lang == 'auto':
-            target_lang = get_preferred_subtitle_lang()
+            target_lang = kodi_utils.get_preferred_subtitle_lang()
             if not target_lang:
                 logger.info("No result auto-detecting target language; skipping translation.")
                 return
@@ -417,6 +205,7 @@ def translate_file(video_file: str,
         if os.path.isfile(cache_file_name):
             logger.info("Used translation from cache: '%s'", cache_file_name)
             shutil.copy(cache_file_name, kodi_file_name)
+            save_last_translated_filename(cache_file_name)
             return kodi_file_name
 
         logger.info("Translating subtitles file %s from %s to %s", file_path, src_lang, trans_lang.id)
@@ -451,6 +240,7 @@ def translate_file(video_file: str,
 
         with open(kodi_file_name, 'w', encoding='utf8') as f:
             f.write(translated_srt)
+        save_last_translated_filename(cache_file_name)
         return kodi_file_name
     except:
         # Translating on free public services can fail for a number of reasons. Ensure not to crash the
@@ -478,41 +268,6 @@ def cleanup_cached_files(max_age: int = FILE_CACHE_TIME):
 def get_language_id(lang: str):
     lang_obj = Language(lang)
     return lang_obj.id
-
-
-def get_preferred_subtitle_lang():
-    """Get the preferred subtitle language from Kodi settings."""
-    response = xbmc.executeJSONRPC(
-        '{"jsonrpc": "2.0", "method": "Settings.GetSettingValue", "params": ["locale.subtitlelanguage"], "id": 1}')
-    try:
-        data = json.loads(response)['result']['value']
-    except:
-        logger.error("Error getting preferred subtitle language. Response='%s'", response)
-        raise
-    if data in ('none', 'forced_only', 'original'):
-        logger.debug("No subtitles translation, since preferred subtitle language is '%s'", data)
-        return None
-    if data == 'default':
-        lang_id = get_kodi_ui_language()
-        logger.debug("Using Kodi ui language '%s' for translated subtitles.", lang_id)
-        return lang_id
-    else:
-        return data
-
-
-def get_kodi_ui_language():
-    """Return the 2-letter language code of the language used in the Kodi user interface.
-
-    The region part is stripped from the ID returned by Kodi, because translatepy can
-    handle a variety of language identifiers, but cannot handle language_Region type of
-    id's used in Kodi, like 'en_GB'.
-
-    """
-    response = xbmc.executeJSONRPC(
-        '{"jsonrpc": "2.0", "method": "Settings.GetSettingValue", "params": ["locale.language"], "id": 1}')
-    data = json.loads(response)['result']['value']
-    # The data value returned is in a format like 'resources.language.en_GB'
-    return data.split('.')[-1].split('_')[0]
 
 
 def get_filter_flags(init_flags: int) -> int:
@@ -560,3 +315,12 @@ def read_subtitles_file(file_path):
         with xbmcvfs.File(file_path, 'r') as f:
             subs_text = f.read()
     return subs_text
+
+
+def save_last_translated_filename(filepath):
+    """Store path to the last translated srt file.
+    To be used by error marker.
+
+    """
+    with open(os.path.join(SUBS_CACHE_DIR, 'last_translation'), 'w') as f:
+        f.write(filepath)

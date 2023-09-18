@@ -100,13 +100,7 @@ msgid "translated"
 msgstr ""
 
 # Texts in dialogs
-msgctxt "#30604"
-msgid "More info"
-msgstr ""
 
-msgctxt "#30621"
-msgid "Open settings"
-msgstr ""
 
 # Generic button texts
 msgctxt "#30790"
@@ -128,30 +122,10 @@ msgstr ""
 
 # Error texts
 msgctxt "#30901"
-msgid "Access not allowed."
+msgid "Error marked."
 msgstr ""
 
-msgctxt "#30902"
-msgid "Not signed in."
-msgstr ""
 
-msgctxt "#30903"
-msgid "Sign in to account failed."
-msgstr ""
 
-msgctxt "#30905"
-msgid "Connection error: {}."
-msgstr ""
 
-msgctxt "#30906"
-msgid "Error parsing data."
-msgstr ""
-
-msgctxt "#30920"
-msgid "Received invalid data."
-msgstr ""
-
-msgctxt "#30921"
-msgid "Stream info not available."
-msgstr ""
 

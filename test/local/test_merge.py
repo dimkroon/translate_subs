@@ -27,11 +27,11 @@ class TestSentence(unittest.TestCase):
         self.assertEqual(3, len(s.orig_frases))
 
     def test_relative_line_lengths(self):
-        s = merge.Sentence(SrtFrase('', 'a', ''), SrtFrase('', 'bc', ''), SrtFrase('', 'dw', ''))
+        s = merge.Sentence(SrtFrase('a', '', ''), SrtFrase('bc', '', ''), SrtFrase('dw', '', ''))
         self.assertListEqual([0.2, 0.5, 1], s._relative_line_lengths())
-        s = merge.Sentence(SrtFrase('', 'a', ''), SrtFrase('', 'b', ''), SrtFrase('', 'c', ''))
+        s = merge.Sentence(SrtFrase('a', '', ''), SrtFrase('b', '', ''), SrtFrase('c', '', ''))
         self.assertListEqual([1/3, 0.5, 1], s._relative_line_lengths())
-        s = merge.Sentence(SrtFrase('', 'a line', ''))
+        s = merge.Sentence(SrtFrase('a line', '', ''))
         self.assertListEqual([1], s._relative_line_lengths())
 
 
