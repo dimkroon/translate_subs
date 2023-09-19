@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- This file contains custom key mapping to mark translation errors while you watch     -->
 <!-- using the red button of the remote control, or the 'a' key of a keyboard.            -->
-<!-- Change the mapping to another key of your remote does not have a red button.         -->
+<!-- Change the mapping to another key of your remote does not have a red button, or if   -->
+<!-- you want to preserve the original function of the button                             -->
 <!--                                                                                      -->
 <!-- Copy this file to the keymaps folder in userdata.                                    -->
 <!--                                                                                      -->
@@ -12,6 +13,7 @@
       <red>RunScript(service.subtitles.translate, mark_error)</red>
     </remote>
     <keyboard>
+      <red>RunScript(service.subtitles.translate, mark_error)</red>
       <a>RunScript(service.subtitles.translate, mark_error)</a>
     </keyboard>
   </FullscreenVideo>
