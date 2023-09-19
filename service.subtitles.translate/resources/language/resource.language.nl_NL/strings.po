@@ -1,0 +1,135 @@
+# Kodi Media Center language file
+# Addon Name: viwX
+# Addon id: plugin.subtitles.translate
+# Addon Provider: Dim Kroon
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl_NL\\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Settings
+msgctxt "#30100"
+msgid "Translation"
+msgstr "Vertaling"
+
+msgctxt "#30101"
+msgid "Filter subtitles"
+msgstr "Filter ondertiteling"
+
+msgctxt "#30102"
+msgid "Enable automatic translation."
+msgstr "Schakel automatisch vertalen in"
+
+msgctxt "#30103"
+msgid "Remove colours"
+msgstr "Verwijder text kleuren"
+
+msgctxt "#30104"
+msgid "Filter sounds enclosed in brackets"
+msgstr "Filter geluid beschrijvingen in haakjes"
+
+msgctxt "#30105"
+msgid "Filter sounds in all uppercase letters"
+msgstr "Filter geluid beschrijvingen in hoofdletters"
+
+msgctxt "#30106"
+msgid "Filter music between hashtags"
+msgstr "Filter song texten tussen hashtags"
+
+msgctxt "#30190"
+msgid "Logging"
+msgstr ""
+
+msgctxt "#30191"
+msgid "Log to:"
+msgstr "Log naar"
+
+msgctxt "#30192"
+msgid "Kodi log,File,No logging"
+msgstr ""
+
+msgctxt "#30193"
+msgid "Log level"
+msgstr "Log niveau"
+
+
+# Help texts
+
+msgctxt "#30302"
+msgid "When enabled subtitles will, whenever possible, automatically be translated after a video is started.\n"
+"The playing addon must have been build with support for automatic translation."
+msgstr "Ondertiteling wordt, wanneer mogelijk, automatisch vertaald nadat de video is gestart."
+
+msgctxt "#30303"
+msgid "Subtitles for hearing impaired usually display text for each person in a different colour.\n"
+"If this filter is enabled all subtitles are shown in white."
+msgstr "Met dit filter ingeschakeld worden alle ondertitels in het wit getoond."
+
+msgctxt "#30304"
+msgid "Some subtitles display non-spoken sounds in brackets.\n"
+"If this filter is enabled an attempt is made to remove this."
+msgstr "Sommige ondertitels tonen niet-gesproken geluiden tussen haakjes.\n"
+"Dit filter probeert dit te verwijderen."
+
+msgctxt "#30305"
+msgid "Some subtitles display non-spoken sounds in all uppercase letters.\n"
+"If this filter is enabled an attempt is made to remove this."
+msgstr "Sommige ondertitels tonen niet-gesproken geluiden in hoofdletter.\n"
+"Dit filter probeert dit te verwijderen."
+
+msgctxt "#30306"
+msgid "Some subtitles display music and lyrics between hashtags.\n"
+"If this filter is enabled an attempt is made to remove this."
+msgstr "Sommige ondertitels tonen gezongen texten tussen hashtags (#).\n"
+"Dit filter probeert dit te verwijderen."
+
+msgctxt "#30391"
+msgid "Select whether the addon logs to 'Kodi log' (default), its own log file stored in the user data directory,\n"
+"or doesn't log at all. A restart of Kodi (or the service) is required before new settings take effect."
+msgstr "Kies of de addon logs weg schrijft naar de 'Kodi log (standaard)', zijn eigen bestand, of helemaal niet logt."
+"Herstart Kodi (of de service) om de nieuwe instelling te activeren."
+
+# Script texts
+msgctxt "#30501"
+msgid "translated"
+msgstr "vertaald"
+
+# Texts in dialogs
+
+
+# Generic button texts
+msgctxt "#30790"
+msgid "OK"
+msgstr ""
+
+msgctxt "#30791"
+msgid "Cancel"
+msgstr ""
+
+msgctxt "#30792"
+msgid "YES"
+msgstr "JA"
+
+msgctxt "#30793"
+msgid "NO"
+msgstr "NEE"
+
+
+# Error texts
+msgctxt "#30901"
+msgid "Error marked!"
+msgstr "Fout gemarkeerd!"
+
+
+
+
+
