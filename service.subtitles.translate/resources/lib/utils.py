@@ -93,7 +93,7 @@ def mark_error():
 
     with open(os.path.join(error_dir, 'manifest.json'), 'w') as f:
         json.dump({'video_file': playing_file,
-                   'playtime': play_time,
+                   'playtime': "{}:{:02}:{:02}".format(int(play_time / 3600), int((play_time % 3600)/60), play_time % 60),
                    'orig_subs': orig_subs,
                    'translated_subs': translated_subs,
                    'source': source,
