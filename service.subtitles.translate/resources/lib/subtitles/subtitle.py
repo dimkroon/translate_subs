@@ -9,7 +9,7 @@ from __future__ import annotations
 import re
 
 # Regex to parse a line with optional multiple tags of various types, like colour, bold, etc.
-# Only font (colour) tags are captured, all other tags are disregarded. I'm not quite sure if how
+# Only font (colour) tags are captured, all other tags are disregarded. I'm not quite sure if and how
 # to handle other markup tags, as it's very hard to apply them correctly to translated text if the
 # tag did not apply to the whole sentence.
 
@@ -86,7 +86,8 @@ class SrtLine:
 class SrtBlock:
     def __init__(self, block_str, ignore_colours=False):
         self.idx = ''
-        self._time = ''
+        self.start_time = None
+        self.end_time = None
         self.lines = []
         self._parse(block_str, ignore_colours)
 
@@ -94,7 +95,7 @@ class SrtBlock:
         lines = block_str.strip().split('\n')
         try:
             self.idx = lines[0]
-            self._time = lines[1]
+            self._parse_time_line(lines[1])
             for line in lines[2:]:
                 line_obj = SrtLine(line.strip(), ignore_colours=no_col)
                 if line_obj:
@@ -103,9 +104,25 @@ class SrtBlock:
             # A block with index, (possibly empty) time, but no text. Does happen...
             pass
 
+    def _parse_time_line(self, time_line):
+        start_str, end_str = time_line.split("-->")
+        self.start_time = self._parse_time(start_str)
+        self.end_time = self._parse_time(end_str)
+
+    def _parse_time(self, time_str: str) -> float:
+        """Take a string formatted as %H:%M:%s.%f and return the number of seconds"""
+        hours, minutes, second = time_str.replace(',', '.').split(':')
+        return int(hours) * 3600 + int(minutes) * 60 + float(second)
+
+    def _format_time_line(self):
+        st = self.start_time
+        et = self.end_time
+        line = f'{st//3600:02.0f}:{st%3600//60:02.0f}:{st%60:06.3f} --> {et//3600:02.0f}:{et%3600//60:02.0f}:{et%60:06.3f}'
+        return line.replace('.', ',')
+
     def __str__(self):
         if self:
-            return '\n'.join((self.idx, self._time, *(str(line) for line in self.lines if line), '\n'))
+            return '\n'.join((self.idx, self._format_time_line(), *(str(line) for line in self.lines if line), '\n'))
         else:
             return ''
 
@@ -119,7 +136,7 @@ class SrtBlock:
 class SrtDoc:
     def __init__(self, srt_doc: str, ignore_colours=False):
         blocks = srt_doc.split('\n\n')
-        self.blocks = [SrtBlock(block, ignore_colours) for block in blocks if block]
+        self.blocks = list(filter(bool, (SrtBlock(block, ignore_colours) for block in blocks if block)))
 
     @property
     def text(self):
@@ -143,7 +160,24 @@ class SrtDoc:
         return ''.join(block_str for block_str in block_iter())
 
     def frases(self):
-        """Iterate over all frases in the document."""
+        """Generator that iterates over all frases in the document."""
         for block in self.blocks:
             for line in block.lines:
                 yield from line
+
+    def stretch_time(self, display_time: float):
+        """Increase the time subtitles are shown to `display_time` number
+        of seconds whenever possible.
+
+        If the gap between one block of subtitles and the next is less than
+        `display_time`, stretch the time the first block is shown to fill the gap.
+
+        """
+        blocks_iter = iter(self.blocks)
+        b1 = next(blocks_iter)
+        for b2 in blocks_iter:
+            t_dif = b2.start_time - b1.end_time
+            if t_dif > 0:
+                new_end_t = min(b1.start_time + display_time, b1.end_time + t_dif)
+                b1.end_time = new_end_t
+            b1 = b2

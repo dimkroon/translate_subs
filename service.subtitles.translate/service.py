@@ -82,8 +82,10 @@ class PlayerMonitor(Player):
         logger.info("Subtitles filter_flags: '%s'", filter_flags)
         logger.info("Video ID: %s", video_file)
 
+        preferred_display_time = utils.addon_info.addon.getSettingNumber('display_time')
         translated_fname = translate.translate_file(video_file, file_name, subs_type,
-                                                    src_lang=orig_lang, filter_flags=filter_flags)
+                                                    src_lang=orig_lang, filter_flags=filter_flags,
+                                                    display_time=preferred_display_time)
         if not translated_fname:
             return
         # Translating can take some time, check if the file is still playing

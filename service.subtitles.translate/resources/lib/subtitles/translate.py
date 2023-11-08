@@ -153,7 +153,8 @@ def translate_file(video_file: str,
                    file_type: str,
                    target_lang: str = 'auto',
                    src_lang: str = 'auto',
-                   filter_flags: int = -1) -> str | None:
+                   filter_flags: int = -1,
+                   display_time: float = 0) -> str | None:
     """
     Translate an srt file into target_lang and return the path to the translated document.
     Returns an already saved document if it is found in the cache. If not, an online translation
@@ -166,8 +167,9 @@ def translate_file(video_file: str,
     :param target_lang: Language of the translation.
     :param src_lang: Language of the original subtitles. Can be 'auto' tot let the translation
         service auto-detect the langauge.
-    :return: The path to the translated srt document on success, or None on failure.
     :param filter_flags: Bitmask of FILTER_xxxx flags.
+    :param display_time: Preferred number of seconds a subtitle block should remain visible.
+    :return: The path to the translated srt document on success, or None on failure.
 
     """
     # delete previously stored intermediate files
@@ -233,6 +235,8 @@ def translate_file(video_file: str,
             return
 
         merged_obj.text = new_txt
+        if display_time:
+            orig_subs_obj.stretch_time(display_time)
         translated_srt = str(orig_subs_obj)
         with open(cache_file_name, 'w', encoding='utf8') as f:
             f.write(translated_srt)
