@@ -46,7 +46,7 @@ msgid "Filter music between hashtags"
 msgstr ""
 
 msgctxt "#30131"
-msgid "Time to display a block of subtitles"
+msgid "Preferred display time of subtitles in seconds"
 msgstr ""
 
 msgctxt "#30190"
@@ -94,8 +94,8 @@ msgid "Some subtitles display music and lyrics between hashtags.\n"
 msgstr ""
 
 msgctxt "#30331"
-msgid "Number of seconds the subtitles should preferably remain shown on screen.\n"
-"If the next block of subtitles comes up earlier, keep the current block on screen as long as possible."
+msgid "Number of seconds subtitles should preferably remain on screen.\n"
+"If the next block of subtitles comes up earlier, the current block remains on screen until the next block appears."
 msgstr ""
 
 msgctxt "#30391"
