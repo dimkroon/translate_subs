@@ -1,3 +1,9 @@
+v 0.3.0-alpha
+- Open settings when activated as script from the UI.
+- New setting to define the number of seconds subtitles should preferably remain on displayed on screen.
+  When the designated display period of a block of subtitles is shorter than the number of seconds defined in this setting, TranslateSubs will stretch the display period to the number of seconds defined in this setting, or to the start of the next block, whichever comes first.
+- Removed dependency on codequick.
+
 v 0.2.0 - alpha
 - Filters now also operate on text between colour tags
 - Add possibility to mark errors for error reports while you watch, using the red button on the IR remote, or the 'a' key on a keyboard. (requires additional keymap)
