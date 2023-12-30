@@ -6,7 +6,14 @@
 # ----------------------------------------------------------------------------------------------------------------------
 
 from __future__ import annotations
+
+import logging
 import re
+
+from resources.lib import utils
+
+
+logger = logging.getLogger('.'.join((utils.logger_id, __name__.split('.', 2)[-1])))
 
 # Regex to parse a line with optional multiple tags of various types, like colour, bold, etc.
 # Only font (colour) tags are captured, all other tags are disregarded. I'm not quite sure if and how
@@ -176,8 +183,13 @@ class SrtDoc:
         blocks_iter = iter(self.blocks)
         b1 = next(blocks_iter)
         for b2 in blocks_iter:
-            t_dif = b2.start_time - b1.end_time
-            if t_dif > 0:
-                new_end_t = min(b1.start_time + display_time, b1.end_time + t_dif)
+            if not b2:
+                continue
+            et = b1.end_time
+            st = b2.start_time
+            if st > et:
+                new_end_t = min(b1.start_time + display_time, st)
                 b1.end_time = new_end_t
+                logger.debug("stretched display endTime from %02.0f:%02.0f:%06.3f to %02.0f:%02.0f:%06.3f",
+                             et/3600, (et%3600)/60, et%60, new_end_t/3600, (new_end_t%3600)/60, new_end_t%60)
             b1 = b2

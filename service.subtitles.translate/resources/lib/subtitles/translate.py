@@ -236,6 +236,7 @@ def translate_file(video_file: str,
 
         merged_obj.text = new_txt
         if display_time:
+            logger.debug("Trying to stretch display time to %s sec.", display_time)
             orig_subs_obj.stretch_time(display_time)
         translated_srt = str(orig_subs_obj)
         with open(cache_file_name, 'w', encoding='utf8') as f:

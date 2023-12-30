@@ -75,14 +75,15 @@ class PlayerMonitor(Player):
 
         # Strip the querystring from the video url, because it may contain items unique to every instance played.
         video_file = self.getPlayingFile().split('?')[0]
+        preferred_display_time = utils.addon_info.addon.getSettingNumber('display_time')
 
         logger.info("Subtitles file: '%s'", file_name)
         logger.info("Subtitles type: '%s'", subs_type)
         logger.info("Subtitles original language: '%s'", orig_lang)
         logger.info("Subtitles filter_flags: '%s'", filter_flags)
         logger.info("Video ID: %s", video_file)
+        logger.info("Display time: %s", preferred_display_time)
 
-        preferred_display_time = utils.addon_info.addon.getSettingNumber('display_time')
         translated_fname = translate.translate_file(video_file, file_name, subs_type,
                                                     src_lang=orig_lang, filter_flags=filter_flags,
                                                     display_time=preferred_display_time)
@@ -105,6 +106,8 @@ if __name__ == '__main__':
             player = PlayerMonitor()
             while system_monitor.abortRequested() is False:
                 system_monitor.waitForAbort(86400)
+                logger.info("Abort requested")
                 translate.cleanup_cached_files()
         except Exception as e:
             logger.error("Unhandled exception: %r:", e, exc_info=True)
+    logger.info("Ended service")
