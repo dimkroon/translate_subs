@@ -83,6 +83,11 @@ class TestLine(unittest.TestCase):
         line = subtitle.SrtLine('<font color="cyan"> </font>')
         self.assertEqual(0, len(line._frases))
 
+    def test__bool_(self):
+        self.assertFalse(subtitle.SrtLine(''))
+        self.assertFalse(subtitle.SrtLine('<font color="cyan"> </font>'))
+        self.assertTrue(subtitle.SrtLine(' <font color="cyan"> This is text </font>'))
+
 
 test_block ="""
 1
@@ -121,6 +126,13 @@ class TestSrtBlock(unittest.TestCase):
         b.start_time = 1 * 3600 + 3 * 60 + 2.9623
         b.end_time = b.start_time
         self.assertEqual('01:03:02,962 --> 01:03:02,962', b._format_time_line())
+
+    def test__bool_(self):
+        self.assertFalse(subtitle.SrtBlock(test_block))
+        self.assertFalse(subtitle.SrtBlock(test_block + ''))
+        self.assertFalse(subtitle.SrtBlock(test_block + ' \n '))
+        self.assertTrue(subtitle.SrtBlock(test_block + 'this is the first line'))
+        self.assertTrue(subtitle.SrtBlock(test_block + '\nthis is the second line'))
 
 
 class TestSrtDoc(unittest.TestCase):
