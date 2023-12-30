@@ -16,7 +16,6 @@ from resources.lib.subtitles import subtitle
 from test.support.testutils import open_doc
 
 
-
 class TestLine(unittest.TestCase):
     def test_text_line(self):
         txt = 'This is text'
@@ -84,6 +83,11 @@ class TestLine(unittest.TestCase):
         line = subtitle.SrtLine('<font color="cyan"> </font>')
         self.assertEqual(0, len(line._frases))
 
+    def test__bool_(self):
+        self.assertFalse(subtitle.SrtLine(''))
+        self.assertFalse(subtitle.SrtLine('<font color="cyan"> </font>'))
+        self.assertTrue(subtitle.SrtLine(' <font color="cyan"> This is text </font>'))
+
 
 test_block ="""
 1
@@ -104,3 +108,38 @@ class TestSrtBlock(unittest.TestCase):
         self.assertTrue(block)
         self.assertEqual(2, len(block.lines))
         self.assertEqual(2, len(list(block)))
+
+    def test_parse_time_line(self):
+        b = subtitle.SrtBlock('')
+        b._parse_time_line('00:03:02,961 --> 00:03:02,961')
+        self.assertEqual(3 * 60 + 2.961, b.start_time)
+        self.assertEqual(3 * 60 + 2.961, b.end_time)
+        b._parse_time_line('10:13:20,9 --> 02:03:22,60')
+        self.assertEqual(10 * 3600 + 13 * 60 + 20.9, b.start_time)
+        self.assertEqual(2 * 3600 + 3 * 60 + 22.60, b.end_time)
+
+    def test_format_time_line(self):
+        b = subtitle.SrtBlock('')
+        b.start_time = 10 * 3600 + 11 * 60 + 21.9
+        b.end_time = b.start_time
+        self.assertEqual('10:11:21,900 --> 10:11:21,900', b._format_time_line())
+        b.start_time = 1 * 3600 + 3 * 60 + 2.9623
+        b.end_time = b.start_time
+        self.assertEqual('01:03:02,962 --> 01:03:02,962', b._format_time_line())
+
+    def test__bool_(self):
+        self.assertFalse(subtitle.SrtBlock(test_block))
+        self.assertFalse(subtitle.SrtBlock(test_block + ''))
+        self.assertFalse(subtitle.SrtBlock(test_block + ' \n '))
+        self.assertTrue(subtitle.SrtBlock(test_block + 'this is the first line'))
+        self.assertTrue(subtitle.SrtBlock(test_block + '\nthis is the second line'))
+
+
+class TestSrtDoc(unittest.TestCase):
+    def test_create_doc(self):
+        srt = subtitle.SrtDoc(open_doc('srt/spy_among_friends.en.srt')())
+
+    def test_stretch_time(self):
+        srt = subtitle.SrtDoc(open_doc('srt/spy_among_friends.en.srt')())
+        srt.stretch_time(7)
+        print(str(srt))

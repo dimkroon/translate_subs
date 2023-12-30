@@ -25,7 +25,7 @@ class Sentence:
 
     @text.setter
     def text(self, new_text):
-        """Divide new_text over all lines in such a way that each line has a relative
+        """Spread new_text over all lines in such a way that each line has a relative
         length similar to the original. All in an attempt to keep the timing of the
         new subtitles as close to the original as possible.
 

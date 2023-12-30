@@ -7,11 +7,16 @@
 
 import sys
 
+import xbmc
+import xbmcaddon
 
 from resources.lib import utils
 
 
 if __name__ == '__main__':
-    if len(sys.argv) == 2:
+    xbmc.log("[translatepy] called with :{}".format(sys.argv), xbmc.LOGWARNING)
+    if len(sys.argv) == 1:
+        xbmcaddon.Addon().openSettings()
+    elif len(sys.argv) == 2:
         if sys.argv[1] == 'mark_error':
             utils.mark_error()
