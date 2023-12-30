@@ -3,7 +3,6 @@
   <requires>
     <import addon="xbmc.python" version="3.0.1"/>
     <import addon="script.module.requests"/>
-    <import addon="script.module.codequick"/>
   </requires>
   <extension point="xbmc.service" library="service.py" start="startup" />
   <extension point="xbmc.python.library" library="libs"/>

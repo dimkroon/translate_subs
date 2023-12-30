@@ -10,10 +10,6 @@ import logging
 import xbmc
 import xbmcgui
 
-from codequick import Script, utils
-from codequick.support import addon_data
-
-
 from . utils import addon_info, logger_id
 
 logger = logging.getLogger(logger_id + '.kodi_utils')
@@ -23,7 +19,7 @@ TXT_LOG_TARGETS = 30192
 
 
 def ask_log_handler(default):
-    options = Script.localize(TXT_LOG_TARGETS).split(',')
+    options = addon_info.localise(TXT_LOG_TARGETS).split(',')
     dlg = xbmcgui.Dialog()
     result = dlg.contextmenu(options)
     if result == -1:
