@@ -95,7 +95,7 @@ def vtt_to_srt(vtt_doc: str, colourize=True) -> str:
     from io import StringIO
     import re
 
-    # Match a line that start with cue timings. Accept timings with or without hours.
+    # Match a line that starts with cue timings. Accept timings with or without hours.
     regex = re.compile(r'(\d{2})?:?(\d{2}:\d{2})\.(\d{3}) +--> +(\d{2})?:?(\d{2}:\d{2})\.(\d{3})')
 
     # Convert new lines conform WebVTT specs
@@ -140,7 +140,7 @@ def vtt_to_srt(vtt_doc: str, colourize=True) -> str:
         # Remove any markup tag other than the supported bold, italic underline and colour.
         srt_doc = re.sub(r'<([^biuc]).*?>(.*?)</\1.*?>', r'\2', srt_doc)
 
-        # convert color tags, accept only simple colour names.
+        # convert color tags.
         def sub_color_tags(match):
             colour = match[1]
             if colour in ('white', 'yellow', 'green', 'cyan', 'red'):
