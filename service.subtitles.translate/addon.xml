@@ -4,8 +4,8 @@
     <import addon="xbmc.python" version="3.0.1"/>
     <import addon="script.module.requests"/>
   </requires>
-  <extension point="xbmc.service" library="service.py" start="startup" />
-  <extension point="xbmc.python.library" library="libs"/>
+  <extension point="xbmc.service" library="service.py" />
+  <extension point="xbmc.python.library" library="resources/lib"/>
   <extension point="xbmc.python.script" library="default.py">
     <provides>executable</provides>
   </extension>
@@ -28,7 +28,6 @@
     <source>https://github.com/dimkroon/translate_subs</source>
     <assets>
       <icon>resources/icon.png</icon>
-      <fanart />
     </assets>
     <news>
 * Open settings when activated as script from the UI.[CR]
