@@ -98,7 +98,7 @@ def split_line(srt_frase: SrtFrase,
                new_text: str,
                split_idx: int):
     last_char = srt_frase.text[-1]
-    if last_char in ",:;":
+    if last_char in ",:;'\"":
         # Try to split on the same character
         new_frase_text, remainder = _split_line_on_character(new_text, last_char, split_idx)
         if new_frase_text:
