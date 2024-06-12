@@ -1,6 +1,6 @@
 # ----------------------------------------------------------------------------------------------------------------------
-#  Copyright (c) 2023 Dimitri Kroon.
-#  This file is part of plugin.video.viewx.
+#  Copyright (c) 2023-2024 Dimitri Kroon.
+#  This file is part of service.subtitles.translate.
 #  SPDX-License-Identifier: GPL-2.0-or-later
 #  See LICENSE.txt
 # ----------------------------------------------------------------------------------------------------------------------
