@@ -148,11 +148,11 @@ def translate_text(subs: str,
     return translation
 
 
-def translate_file(video_file: str,
-                   file_path: str,
+def translate_file(file_path: str,
                    file_type: str,
                    target_lang: str = 'auto',
                    src_lang: str = 'auto',
+                   video_id: str = None,
                    filter_flags: int = -1,
                    display_time: float = 0) -> str | None:
     """
@@ -161,12 +161,13 @@ def translate_file(video_file: str,
     service is used to perform the translation and the result is stored on disc for a while for
     subsequent use.
 
-    :param video_file: URL or name of the associate video file. Used for caching translated subtitles.
     :param file_path: Path to the srt file in the original language.
     :param file_type: Type of subtitle file (srt, vtt, etc).
     :param target_lang: Language of the translation.
     :param src_lang: Language of the original subtitles. Can be 'auto' tot let the translation
         service auto-detect the langauge.
+    :param video_id: A string that uniquely identifies the associated video, e.g. the url.
+        Used for caching translated subtitles.
     :param filter_flags: Bitmask of FILTER_xxxx flags.
     :param display_time: Preferred number of seconds a subtitle block should remain visible.
     :return: The path to the translated srt document on success, or None on failure.
@@ -192,14 +193,19 @@ def translate_file(video_file: str,
         filter_flags = get_filter_flags(filter_flags)
 
         # Create a unique file name based on the video file, language and filter options.
-        cache_file_name = os.path.join(
-                SUBS_CACHE_DIR,
-                ''.join((md5(video_file.encode('utf8')).hexdigest(),
-                         '_',
-                         str(filter_flags),
-                         '.',
-                         trans_lang.id,
-                         '.srt')))
+
+        if video_id:
+            cache_file_name = os.path.join(
+                    SUBS_CACHE_DIR,
+                    ''.join((md5(video_id.encode('utf8')).hexdigest(),
+                             '_',
+                             str(filter_flags),
+                             '.',
+                             trans_lang.id,
+                             '.srt')))
+        else:
+            cache_file_name = ''
+
         # Use a different file name to pass on to Kodi to get more informative
         # descriptions in subtitle dialogs in the UI.
         kodi_file_name = os.path.join(utils.addon_info.temp_dir,
@@ -239,8 +245,10 @@ def translate_file(video_file: str,
             logger.debug("Trying to stretch display time to %s sec.", display_time)
             orig_subs_obj.stretch_time(display_time)
         translated_srt = str(orig_subs_obj)
-        with open(cache_file_name, 'w', encoding='utf8') as f:
-            f.write(translated_srt)
+
+        if cache_file_name:
+            with open(cache_file_name, 'w', encoding='utf8') as f:
+                f.write(translated_srt)
         logger.info("Translated subtitles in '%s' sec, output: '%s'", time.monotonic() - t_start, cache_file_name)
 
         with open(kodi_file_name, 'w', encoding='utf8') as f:
