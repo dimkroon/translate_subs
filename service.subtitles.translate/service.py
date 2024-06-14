@@ -44,7 +44,6 @@ class PlayerMonitor(Player):
             return
 
         self._cur_file = video_file = self.getPlayingFile()
-        utils.addon_info.initialise()
         if not utils.addon_info.addon.getSettingBool('subtitles_translate'):
             logger.debug("Automatic translation disabled in settings.")
             return
@@ -103,10 +102,16 @@ class PlayerMonitor(Player):
         self.setSubtitles(translated_fname)
 
 
+class SystemMonitor(xbmc.Monitor):
+    def onSettingsChanged(self) -> None:
+        logger.info("Settings have changed")
+        utils.addon_info.initialise()
+
+
 if __name__ == '__main__':
     logger.debug("Running translate service from thead %s", threading.current_thread().native_id)
     translate.cleanup_cached_files()
-    system_monitor = xbmc.Monitor()
+    system_monitor = SystemMonitor()
     while system_monitor.abortRequested() is False:
         try:
             player = PlayerMonitor()
