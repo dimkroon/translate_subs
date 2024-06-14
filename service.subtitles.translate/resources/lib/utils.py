@@ -48,7 +48,8 @@ def get_os():
 
 
 def log(message, *args, **kwargs):
-    xbmc.log('[subtitles.translate] ' + message.format(*args, **kwargs), xbmc.LOGDEBUG)
+    level = kwargs.pop('level', xbmc.LOGWARNING)
+    xbmc.log('[subtitles.translate] ' + message.format(*args, **kwargs), level)
 
 
 def mark_error():

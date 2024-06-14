@@ -4,11 +4,13 @@
     <import addon="xbmc.python" version="3.0.1"/>
     <import addon="script.module.requests"/>
   </requires>
+  <extension point="xbmc.subtitle.module" library="default.py"/>
   <extension point="xbmc.service" library="service.py" />
-  <extension point="xbmc.python.library" library="resources/lib"/>
-  <extension point="xbmc.python.script" library="default.py">
+  <!--extension point="xbmc.python.module" library="resources/lib"/>
+
+  <extension point="xbmc.python.script" library="script.py">
     <provides>executable</provides>
-  </extension>
+  </extension-->
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <summary lang="en_GB">Automatically translate subtitles using translatepy</summary>
@@ -28,6 +30,7 @@
     <source>https://github.com/dimkroon/translate_subs</source>
     <assets>
       <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
     </assets>
     <news>
 
