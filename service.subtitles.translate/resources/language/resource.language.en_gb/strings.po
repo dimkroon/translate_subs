@@ -45,6 +45,10 @@ msgctxt "#30106"
 msgid "Filter music between hashtags"
 msgstr ""
 
+msgctxt "#30107"
+msgid "Check on pause?"
+msgstr ""
+
 msgctxt "#30131"
 msgid "Preferred display time of subtitles in seconds"
 msgstr ""
@@ -91,6 +95,11 @@ msgstr ""
 msgctxt "#30306"
 msgid "Some subtitles display music and lyrics between hashtags.\n"
 "If this filter is enabled an attempt is made to remove this."
+msgstr ""
+
+msgctxt "#30307"
+msgid "When enabled subtitles will, whenever possible, automatically be translated when video is paused.\n"
+"User will be prompted before translation."
 msgstr ""
 
 msgctxt "#30331"

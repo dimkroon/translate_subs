@@ -1,3 +1,7 @@
+v 0.3.2-alpha
+- Looks for subtitles on the same location of the video being played
+- Allows to run when playback is paused
+
 v 0.3.1-alpha
 - Fix: Addon failed to install with message "Invalid add-on structure".
 
