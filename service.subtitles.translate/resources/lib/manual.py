@@ -84,6 +84,11 @@ def use_preferred_language(file_path):
 
 
 def search(args, handle):
+    """Search existing subtitles files that match the current video file.
+
+    Look for subtitles in the same folder as the video file and in the
+    custom folder defined in Settings -> Player -> Subtitles -> Download Services.
+    """
     video_folder = xbmc.getInfoLabel('Player.Folderpath')
     subs_folder = get_system_setting('subtitles.custompath')
     video_file = xbmc.getInfoLabel('Player.Filename')
@@ -176,5 +181,4 @@ def translate(path, orig_lang, dest_lang, type, handle):
     )
     li = xbmcgui.ListItem(label=translated_file)
     xbmcplugin.addDirectoryItem(handle, translated_file, li, isFolder=False)
-    xbmc.Player().getPlayingItem().setProperty('subtitle.translate.byaddon', translated_file)
     return True
