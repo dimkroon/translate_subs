@@ -1,0 +1,2577 @@
+1
+00:00:02,000 --> 00:00:03,200
+<b>{\an2}OK, I've fed you.</b>
+ 
+2
+00:00:03,240 --> 00:00:06,000
+<b>{\an2}Now, who's ready</b>
+<b>to watch some basketball?</b>
+ 
+3
+00:00:06,040 --> 00:00:07,440
+<b>{\an2}Why am I looking at you?</b>
+ 
+4
+00:00:07,480 --> 00:00:09,240
+<b>{\an2}I don't know. Unlike you,</b>
+<b>I don't need a reason</b>
+ 
+5
+00:00:09,280 --> 00:00:11,000
+<b>{\an2}to watch a bunch of guys</b>
+<b>run around in shorts.</b>
+ 
+6
+00:00:11,040 --> 00:00:13,280
+<b>{\an2}Don't ruin this for me like</b>
+<b>you did with Olympic diving.</b>
+ 
+7
+00:00:13,320 --> 00:00:15,000
+<b>{\an2}Cam? Recording it.</b>
+ 
+8
+00:00:15,040 --> 00:00:17,200
+<b>{\an2}Mitch and I are taking</b>
+<b>Alex and Manny to an art exhibit.</b>
+ 
+9
+00:00:17,240 --> 00:00:19,240
+<b>{\an2}But, of course,</b>
+<b>everybody is welcome to join.</b>
+ 
+10
+00:00:19,280 --> 00:00:21,880
+<b>{\an2}It's a retrospective on</b>
+<b>post-war abstract expressionism.</b>
+ 
+11
+00:00:21,920 --> 00:00:24,080
+<b>{\an2}Wait, for school? No, for life.</b>
+ 
+12
+00:00:24,120 --> 00:00:25,240
+<b>{\an2}Oh, thank God.</b>
+ 
+13
+00:00:25,280 --> 00:00:27,200
+<b>{\an2}I don't even know who</b>
+<b>we fought in the post-war.</b>
+ 
+14
+00:00:27,240 --> 00:00:29,160
+<b>{\an2}Told you one car was enough.</b>
+ 
+15
+00:00:29,200 --> 00:00:31,160
+<b>{\an2}Looks like it's just the two</b>
+<b>amigos. Haley?</b>
+ 
+16
+00:00:31,200 --> 00:00:34,040
+<b>{\an2}Oh, sorry to brunch and bail,</b>
+<b>Grandpa, but I've got a date.</b>
+ 
+17
+00:00:34,080 --> 00:00:36,640
+<b>{\an2}Uh, with whom?</b>
+<b>A gorgeous guy I met at school.</b>
+ 
+18
+00:00:36,680 --> 00:00:38,280
+<b>{\an2}Ooh, goes there or cleans there?</b>
+ 
+19
+00:00:38,320 --> 00:00:40,040
+<b>{\an2}Mom! Answer the question.</b>
+ 
+20
+00:00:40,080 --> 00:00:41,080
+<b>{\an2}So everyone's leaving?</b>
+ 
+21
+00:00:41,120 --> 00:00:44,120
+<b>{\an2}No, I-I'm not. I wish I had known</b>
+<b>this before I served the good bacon.</b>
+ 
+22
+00:00:44,160 --> 00:00:45,840
+<b>{\an2}You did not serve the good bacon.</b>
+ 
+23
+00:00:45,880 --> 00:00:47,440
+<b>{\an2}Shh! Don't you have a</b>
+<b>tiny dress to buy?</b>
+ 
+24
+00:00:47,480 --> 00:00:48,640
+<b>{\an1}SHE SQUEALS</b>
+ 
+25
+00:00:48,680 --> 00:00:50,480
+<b>{\an2}Yes, we do!</b>
+ 
+26
+00:00:50,520 --> 00:00:53,400
+<b>{\an2}We asked Gloria to take Lily to</b>
+<b>pick out her flower girl dress.</b>
+ 
+27
+00:00:53,440 --> 00:00:56,120
+<b>{\an2}Yeah, we're clearly not following</b>
+<b>every wedding tradition,</b>
+ 
+28
+00:00:56,160 --> 00:00:57,840
+<b>{\an2}but there will damn sure be one</b>
+ 
+29
+00:00:57,880 --> 00:00:59,760
+<b>{\an2}dress the grooms don't</b>
+<b>see until the big day.</b>
+ 
+30
+00:00:59,800 --> 00:01:01,240
+<b>{\an2}And we also asked Claire to go</b>
+ 
+31
+00:01:01,280 --> 00:01:03,400
+<b>{\an2}because we thought</b>
+<b>her sensible style</b>
+ 
+32
+00:01:03,440 --> 00:01:05,240
+<b>{\an2}nicely complements Gloria's flair.</b>
+ 
+33
+00:01:05,280 --> 00:01:07,560
+<b>{\an2}That way Lily doesn't</b>
+<b>end up looking too...</b>
+ 
+34
+00:01:07,600 --> 00:01:09,040
+<b>{\an1}HE HUMS LA CUCARACHA</b>
+ 
+35
+00:01:09,080 --> 00:01:12,120
+<b>{\an2}..or too wah-waaah.</b>
+ 
+36
+00:01:26,520 --> 00:01:27,640
+<b>{\an2}There's my boy.</b>
+ 
+37
+00:01:27,680 --> 00:01:29,040
+<b>{\an2}I know you're talking to Joe,</b>
+ 
+38
+00:01:29,080 --> 00:01:31,080
+<b>{\an2}but that still feels</b>
+<b>really good to hear.</b>
+ 
+39
+00:01:31,120 --> 00:01:33,000
+<b>{\an2}OK, clocking out.</b>
+ 
+40
+00:01:33,040 --> 00:01:34,240
+<b>{\an2}Ch-ch-boop!</b>
+ 
+41
+00:01:34,280 --> 00:01:36,840
+<b>{\an2}You know, Andy, if you want,</b>
+<b>you can stay and watch the game.</b>
+ 
+42
+00:01:36,880 --> 00:01:39,120
+<b>{\an2}Otherwise, I'll just</b>
+<b>be here by myself.</b>
+ 
+43
+00:01:39,160 --> 00:01:40,520
+<b>{\an2}I'm right here.</b>
+ 
+44
+00:01:40,560 --> 00:01:41,840
+<b>{\an2}I'd love to, Mr P,</b>
+ 
+45
+00:01:41,880 --> 00:01:44,200
+<b>{\an2}but I got to come up</b>
+<b>with an anniversary gift</b>
+ 
+46
+00:01:44,240 --> 00:01:45,360
+<b>{\an2}for my girlfriend.</b>
+ 
+47
+00:01:45,400 --> 00:01:47,280
+<b>{\an2}I make her something</b>
+<b>different every year,</b>
+ 
+48
+00:01:47,320 --> 00:01:48,760
+<b>{\an2}like a scrapbook or a nice scarf.</b>
+ 
+49
+00:01:48,800 --> 00:01:50,120
+<b>{\an2}This year, I was thinking</b>
+ 
+50
+00:01:50,160 --> 00:01:51,920
+<b>{\an2}maybe I could bake her</b>
+<b>some banana bread.</b>
+ 
+51
+00:01:51,960 --> 00:01:54,360
+<b>{\an2}Ohh, I am the king of banana bread.</b>
+ 
+52
+00:01:54,400 --> 00:01:55,560
+<b>{\an2}You know my secret?</b>
+ 
+53
+00:01:55,600 --> 00:01:58,160
+<b>{\an2}No nuts. Not such a secret.</b>
+ 
+54
+00:01:58,200 --> 00:02:00,240
+<b>{\an2}I used to make stuff</b>
+<b>for Claire all the time.</b>
+ 
+55
+00:02:00,280 --> 00:02:02,160
+<b>{\an2}Pretty sure my artistry</b>
+<b>is what locked her down.</b>
+ 
+56
+00:02:02,200 --> 00:02:03,600
+<b>{\an2}I got to make this year's special.</b>
+ 
+57
+00:02:03,640 --> 00:02:04,600
+<b>{\an2}With her in the coastguard,</b>
+ 
+58
+00:02:04,640 --> 00:02:06,040
+<b>{\an2}I, like, hardly ever get to see her.</b>
+ 
+59
+00:02:06,080 --> 00:02:08,280
+<b>{\an2}Well, this is just off the dome,</b>
+ 
+60
+00:02:08,320 --> 00:02:10,480
+<b>{\an2}but, uh, maybe send her a fun video?</b>
+ 
+61
+00:02:10,520 --> 00:02:13,720
+<b>{\an2}Ooh, she does love Rock of Ages.</b>
+ 
+62
+00:02:13,760 --> 00:02:15,160
+<b>{\an2}Or you could make your own video.</b>
+ 
+63
+00:02:15,200 --> 00:02:18,080
+<b>{\an2}Something romantic and personal</b>
+<b>with real production value.</b>
+ 
+64
+00:02:18,120 --> 00:02:20,080
+<b>{\an2}I got some pretty choice</b>
+<b>equipment back at the house.</b>
+ 
+65
+00:02:20,120 --> 00:02:22,240
+<b>{\an2}I'd be happy to help.</b>
+<b>Would you really? Yeah!</b>
+ 
+66
+00:02:22,280 --> 00:02:23,600
+<b>{\an2}Yes!</b>
+ 
+67
+00:02:23,640 --> 00:02:26,040
+<b>{\an2}Great! Let's do it! Luke, buddy,</b>
+<b>I'll pick you up later.</b>
+ 
+68
+00:02:26,080 --> 00:02:27,480
+<b>{\an2}We can go check out some wheels.</b>
+ 
+69
+00:02:27,520 --> 00:02:30,440
+<b>{\an2}I thought you were going to</b>
+<b>stay and watch the game.</b>
+ 
+70
+00:02:30,480 --> 00:02:32,000
+<b>{\an2}I knew you loved me.</b>
+ 
+71
+00:02:32,040 --> 00:02:33,520
+<b>{\an2}Get out!</b>
+ 
+72
+00:02:33,560 --> 00:02:34,720
+<b>{\an2}Come on.</b>
+ 
+73
+00:02:34,760 --> 00:02:36,840
+<b>{\an2}"Wheels"? What, are you</b>
+<b>looking at cars already?</b>
+ 
+74
+00:02:36,880 --> 00:02:38,000
+<b>{\an2}Pottery wheels.</b>
+ 
+75
+00:02:38,040 --> 00:02:39,400
+<b>{\an2}I have to pick a spring elective,</b>
+ 
+76
+00:02:39,440 --> 00:02:41,000
+<b>{\an2}and dad thinks I</b>
+<b>should take ceramics</b>
+ 
+77
+00:02:41,040 --> 00:02:42,240
+<b>{\an2}cos lots of girls do.</b>
+ 
+78
+00:02:42,280 --> 00:02:43,760
+<b>{\an2}You know what a lot</b>
+<b>of girls don't do?</b>
+ 
+79
+00:02:43,800 --> 00:02:45,000
+<b>{\an2}Guys who take ceramics.</b>
+ 
+80
+00:02:45,040 --> 00:02:46,840
+<b>{\an2}You got a wood shop at your school?</b>
+ 
+81
+00:02:46,880 --> 00:02:48,080
+<b>{\an2}I can't really build stuff.</b>
+ 
+82
+00:02:48,120 --> 00:02:50,000
+<b>{\an2}I mostly take apart and apologise.</b>
+ 
+83
+00:02:50,040 --> 00:02:51,520
+<b>{\an2}You got to know</b>
+<b>how to build things.</b>
+ 
+84
+00:02:51,560 --> 00:02:53,320
+<b>{\an2}I can build suspense. How?</b>
+ 
+85
+00:02:53,360 --> 00:02:54,800
+<b>{\an2}Well, get this.</b>
+ 
+86
+00:02:57,360 --> 00:02:58,440
+<b>{\an2}Huh?</b>
+ 
+87
+00:02:58,480 --> 00:02:59,600
+<b>{\an2}Garage. Now.</b>
+ 
+88
+00:03:01,880 --> 00:03:03,240
+<b>{\an3}What's a bridal store?</b>
+ 
+89
+00:03:03,280 --> 00:03:05,400
+<b>{\an2}It's a place with</b>
+<b>the most wonderful dresses</b>
+ 
+90
+00:03:05,440 --> 00:03:06,920
+<b>{\an2}that you have ever seen.</b>
+ 
+91
+00:03:06,960 --> 00:03:08,200
+<b>{\an2}We're going to get</b>
+<b>you the perfect one</b>
+ 
+92
+00:03:08,240 --> 00:03:11,000
+<b>{\an2}even if it takes us all day.</b>
+ 
+93
+00:03:11,040 --> 00:03:12,520
+<b>{\an2}Found it.</b>
+ 
+94
+00:03:12,560 --> 00:03:14,200
+<b>{\an2}Oh, no, sweetie. That's a costume.</b>
+ 
+95
+00:03:14,240 --> 00:03:16,240
+<b>{\an2}You can't wear a</b>
+<b>costume to a wedding.</b>
+ 
+96
+00:03:16,280 --> 00:03:18,040
+<b>{\an2}Why not? Belle's a princess.</b>
+ 
+97
+00:03:18,080 --> 00:03:19,400
+<b>{\an2}She faced the beast.</b>
+ 
+98
+00:03:19,440 --> 00:03:21,480
+<b>{\an2}She stood up to the townspeople.</b>
+ 
+99
+00:03:21,520 --> 00:03:22,560
+<b>{\an2}What have YOU done?</b>
+ 
+100
+00:03:22,600 --> 00:03:27,000
+<b>{\an2}I...got us into that tiny,</b>
+<b>little parking spot.</b>
+ 
+101
+00:03:27,040 --> 00:03:29,640
+<b>{\an2}Princess dresses are not</b>
+<b>the only pretty dresses.</b>
+ 
+102
+00:03:29,680 --> 00:03:32,360
+<b>{\an2}I want to be a princess!</b>
+<b>I want to be a princess!</b>
+ 
+103
+00:03:32,400 --> 00:03:33,520
+<b>{\an2}Stop that right now.</b>
+ 
+104
+00:03:33,560 --> 00:03:35,880
+<b>{\an2}Your dads want you to have</b>
+<b>a flower girl dress,</b>
+ 
+105
+00:03:35,920 --> 00:03:37,640
+<b>{\an2}and that's what</b>
+<b>we're going to get you,</b>
+ 
+106
+00:03:37,680 --> 00:03:38,760
+<b>{\an2}so march.</b>
+ 
+107
+00:03:40,040 --> 00:03:43,720
+<b>{\an2}It was marked "compact"</b>
+<b>and we're driving a minivan, so...</b>
+ 
+108
+00:03:43,760 --> 00:03:45,720
+<b>{\an2}Hey, thanks for inviting us to this.</b>
+ 
+109
+00:03:45,760 --> 00:03:47,440
+<b>{\an2}Oh, no problem. You know,</b>
+<b>I'm surprised that this</b>
+ 
+110
+00:03:47,480 --> 00:03:50,080
+<b>{\an2}particular foursome doesn't hang out</b>
+<b>more often, considering...</b>
+ 
+111
+00:03:50,120 --> 00:03:51,520
+<b>{\an2}We're the cultured ones</b>
+<b>in the family?</b>
+ 
+112
+00:03:51,560 --> 00:03:52,640
+<b>{\an2}I wouldn't say that.</b>
+ 
+113
+00:03:52,680 --> 00:03:53,880
+<b>{\an2}Outside this group.</b>
+ 
+114
+00:03:54,880 --> 00:03:56,080
+<b>{\an2}Did you know your father</b>
+ 
+115
+00:03:56,120 --> 00:03:57,840
+<b>{\an2}actually goes to the</b>
+<b>grocery store to buy books?</b>
+ 
+116
+00:03:57,880 --> 00:03:59,080
+<b>{\an2}I did know that, yeah.</b>
+ 
+117
+00:03:59,120 --> 00:04:01,680
+<b>{\an2}I also know that the best way to get</b>
+<b>my sister to fall asleep is to...</b>
+ 
+118
+00:04:01,720 --> 00:04:03,120
+<b>{\an2}Show her a movie with subtitles.</b>
+ 
+119
+00:04:03,160 --> 00:04:04,160
+<b>{\an2}Bonne nuit, mama.</b>
+ 
+120
+00:04:04,200 --> 00:04:05,520
+<b>{\an2}We should be nice and grateful</b>
+ 
+121
+00:04:05,560 --> 00:04:06,960
+<b>{\an2}that we have this day</b>
+<b>to spend together</b>
+ 
+122
+00:04:07,000 --> 00:04:08,400
+<b>{\an2}in our own private salon.</b>
+ 
+123
+00:04:08,440 --> 00:04:09,640
+<b>{\an2}Don't tell my mom that.</b>
+ 
+124
+00:04:09,680 --> 00:04:11,840
+<b>{\an2}She'll show up and ask</b>
+<b>to get her roots done.</b>
+ 
+125
+00:04:11,880 --> 00:04:13,840
+<b>{\an2}Manny! That's true, though!</b>
+<b>That's true.</b>
+ 
+126
+00:04:16,120 --> 00:04:17,240
+<b>{\an2}Thanks, Manny.</b>
+ 
+127
+00:04:17,280 --> 00:04:18,840
+<b>{\an2}I am so excited for this exhibit.</b>
+ 
+128
+00:04:18,880 --> 00:04:20,760
+<b>{\an2}I'm such an admirer of Kandinsky.</b>
+ 
+129
+00:04:20,800 --> 00:04:22,000
+<b>{\an2}You know, he was credited</b>
+ 
+130
+00:04:22,040 --> 00:04:24,600
+<b>{\an2}with painting the first</b>
+<b>truly abstract work.</b>
+ 
+131
+00:04:24,640 --> 00:04:25,840
+<b>{\an2}Is that so? Mm-hm.</b>
+ 
+132
+00:04:25,880 --> 00:04:27,240
+<b>{\an2}To be honest, I was a little nervous</b>
+ 
+133
+00:04:27,280 --> 00:04:29,800
+<b>{\an2}about holding my own</b>
+<b>with those three, so...</b>
+ 
+134
+00:04:29,840 --> 00:04:31,800
+<b>{\an2}..I did a little</b>
+<b>boning-up on Kandinsky.</b>
+ 
+135
+00:04:31,840 --> 00:04:34,200
+<b>{\an2}Figured it couldn't hurt to have</b>
+<b>a few facts in my pocket.</b>
+ 
+136
+00:04:34,240 --> 00:04:37,480
+<b>{\an2}My backup plan was to touch</b>
+<b>a painting and get thrown out.</b>
+ 
+137
+00:04:37,520 --> 00:04:40,600
+<b>{\an2}Yes, hi. Excuse me, can you tell us</b>
+<b>where the Kandinsky exhibit is?</b>
+ 
+138
+00:04:40,640 --> 00:04:42,120
+<b>{\an2}You know, Wassily Kandinsky?</b>
+ 
+139
+00:04:42,160 --> 00:04:43,960
+<b>{\an2}Born in Moscow,</b>
+<b>son of a tea merchant?</b>
+ 
+140
+00:04:44,000 --> 00:04:46,760
+<b>{\an2}I'm sorry. That exhibit was</b>
+<b>temporary. It's closed.</b>
+ 
+141
+00:04:46,800 --> 00:04:48,600
+<b>{\an2}What? No.</b>
+ 
+142
+00:04:48,640 --> 00:04:50,600
+<b>{\an2}Oh, I love this Matisse.</b>
+ 
+143
+00:04:50,640 --> 00:04:51,960
+<b>{\an2}You know this is one</b>
+<b>of his final works?</b>
+ 
+144
+00:04:52,000 --> 00:04:54,120
+<b>{\an2}His failing health led to his</b>
+<b>exploration of paper cut-outs.</b>
+ 
+145
+00:04:54,160 --> 00:04:56,520
+<b>{\an2}Ah, yes. I believe he called it</b>
+<b>painting with scissors.</b>
+ 
+146
+00:04:56,560 --> 00:04:58,280
+<b>{\an2}Mm-hm. And he was also</b>
+<b>a contemporary of Picasso.</b>
+ 
+147
+00:04:58,320 --> 00:05:00,240
+<b>{\an2}You can definitely see how</b>
+<b>they influenced each other,</b>
+ 
+148
+00:05:00,280 --> 00:05:01,640
+<b>{\an2}right, Cam? Huh?</b>
+ 
+149
+00:05:01,680 --> 00:05:05,400
+<b>{\an2}Uh, well, you know, it really</b>
+<b>reminds me of, uh, Kandinsky.</b>
+ 
+150
+00:05:05,440 --> 00:05:06,560
+<b>{\an2}How so?</b>
+ 
+151
+00:05:06,600 --> 00:05:08,600
+<b>{\an2}Well, not so much in look,</b>
+<b>more in texture.</b>
+ 
+152
+00:05:08,640 --> 00:05:10,240
+<b>{\an2}Cam! No, please, sir,</b>
+<b>don't touch the art.</b>
+ 
+153
+00:05:10,280 --> 00:05:11,600
+<b>{\an2}I'm sorry. I'll leave the premises.</b>
+ 
+154
+00:05:11,640 --> 00:05:14,040
+<b>{\an2}No, it's...it's fine.</b>
+<b>Just take a few steps back.</b>
+ 
+155
+00:05:16,160 --> 00:05:19,720
+<b>{\an2}Beth, I would swim</b>
+<b>the deepest, sharkiest oceans</b>
+ 
+156
+00:05:19,760 --> 00:05:21,080
+<b>{\an2}to be with you.</b>
+ 
+157
+00:05:21,120 --> 00:05:22,200
+<b>{\an2}What are you doing?</b>
+ 
+158
+00:05:22,240 --> 00:05:23,240
+<b>{\an2}Cut!</b>
+ 
+159
+00:05:23,280 --> 00:05:25,200
+<b>{\an2}Well, now we have a blooper reel.</b>
+ 
+160
+00:05:25,240 --> 00:05:27,400
+<b>{\an2}We're making a video love letter</b>
+<b>for Andy's girlfriend.</b>
+ 
+161
+00:05:27,440 --> 00:05:30,080
+<b>{\an2}Your dad uses his computer</b>
+<b>to put in cool backgrounds</b>
+ 
+162
+00:05:30,120 --> 00:05:32,600
+<b>{\an2}while I act out all the things</b>
+<b>that I would do to be with her,</b>
+ 
+163
+00:05:32,640 --> 00:05:35,120
+<b>{\an2}like swim an ocean</b>
+<b>or climb a mountain.</b>
+ 
+164
+00:05:35,160 --> 00:05:37,160
+<b>{\an2}Ooh, how about you buy a plane</b>
+<b>ticket and visit her</b>
+ 
+165
+00:05:37,200 --> 00:05:38,200
+<b>{\an2}like a normal person?</b>
+ 
+166
+00:05:38,240 --> 00:05:40,080
+<b>{\an2}I would, but the coastguard</b>
+<b>keeps her really busy.</b>
+ 
+167
+00:05:40,120 --> 00:05:42,040
+<b>{\an2}Eyes. Does she like it?</b>
+ 
+168
+00:05:42,080 --> 00:05:44,600
+<b>{\an2}She's probably so lonely with</b>
+<b>only two other women to talk to</b>
+ 
+169
+00:05:44,640 --> 00:05:46,160
+<b>{\an2}in her whole 40-person unit.</b>
+ 
+170
+00:05:46,200 --> 00:05:47,880
+<b>{\an2}So you're saying it's</b>
+<b>just your girlfriend</b>
+ 
+171
+00:05:47,920 --> 00:05:49,720
+<b>{\an2}and 36 super-in-shape dudes?</b>
+ 
+172
+00:05:49,760 --> 00:05:51,360
+<b>{\an2}37. And it's not what you think.</b>
+ 
+173
+00:05:51,400 --> 00:05:53,480
+<b>{\an2}The coastguard seriously</b>
+<b>frowns on fraternising.</b>
+ 
+174
+00:05:53,520 --> 00:05:54,800
+<b>{\an2}It's forbidden.</b>
+ 
+175
+00:05:54,840 --> 00:05:56,240
+<b>{\an2}Oh, that doesn't make it hot!</b>
+ 
+176
+00:05:56,280 --> 00:05:58,120
+<b>{\an2}Oh, I got some on your face.</b>
+<b>You're going to shine.</b>
+ 
+177
+00:05:58,160 --> 00:05:59,840
+<b>{\an2}I'll go get some of my...</b>
+<b>Claire's powder.</b>
+ 
+178
+00:05:59,880 --> 00:06:01,840
+<b>{\an2}My Claire. She's my wife.</b>
+ 
+179
+00:06:03,240 --> 00:06:04,360
+<b>{\an2}I thought you had a date to go on.</b>
+ 
+180
+00:06:04,400 --> 00:06:05,480
+<b>{\an2}I do.</b>
+ 
+181
+00:06:05,520 --> 00:06:07,160
+<b>{\an2}When's he going to get here?</b>
+ 
+182
+00:06:07,200 --> 00:06:08,480
+<b>{\an2}Whenever he does.</b>
+ 
+183
+00:06:08,520 --> 00:06:10,480
+<b>{\an2}He's just, like,</b>
+<b>a few minutes late.</b>
+ 
+184
+00:06:10,520 --> 00:06:12,120
+<b>{\an2}I'm sorry.</b>
+ 
+185
+00:06:12,160 --> 00:06:13,880
+<b>{\an2}That is so rude.</b>
+ 
+186
+00:06:13,920 --> 00:06:16,240
+<b>{\an2}A real man would be more</b>
+<b>considerate of your time.</b>
+ 
+187
+00:06:16,280 --> 00:06:17,320
+<b>{\an2}You're right.</b>
+ 
+188
+00:06:17,360 --> 00:06:18,680
+<b>{\an2}That's why every year</b>
+ 
+189
+00:06:18,720 --> 00:06:21,200
+<b>{\an2}People magazine names the</b>
+<b>consideratest man alive.</b>
+ 
+190
+00:06:21,240 --> 00:06:22,360
+<b>{\an1}HE CHUCKLES</b>
+ 
+191
+00:06:22,400 --> 00:06:24,400
+<b>{\an2}Oh, man, you can make</b>
+<b>fun of me all you want,</b>
+ 
+192
+00:06:24,440 --> 00:06:25,560
+<b>{\an2}but when you grow up,</b>
+ 
+193
+00:06:25,600 --> 00:06:27,440
+<b>{\an2}you'll see what qualities</b>
+<b>make up a real man.</b>
+ 
+194
+00:06:27,480 --> 00:06:28,600
+<b>{\an2}Someone say "make-up"?</b>
+ 
+195
+00:06:28,640 --> 00:06:30,040
+<b>{\an2}I did.</b>
+ 
+196
+00:06:30,080 --> 00:06:31,280
+<b>{\an2}All right, here we go.</b>
+ 
+197
+00:06:31,320 --> 00:06:32,640
+<b>{\an2}Oh, yeah. Much better.</b>
+ 
+198
+00:06:32,680 --> 00:06:35,080
+<b>{\an2}You know what? I think</b>
+<b>I'm going to shadow down here.</b>
+ 
+199
+00:06:36,520 --> 00:06:38,040
+<b>{\an2}Gloria, you are going</b>
+<b>to love this one.</b>
+ 
+200
+00:06:38,080 --> 00:06:41,280
+<b>{\an2}I think we have finally</b>
+<b>found the perfect dress.</b>
+ 
+201
+00:06:41,320 --> 00:06:42,320
+<b>{\an2}Ta-da.</b>
+ 
+202
+00:06:43,760 --> 00:06:45,880
+<b>{\an2}It's nice, but I don't like the bow.</b>
+ 
+203
+00:06:45,920 --> 00:06:47,040
+<b>{\an2}Let's try more.</b>
+ 
+204
+00:06:47,080 --> 00:06:48,320
+<b>{\an2}We've tried on six dresses already.</b>
+ 
+205
+00:06:48,360 --> 00:06:49,920
+<b>{\an2}She's fine with this, right, Lily?</b>
+ 
+206
+00:06:49,960 --> 00:06:52,560
+<b>{\an2}I don't care. See? She loves it.</b>
+<b>Done.</b>
+ 
+207
+00:06:52,600 --> 00:06:54,080
+<b>{\an2}Go try the lace one.</b>
+ 
+208
+00:06:54,120 --> 00:06:55,480
+<b>{\an2}Seriously?</b>
+ 
+209
+00:06:55,520 --> 00:06:57,520
+<b>{\an2}This is endless.</b>
+ 
+210
+00:06:57,560 --> 00:06:59,480
+<b>{\an2}Why are you dragging this out?</b>
+ 
+211
+00:06:59,520 --> 00:07:01,520
+<b>{\an2}Cos we haven't found</b>
+<b>the right dress.</b>
+ 
+212
+00:07:01,560 --> 00:07:03,520
+<b>{\an2}You have got to be a</b>
+<b>better shopper than this.</b>
+ 
+213
+00:07:03,560 --> 00:07:05,360
+<b>{\an2}I have seen you buy three</b>
+<b>outfits while driving a car.</b>
+ 
+214
+00:07:05,400 --> 00:07:07,120
+<b>{\an2}Come on. It's fun.</b>
+ 
+215
+00:07:07,160 --> 00:07:08,440
+<b>{\an2}I don't have any daughters.</b>
+ 
+216
+00:07:08,480 --> 00:07:12,120
+<b>{\an2}All I get to buy is tuxedos</b>
+<b>and they all look the same.</b>
+ 
+217
+00:07:12,160 --> 00:07:14,840
+<b>{\an2}But don't tell Manny that because I</b>
+<b>don't want to hear another lecture.</b>
+ 
+218
+00:07:14,880 --> 00:07:15,920
+<b>{\an2}It's funny.</b>
+ 
+219
+00:07:15,960 --> 00:07:18,920
+<b>{\an2}I have never cared about</b>
+<b>any of this stuff.</b>
+ 
+220
+00:07:18,960 --> 00:07:21,040
+<b>{\an2}I didn't even wear a wedding</b>
+<b>dress when I married Phil.</b>
+ 
+221
+00:07:21,080 --> 00:07:22,080
+<b>{\an2}Never even tried one on.</b>
+ 
+222
+00:07:22,120 --> 00:07:23,520
+<b>{\an1}SHE GASPS</b>
+ 
+223
+00:07:23,560 --> 00:07:26,920
+<b>{\an2}Easy! That is the reaction for when</b>
+<b>there's a man behind me with a gun.</b>
+ 
+224
+00:07:26,960 --> 00:07:28,720
+<b>{\an2}All I said is I don't care</b>
+<b>about wedding dresses.</b>
+ 
+225
+00:07:28,760 --> 00:07:30,880
+<b>{\an2}Because you've never been in one.</b>
+ 
+226
+00:07:30,920 --> 00:07:34,120
+<b>{\an2}I'm going to pick some for you to</b>
+<b>try. OK, no, no. No need. Mm-mm.</b>
+ 
+227
+00:07:34,160 --> 00:07:35,600
+<b>{\an2}Come on, you'll feel beautiful.</b>
+ 
+228
+00:07:35,640 --> 00:07:38,400
+<b>{\an2}Then you can go back</b>
+<b>to your...boy clothes.</b>
+ 
+229
+00:07:38,440 --> 00:07:39,880
+<b>{\an2}Hey!</b>
+ 
+230
+00:07:39,920 --> 00:07:41,760
+<b>{\an2}I bought this shirt for Luke</b>
+<b>and I couldn't return it.</b>
+ 
+231
+00:07:41,800 --> 00:07:43,600
+<b>{\an2}And I don't have all day</b>
+<b>to try on dresses.</b>
+ 
+232
+00:07:43,640 --> 00:07:45,120
+<b>{\an2}Oh, and I do?</b>
+ 
+233
+00:07:45,160 --> 00:07:46,440
+<b>{\an2}It'll be fun for me.</b>
+ 
+234
+00:07:46,480 --> 00:07:47,760
+<b>{\an2}You're my stepdaughter.</b>
+ 
+235
+00:07:47,800 --> 00:07:49,200
+<b>{\an2}I'm older than you.</b>
+ 
+236
+00:07:49,240 --> 00:07:51,360
+<b>{\an2}You see? It's already fun.</b>
+ 
+237
+00:07:52,640 --> 00:07:55,520
+<b>{\an2}We're going to start by</b>
+<b>building a simple tool box.</b>
+ 
+238
+00:07:55,560 --> 00:07:57,560
+<b>{\an2}First, I'm going to show you</b>
+<b>how to cut the wood.</b>
+ 
+239
+00:07:57,600 --> 00:07:59,640
+<b>{\an2}I know you're a little</b>
+<b>young for this, Goober.</b>
+ 
+240
+00:07:59,680 --> 00:08:00,720
+<b>{\an2}Try to soak it all up.</b>
+ 
+241
+00:08:00,760 --> 00:08:02,400
+<b>{\an2}What's this thing? A table vice.</b>
+ 
+242
+00:08:02,440 --> 00:08:04,640
+<b>{\an2}# Table vice, ta... #</b>
+ 
+243
+00:08:04,680 --> 00:08:05,840
+<b>{\an2}No.</b>
+ 
+244
+00:08:05,880 --> 00:08:07,440
+<b>{\an2}I already went through this</b>
+<b>with Mitchell.</b>
+ 
+245
+00:08:07,480 --> 00:08:09,000
+<b>{\an2}That's what we're here</b>
+<b>to prevent.</b>
+ 
+246
+00:08:09,040 --> 00:08:11,000
+<b>{\an2}Didn't your dad teach you</b>
+<b>any of this stuff?</b>
+ 
+247
+00:08:11,040 --> 00:08:13,080
+<b>{\an2}He says the only tool you need</b>
+<b>is a sense of humour.</b>
+ 
+248
+00:08:13,120 --> 00:08:15,920
+<b>{\an2}Cos who needs the jaws of life</b>
+<b>if you have a good knock-knock joke?</b>
+ 
+249
+00:08:15,960 --> 00:08:18,120
+<b>{\an2}Luke, grab the goggles</b>
+<b>over there, please.</b>
+ 
+250
+00:08:19,840 --> 00:08:21,600
+<b>{\an2}And try to pay attention.</b>
+ 
+251
+00:08:21,640 --> 00:08:24,160
+<b>{\an2}We measure twice and we cut once.</b>
+ 
+252
+00:08:24,200 --> 00:08:26,320
+<b>{\an2}Hey, Grandpa, can you bench 180lb?</b>
+ 
+253
+00:08:26,360 --> 00:08:27,840
+<b>{\an2}I just said pay attention.</b>
+ 
+254
+00:08:27,880 --> 00:08:29,840
+<b>{\an2}And that's actually</b>
+<b>205 with the bar.</b>
+ 
+255
+00:08:29,880 --> 00:08:31,680
+<b>{\an2}I'll lift that for you later.</b>
+ 
+256
+00:08:33,720 --> 00:08:35,520
+<b>{\an2}I can see you're not</b>
+<b>going to let up about that.</b>
+ 
+257
+00:08:35,560 --> 00:08:37,440
+<b>{\an2}Eh, I'm OK. Spot me.</b>
+ 
+258
+00:08:37,480 --> 00:08:41,360
+<b>{\an2}Now, if this thing goes south,</b>
+<b>I want you to call 911</b>
+ 
+259
+00:08:41,400 --> 00:08:44,120
+<b>{\an2}and tell Joe his old man</b>
+<b>died as he lived -</b>
+ 
+260
+00:08:44,160 --> 00:08:45,560
+<b>{\an2}saving a trainload of people.</b>
+ 
+261
+00:08:45,600 --> 00:08:48,480
+<b>{\an1}HE GRUNTS</b>
+ 
+262
+00:08:52,520 --> 00:08:54,560
+<b>{\an2}All right. That's enough for now.</b>
+ 
+263
+00:08:54,600 --> 00:08:56,320
+<b>{\an2}Whoa.</b>
+ 
+264
+00:08:56,360 --> 00:08:58,400
+<b>{\an2}Tell me everything</b>
+<b>you know about women.</b>
+ 
+265
+00:09:00,080 --> 00:09:03,400
+<b>{\an1}THEY LAUGH</b>
+ 
+266
+00:09:03,440 --> 00:09:04,480
+<b>{\an2}Yeah, that last thing.</b>
+ 
+267
+00:09:04,520 --> 00:09:06,280
+<b>{\an2}Funny. Funny. Funny.</b>
+ 
+268
+00:09:06,320 --> 00:09:08,280
+<b>{\an2}I must be a little behind you guys.</b>
+ 
+269
+00:09:08,320 --> 00:09:09,400
+<b>{\an2}His words.</b>
+ 
+270
+00:09:11,240 --> 00:09:12,920
+<b>{\an2}Do you feel what's happening here?</b>
+ 
+271
+00:09:12,960 --> 00:09:14,320
+<b>{\an2}I feel pinching. No.</b>
+ 
+272
+00:09:14,360 --> 00:09:16,400
+<b>{\an2}I'm the weak link</b>
+<b>of this super group.</b>
+ 
+273
+00:09:16,440 --> 00:09:17,680
+<b>{\an2}They know it and I know it.</b>
+ 
+274
+00:09:17,720 --> 00:09:19,560
+<b>{\an2}It's fine when we're all</b>
+<b>in a big group,</b>
+ 
+275
+00:09:19,600 --> 00:09:21,520
+<b>{\an2}but once we're separated</b>
+<b>from the herd,</b>
+ 
+276
+00:09:21,560 --> 00:09:23,480
+<b>{\an2}the hooves come out.</b>
+<b>Don't you mean "claws"?</b>
+ 
+277
+00:09:23,520 --> 00:09:26,440
+<b>{\an2}Clawed animals don't</b>
+<b>travel in herds, Mitchell.</b>
+ 
+278
+00:09:26,480 --> 00:09:28,920
+<b>{\an2}Packs, flocks, and prides.</b>
+<b>Why can't we be on a farm?</b>
+ 
+279
+00:09:28,960 --> 00:09:31,080
+<b>{\an2}I'd make you all</b>
+<b>look like such idiots.</b>
+ 
+280
+00:09:31,120 --> 00:09:32,240
+<b>{\an2}You know what?</b>
+ 
+281
+00:09:32,280 --> 00:09:33,720
+<b>{\an2}I'm just going to wait outside.</b>
+ 
+282
+00:09:33,760 --> 00:09:35,640
+<b>{\an2}No. Cam, come on.</b>
+ 
+283
+00:09:35,680 --> 00:09:36,800
+<b>{\an2}You're being silly.</b>
+ 
+284
+00:09:36,840 --> 00:09:40,520
+<b>{\an2}To be perfectly honest,</b>
+<b>I-I really needed Cam to stay.</b>
+ 
+285
+00:09:40,560 --> 00:09:42,720
+<b>{\an2}The minute he goes,</b>
+<b>I'm the dumb one.</b>
+ 
+286
+00:09:42,760 --> 00:09:44,560
+<b>{\an2}I-I took an art history class once,</b>
+ 
+287
+00:09:44,600 --> 00:09:47,000
+<b>{\an2}but that was just to look at</b>
+<b>naked Italian dudes, so...</b>
+ 
+288
+00:09:47,040 --> 00:09:49,440
+<b>{\an2}Remember now, you're in</b>
+<b>sub-zero temperatures.</b>
+ 
+289
+00:09:49,480 --> 00:09:53,160
+<b>{\an2}The only thing keeping you warm</b>
+<b>is the heat of your fiery passion.</b>
+ 
+290
+00:09:53,200 --> 00:09:55,280
+<b>{\an2}And...go!</b>
+ 
+291
+00:09:55,320 --> 00:09:56,600
+<b>{\an2}My beautiful Beth...</b>
+ 
+292
+00:09:56,640 --> 00:09:58,960
+<b>{\an2}Colder! My b-b-beautiful B-Beth.</b>
+ 
+293
+00:09:59,000 --> 00:10:00,440
+<b>{\an2}Colder! B-b-b-b...</b>
+ 
+294
+00:10:00,480 --> 00:10:01,920
+<b>{\an2}That's too cold. That's too cold.</b>
+ 
+295
+00:10:01,960 --> 00:10:04,560
+<b>{\an2}B-B-Beth! Now we're talkin'!</b>
+ 
+296
+00:10:04,600 --> 00:10:05,880
+<b>{\an2}You're so beautiful to me!</b>
+ 
+297
+00:10:05,920 --> 00:10:07,040
+<b>{\an2}Yes!</b>
+ 
+298
+00:10:07,080 --> 00:10:09,400
+<b>{\an2}Why am I so intent on helping Andy?</b>
+ 
+299
+00:10:09,440 --> 00:10:11,600
+<b>{\an2}I love film-making and I love love.</b>
+ 
+300
+00:10:11,640 --> 00:10:14,520
+<b>{\an2}I guess you could say</b>
+<b>I enjoy making love on film,</b>
+ 
+301
+00:10:14,560 --> 00:10:17,000
+<b>{\an2}and now I don't have</b>
+<b>to do it by myself.</b>
+ 
+302
+00:10:17,040 --> 00:10:20,280
+<b>{\an2}Beth, this is my long way</b>
+<b>of saying I miss you.</b>
+ 
+303
+00:10:20,320 --> 00:10:22,400
+<b>{\an2}Th... Uh. You know, this is weird.</b>
+ 
+304
+00:10:22,440 --> 00:10:23,880
+<b>{\an2}I don't really know where to look.</b>
+ 
+305
+00:10:23,920 --> 00:10:25,000
+<b>{\an2}No, it's not weird.</b>
+ 
+306
+00:10:25,040 --> 00:10:28,000
+<b>{\an2}Just look deep into my eyes</b>
+<b>and sweep me off my feet.</b>
+ 
+307
+00:10:28,040 --> 00:10:29,320
+<b>{\an2}All right.</b>
+ 
+308
+00:10:31,040 --> 00:10:33,440
+<b>{\an2}Honey... Yeah, that's weird.</b>
+<b>It is. Yeah.</b>
+ 
+309
+00:10:33,480 --> 00:10:35,920
+<b>{\an2}Haley, honey, can you help us?</b>
+<b>I don't think anyone can.</b>
+ 
+310
+00:10:35,960 --> 00:10:38,160
+<b>{\an2}Just let Andy hold your</b>
+<b>Officer and a Gentleman-style,</b>
+ 
+311
+00:10:38,200 --> 00:10:40,520
+<b>{\an2}and I'll superimpose Beth's face</b>
+<b>over yours on the computer.</b>
+ 
+312
+00:10:40,560 --> 00:10:41,680
+<b>{\an2}That's insane.</b>
+ 
+313
+00:10:41,720 --> 00:10:43,200
+<b>{\an2}I know. I can do anything with this.</b>
+ 
+314
+00:10:43,240 --> 00:10:45,400
+<b>{\an2}If she's not comfortable...</b>
+<b>You know what, guys?</b>
+ 
+315
+00:10:45,440 --> 00:10:46,920
+<b>{\an2}This whole thing is really</b>
+<b>sad and pathetic.</b>
+ 
+316
+00:10:46,960 --> 00:10:49,560
+<b>{\an2}No girl wants a guy</b>
+<b>that tries this hard.</b>
+ 
+317
+00:10:49,600 --> 00:10:51,920
+<b>{\an2}If I got this video,</b>
+<b>I'd call the police.</b>
+ 
+318
+00:10:51,960 --> 00:10:54,240
+<b>{\an2}Some girls actually like guys</b>
+<b>who are nice to them.</b>
+ 
+319
+00:10:54,280 --> 00:10:55,720
+<b>{\an2}Some girls like 36 of them.</b>
+ 
+320
+00:10:55,760 --> 00:10:57,240
+<b>{\an2}There's 37 of them!</b>
+ 
+321
+00:10:57,280 --> 00:10:58,560
+<b>{\an2}OK, this is passion. We can use it.</b>
+ 
+322
+00:10:58,600 --> 00:11:00,520
+<b>{\an2}Andy, pick her up.</b>
+ 
+323
+00:11:00,560 --> 00:11:02,080
+<b>{\an2}All right, let's just</b>
+<b>get this over with.</b>
+ 
+324
+00:11:02,120 --> 00:11:04,360
+<b>{\an2}Oh, my gosh, he's actually</b>
+<b>picking me up! Dad!</b>
+ 
+325
+00:11:04,400 --> 00:11:07,120
+<b>{\an2}It's just for a minute.</b>
+<b>Now lock eyes and...action.</b>
+ 
+326
+00:11:09,440 --> 00:11:13,440
+<b>{\an2}Honey, this is my long way</b>
+<b>of saying I miss you.</b>
+ 
+327
+00:11:13,480 --> 00:11:15,760
+<b>{\an2}I don't have to climb a mountain</b>
+ 
+328
+00:11:15,800 --> 00:11:18,080
+<b>{\an2}or swim an ocean to be with you...</b>
+ 
+329
+00:11:19,400 --> 00:11:21,880
+<b>{\an2}..cos you're always with me...</b>
+ 
+330
+00:11:21,920 --> 00:11:23,600
+<b>{\an2}In my thoughts...</b>
+ 
+331
+00:11:23,640 --> 00:11:25,640
+<b>{\an2}..my dreams...</b>
+ 
+332
+00:11:25,680 --> 00:11:27,240
+<b>{\an2}..my heart.</b>
+ 
+333
+00:11:27,280 --> 00:11:29,640
+<b>{\an2}You deserve more than</b>
+<b>I could possibly ever give you...</b>
+ 
+334
+00:11:31,000 --> 00:11:32,680
+<b>{\an2}..but everything I have is yours.</b>
+ 
+335
+00:11:35,040 --> 00:11:36,240
+<b>{\an2}I love you.</b>
+ 
+336
+00:11:37,880 --> 00:11:39,880
+<b>{\an2}Cut!</b>
+ 
+337
+00:11:39,920 --> 00:11:41,120
+<b>{\an2}That was beautiful.</b>
+ 
+338
+00:11:41,160 --> 00:11:42,840
+<b>{\an2}I really felt that one.</b>
+<b>Did you feel that one?</b>
+ 
+339
+00:11:42,880 --> 00:11:45,280
+<b>{\an2}No, I didn't feel anything.</b>
+<b>I was talking to Andy.</b>
+ 
+340
+00:11:45,320 --> 00:11:47,280
+<b>{\an2}I know! Put me down, freak!</b>
+ 
+341
+00:11:47,320 --> 00:11:48,400
+<b>{\an2}Ugh!</b>
+ 
+342
+00:11:48,440 --> 00:11:49,560
+<b>{\an2}Wow.</b>
+ 
+343
+00:11:49,600 --> 00:11:52,120
+<b>{\an2}That really takes me back</b>
+<b>to my cheerleading days.</b>
+ 
+344
+00:11:58,040 --> 00:12:00,800
+<b>{\an2}How could a guy with so much pain</b>
+<b>create such hopeful imagery?</b>
+ 
+345
+00:12:00,840 --> 00:12:02,120
+<b>{\an2}I certainly couldn't paint like that</b>
+ 
+346
+00:12:02,160 --> 00:12:03,840
+<b>{\an2}if my mother was dying of</b>
+<b>consumption.</b>
+ 
+347
+00:12:03,880 --> 00:12:05,000
+<b>{\an2}The last time she had a cold,</b>
+ 
+348
+00:12:05,040 --> 00:12:07,280
+<b>{\an2}I could barely arrange</b>
+<b>the flowers on the front table.</b>
+ 
+349
+00:12:07,320 --> 00:12:08,680
+<b>{\an2}You know what I found so</b>
+<b>interesting?</b>
+ 
+350
+00:12:08,720 --> 00:12:11,240
+<b>{\an2}Was that the first painting and the</b>
+<b>last painting were so similar,</b>
+ 
+351
+00:12:11,280 --> 00:12:12,920
+<b>{\an2}and I think that that</b>
+<b>was intentional,</b>
+ 
+352
+00:12:12,960 --> 00:12:14,760
+<b>{\an2}a comment on the</b>
+<b>perpetual motion of life.</b>
+ 
+353
+00:12:14,800 --> 00:12:16,440
+<b>{\an2}The first painting</b>
+<b>WAS the last painting.</b>
+ 
+354
+00:12:16,480 --> 00:12:17,520
+<b>{\an2}We walked in a circle.</b>
+ 
+355
+00:12:18,560 --> 00:12:20,280
+<b>{\an2}Are you sure? Yeah.</b>
+ 
+356
+00:12:20,320 --> 00:12:22,360
+<b>{\an2}So...I'm going to go check on Cam</b>
+ 
+357
+00:12:22,400 --> 00:12:24,400
+<b>{\an2}because he's been alone f-for</b>
+<b>quite some time. Mm-hm.</b>
+ 
+358
+00:12:24,440 --> 00:12:26,960
+<b>{\an2}And, you know, he's probably</b>
+<b>touching a painting. N-no, don't go!</b>
+ 
+359
+00:12:27,000 --> 00:12:28,360
+<b>{\an2}We're having such a good time!</b>
+ 
+360
+00:12:28,400 --> 00:12:29,960
+<b>{\an2}I guess it's just you and me now.</b>
+ 
+361
+00:12:31,160 --> 00:12:33,760
+<b>{\an2}It was OK when Cam left and</b>
+<b>passed the dunce cap to Mitchell,</b>
+ 
+362
+00:12:33,800 --> 00:12:35,920
+<b>{\an2}but with him gone, it went to me.</b>
+ 
+363
+00:12:35,960 --> 00:12:38,040
+<b>{\an2}What I would've given</b>
+<b>to have Luke there.</b>
+ 
+364
+00:12:38,080 --> 00:12:41,040
+<b>{\an2}Ah, Luke - sweet as custard</b>
+<b>and just as smart.</b>
+ 
+365
+00:12:42,360 --> 00:12:43,640
+<b>{\an2}And presto.</b>
+ 
+366
+00:12:43,680 --> 00:12:45,720
+<b>{\an2}Thank you so much, Mr Dunphy.</b>
+ 
+367
+00:12:45,760 --> 00:12:47,160
+<b>{\an2}I wish I could repay you somehow.</b>
+ 
+368
+00:12:47,200 --> 00:12:49,800
+<b>{\an2}Nah. Next time you're with</b>
+<b>your girlfriend, just think of me.</b>
+ 
+369
+00:12:49,840 --> 00:12:51,760
+<b>{\an2}Done.</b>
+<b> </b>
+ 
+370
+00:12:51,800 --> 00:12:53,680
+<b>{\an2}Later. Who's that?</b>
+ 
+371
+00:12:53,720 --> 00:12:56,280
+<b>{\an2}My date. Your lunch date?</b>
+<b>It's five o'clock.</b>
+ 
+372
+00:12:56,320 --> 00:12:58,880
+<b>{\an2}He fell asleep, but he texted me</b>
+<b>right when he woke up.</b>
+ 
+373
+00:12:58,920 --> 00:13:00,000
+<b>{\an2}Well, then, you'd think he'd be</b>
+ 
+374
+00:13:00,040 --> 00:13:01,600
+<b>{\an2}well-rested enough to</b>
+<b>walk to the front door.</b>
+ 
+375
+00:13:01,640 --> 00:13:03,680
+<b>{\an2}Yeah, a gentleman honks</b>
+<b>to support the troops,</b>
+ 
+376
+00:13:03,720 --> 00:13:05,040
+<b>{\an2}not summon his girlfriend.</b>
+ 
+377
+00:13:05,080 --> 00:13:06,400
+<b>{\an2}Although my girlfriend is a troop,</b>
+ 
+378
+00:13:06,440 --> 00:13:08,240
+<b>{\an2}so in my case, it's a</b>
+<b>little confusing.</b>
+ 
+379
+00:13:08,280 --> 00:13:10,040
+<b>{\an2}Oh, my God, it's still talking.</b>
+ 
+380
+00:13:10,080 --> 00:13:12,920
+<b>{\an2}Because it knows you're not being</b>
+<b>respected. Thank you. You bet.</b>
+ 
+381
+00:13:12,960 --> 00:13:15,760
+<b>{\an2}Ugh, you guys don't understand how</b>
+<b>dating works in the real world.</b>
+ 
+382
+00:13:15,800 --> 00:13:17,200
+<b>{\an2}What are you talking about?</b>
+ 
+383
+00:13:17,240 --> 00:13:19,360
+<b>{\an2}Look at everything Andy</b>
+<b>did for Beth today.</b>
+ 
+384
+00:13:19,400 --> 00:13:21,480
+<b>{\an2}I just live my life</b>
+<b>to make her happy.</b>
+ 
+385
+00:13:21,520 --> 00:13:22,920
+<b>{\an2}I'm going to give</b>
+<b>this to the mailman</b>
+ 
+386
+00:13:22,960 --> 00:13:24,560
+<b>{\an2}who's going to give it</b>
+<b>to the coastguard</b>
+ 
+387
+00:13:24,600 --> 00:13:25,960
+<b>{\an2}and by this time tomorrow...</b>
+ 
+388
+00:13:26,000 --> 00:13:27,320
+<b>{\an2}..someone in the coastguard's</b>
+ 
+389
+00:13:27,360 --> 00:13:29,280
+<b>{\an2}going to be giving it</b>
+<b>to my girlfriend.</b>
+ 
+390
+00:13:29,320 --> 00:13:32,880
+<b>{\an2}OK, I'm going to go while you</b>
+<b>two replay that in your minds.</b>
+ 
+391
+00:13:32,920 --> 00:13:34,400
+<b>{\an2}Oh, my gosh.</b>
+ 
+392
+00:13:35,800 --> 00:13:37,680
+<b>{\an2}Would you like to re-enact Gravity?</b>
+ 
+393
+00:13:37,720 --> 00:13:40,240
+<b>{\an2}Yes. Sandra Bullock! Ugh! Dang it!</b>
+ 
+394
+00:13:40,280 --> 00:13:41,760
+<b>{\an2}Good call. That was quick.</b>
+ 
+395
+00:13:43,680 --> 00:13:45,880
+<b>{\an2}Hey. "Hey"?</b>
+ 
+396
+00:13:45,920 --> 00:13:48,000
+<b>{\an2}That's what I get after</b>
+<b>I waited for you all afternoon?</b>
+ 
+397
+00:13:48,040 --> 00:13:49,960
+<b>{\an2}Uh... You look good?</b>
+ 
+398
+00:13:50,000 --> 00:13:51,240
+<b>{\an2}I know that.</b>
+ 
+399
+00:13:51,280 --> 00:13:53,000
+<b>{\an2}You were supposed to</b>
+<b>pick me up hours ago.</b>
+ 
+400
+00:13:53,040 --> 00:13:55,160
+<b>{\an2}You were, like,</b>
+<b>the first or second person</b>
+ 
+401
+00:13:55,200 --> 00:13:56,400
+<b>{\an2}I texted after I woke up.</b>
+ 
+402
+00:13:56,440 --> 00:13:59,120
+<b>{\an2}Aww! That's so sweet!</b>
+ 
+403
+00:13:59,160 --> 00:14:00,920
+<b>{\an2}Did it even occur to you</b>
+<b>to come to the door?</b>
+ 
+404
+00:14:00,960 --> 00:14:02,680
+<b>{\an2}Who comes to the door?</b>
+ 
+405
+00:14:02,720 --> 00:14:04,160
+<b>{\an2}A gentleman.</b>
+ 
+406
+00:14:04,200 --> 00:14:06,400
+<b>{\an2}Could you at least open</b>
+<b>the car door for me?</b>
+ 
+407
+00:14:09,160 --> 00:14:10,520
+<b>{\an2}Now can we go?</b>
+ 
+408
+00:14:10,560 --> 00:14:12,920
+<b>{\an2}You know what?</b>
+<b>Go take another nap.</b>
+ 
+409
+00:14:12,960 --> 00:14:15,520
+<b>{\an2}I'd rather wait for someone</b>
+<b>who'd walk through a blizzard for me</b>
+ 
+410
+00:14:15,560 --> 00:14:17,280
+<b>{\an2}and only honks to</b>
+<b>support the troops!</b>
+ 
+411
+00:14:17,320 --> 00:14:18,760
+<b>{\an2}I don't understand you.</b>
+ 
+412
+00:14:18,800 --> 00:14:20,200
+<b>{\an2}Neither do I!</b>
+ 
+413
+00:14:24,840 --> 00:14:26,040
+<b>{\an2}Ta-da.</b>
+ 
+414
+00:14:26,080 --> 00:14:28,920
+<b>{\an2}Claire, you look beautiful.</b>
+<b>You're glowing.</b>
+ 
+415
+00:14:28,960 --> 00:14:30,560
+<b>{\an2}I'm not glowing. I'm sweating.</b>
+ 
+416
+00:14:30,600 --> 00:14:31,840
+<b>{\an2}Come on.</b>
+ 
+417
+00:14:31,880 --> 00:14:34,080
+<b>{\an2}Look at yourself in the mirror.</b>
+ 
+418
+00:14:34,120 --> 00:14:38,680
+<b>{\an2}Don't tell me that you don't</b>
+<b>feel gorgeous and special.</b>
+ 
+419
+00:14:38,720 --> 00:14:40,720
+<b>{\an2}Wow.</b>
+ 
+420
+00:14:40,760 --> 00:14:42,360
+<b>{\an2}You're right.</b>
+ 
+421
+00:14:42,400 --> 00:14:44,160
+<b>{\an2}I am radiant.</b>
+ 
+422
+00:14:44,200 --> 00:14:48,800
+<b>{\an2}Oh, it's like I'm in a...</b>
+<b>in a fairy tale or a dream.</b>
+ 
+423
+00:14:48,840 --> 00:14:49,920
+<b>{\an2}Oh!</b>
+ 
+424
+00:14:49,960 --> 00:14:51,440
+<b>{\an2}Lies! Hmm.</b>
+ 
+425
+00:14:51,480 --> 00:14:52,520
+<b>{\an2}You're faking it.</b>
+ 
+426
+00:14:52,560 --> 00:14:53,800
+<b>{\an2}Well, I'm sorry!</b>
+ 
+427
+00:14:53,840 --> 00:14:55,160
+<b>{\an2}Look who raised me.</b>
+ 
+428
+00:14:55,200 --> 00:14:57,080
+<b>{\an2}I am my father's daughter.</b>
+ 
+429
+00:14:57,120 --> 00:14:58,880
+<b>{\an2}And also kind of his son.</b>
+ 
+430
+00:14:58,920 --> 00:15:00,800
+<b>{\an2}And I lied about</b>
+<b>that being Luke's shirt.</b>
+ 
+431
+00:15:00,840 --> 00:15:02,880
+<b>{\an2}I bought it for myself</b>
+<b>in three colours.</b>
+ 
+432
+00:15:02,920 --> 00:15:04,800
+<b>{\an2}I am trying to help</b>
+<b>you out here, Gloria,</b>
+ 
+433
+00:15:04,840 --> 00:15:06,400
+<b>{\an2}but this just isn't me.</b>
+ 
+434
+00:15:06,440 --> 00:15:07,840
+<b>{\an2}You did help me.</b>
+ 
+435
+00:15:07,880 --> 00:15:09,800
+<b>{\an2}I am glad I didn't have daughters.</b>
+ 
+436
+00:15:09,840 --> 00:15:12,480
+<b>{\an2}You know, at least</b>
+<b>when I take Manny shopping,</b>
+ 
+437
+00:15:12,520 --> 00:15:13,920
+<b>{\an2}we make a day of it.</b>
+ 
+438
+00:15:13,960 --> 00:15:17,320
+<b>{\an2}I don't even have to ask him to</b>
+<b>twirl because he just does it.</b>
+ 
+439
+00:15:17,360 --> 00:15:19,920
+<b>{\an2}Vamos, Lily!</b>
+ 
+440
+00:15:19,960 --> 00:15:21,560
+<b>{\an2}Lily?</b>
+ 
+441
+00:15:21,600 --> 00:15:22,880
+<b>{\an2}BOTH: Lily?</b>
+ 
+442
+00:15:22,920 --> 00:15:25,480
+<b>{\an2}Is she... No. No?</b>
+<b>She's gone. She's gone.</b>
+ 
+443
+00:15:25,520 --> 00:15:27,560
+<b>{\an2}Lily! Lily! Lily! Lily!</b>
+ 
+444
+00:15:27,600 --> 00:15:29,760
+<b>{\an2}No, the dress!</b>
+ 
+445
+00:15:29,800 --> 00:15:31,000
+<b>{\an2}Lily? Lily?</b>
+ 
+446
+00:15:31,040 --> 00:15:32,640
+<b>{\an2}Wait, wait, wait, wait!</b>
+ 
+447
+00:15:33,760 --> 00:15:35,600
+<b>{\an2}I can't run in these shoes!</b>
+ 
+448
+00:15:35,640 --> 00:15:37,520
+<b>{\an2}I bet you wish you had</b>
+<b>boy shoes now, huh?</b>
+ 
+449
+00:15:37,560 --> 00:15:38,560
+<b>{\an2}Lily?</b>
+ 
+450
+00:15:39,680 --> 00:15:41,760
+<b>{\an2}Claire, stop! What?</b>
+ 
+451
+00:15:41,800 --> 00:15:43,320
+<b>{\an2}Look! Oh, my God.</b>
+ 
+452
+00:15:45,440 --> 00:15:48,160
+<b>{\an2}OK, run, run. Come on. Come on!</b>
+ 
+453
+00:15:51,680 --> 00:15:53,840
+<b>{\an2}She looks so happy.</b>
+ 
+454
+00:15:53,880 --> 00:15:54,960
+<b>{\an2}She does.</b>
+ 
+455
+00:15:55,000 --> 00:15:56,520
+<b>{\an2}Oh, she really does.</b>
+ 
+456
+00:15:56,560 --> 00:15:57,800
+<b>{\an2}They're going to kill us.</b>
+ 
+457
+00:15:58,840 --> 00:16:00,760
+<b>{\an2}What sort of princess?</b>
+ 
+458
+00:16:00,800 --> 00:16:04,200
+<b>{\an2}The kind that dances with beasts</b>
+<b>and won't marry Gaston.</b>
+ 
+459
+00:16:04,240 --> 00:16:06,680
+<b>{\an2}Really? What?</b>
+<b>It's the only dress she likes.</b>
+ 
+460
+00:16:06,720 --> 00:16:09,120
+<b>{\an2}Lily wants to come to</b>
+<b>the wedding as Belle.</b>
+ 
+461
+00:16:09,160 --> 00:16:11,680
+<b>{\an2}Makes sense. She went to Pepper's</b>
+<b>seder as Dora the Explorer.</b>
+ 
+462
+00:16:13,160 --> 00:16:14,680
+<b>{\an2}I-it's fine.</b>
+ 
+463
+00:16:14,720 --> 00:16:15,920
+<b>{\an2}Are you sure?</b>
+ 
+464
+00:16:15,960 --> 00:16:17,200
+<b>{\an2}Yes. Yes.</b>
+ 
+465
+00:16:17,240 --> 00:16:18,800
+<b>{\an2}As long as she's happy.</b>
+ 
+466
+00:16:18,840 --> 00:16:20,600
+<b>{\an2}A gay wedding is hardly</b>
+<b>the place to stop someone</b>
+ 
+467
+00:16:20,640 --> 00:16:22,160
+<b>{\an2}from being who they want to be.</b>
+ 
+468
+00:16:23,680 --> 00:16:24,720
+<b>{\an2}They said it's fine.</b>
+ 
+469
+00:16:24,760 --> 00:16:26,640
+<b>{\an2}Yay! I'm finally happy!</b>
+ 
+470
+00:16:26,680 --> 00:16:28,400
+<b>{\an2}Mm!</b>
+ 
+471
+00:16:28,440 --> 00:16:29,520
+<b>{\an2}What?</b>
+ 
+472
+00:16:29,560 --> 00:16:31,280
+<b>{\an2}I saw you twirl.</b>
+ 
+473
+00:16:31,320 --> 00:16:33,560
+<b>{\an2}Oh, I did not. Yes, you did.</b>
+ 
+474
+00:16:33,600 --> 00:16:35,520
+<b>{\an2}Such a pretty girl.</b>
+ 
+475
+00:16:35,560 --> 00:16:36,600
+<b>{\an2}Shut up.</b>
+ 
+476
+00:16:36,640 --> 00:16:38,040
+<b>{\an2}You're a girl.</b>
+ 
+477
+00:16:38,080 --> 00:16:39,680
+<b>{\an2}How about that daughter of ours?</b>
+ 
+478
+00:16:39,720 --> 00:16:41,560
+<b>{\an2}She marches to the beat</b>
+<b>of her own drum, huh?</b>
+ 
+479
+00:16:41,600 --> 00:16:43,880
+<b>{\an2}Yeah. Exactly.</b>
+<b>S-so, why are we so concerned</b>
+ 
+480
+00:16:43,920 --> 00:16:45,520
+<b>{\an2}what two nerdy</b>
+<b>teenagers think of us?</b>
+ 
+481
+00:16:45,560 --> 00:16:47,040
+<b>{\an2}Isn't the true mark of intelligence</b>
+ 
+482
+00:16:47,080 --> 00:16:48,480
+<b>{\an2}being able to admit</b>
+<b>what you don't know?</b>
+ 
+483
+00:16:48,520 --> 00:16:50,760
+<b>{\an2}Shh. Here comes Manny. Oh, my God.</b>
+<b>Did he hear me? I don't think so.</b>
+ 
+484
+00:16:50,800 --> 00:16:52,080
+<b>{\an2}Hey, guys. Nothin'.</b>
+ 
+485
+00:16:52,120 --> 00:16:53,360
+<b>{\an2}Hey, what are you doing out here?</b>
+ 
+486
+00:16:53,400 --> 00:16:55,280
+<b>{\an2}You guys invited us so we</b>
+<b>could spend the day together.</b>
+ 
+487
+00:16:55,320 --> 00:16:57,080
+<b>{\an2}It felt wrong that you</b>
+<b>two were out here</b>
+ 
+488
+00:16:57,120 --> 00:16:58,440
+<b>{\an2}and I was in there</b>
+<b>all alone with Alex.</b>
+ 
+489
+00:16:58,480 --> 00:16:59,720
+<b>{\an2}Couldn't keep up, could you?</b>
+ 
+490
+00:16:59,760 --> 00:17:01,360
+<b>{\an2}She knows everything.</b>
+<b>She made a docent cry.</b>
+ 
+491
+00:17:01,400 --> 00:17:02,720
+<b>{\an2}It's OK. We're faking it, too.</b>
+ 
+492
+00:17:02,760 --> 00:17:04,480
+<b>{\an2}Well, duh. There you guys are.</b>
+ 
+493
+00:17:04,520 --> 00:17:06,920
+<b>{\an2}Nothin'. Uh, we were</b>
+<b>just headed back in.</b>
+ 
+494
+00:17:06,960 --> 00:17:09,520
+<b>{\an2}Yeah, I'm getting a second wind,</b>
+<b>so... Oh, no, no, no, that's OK.</b>
+ 
+495
+00:17:09,560 --> 00:17:12,000
+<b>{\an2}Uh, what do you say we go check</b>
+<b>out some food trucks? Really?</b>
+ 
+496
+00:17:12,040 --> 00:17:14,600
+<b>{\an2}I'll go back in if you guys want,</b>
+<b>but I'm actually really hungry.</b>
+ 
+497
+00:17:14,640 --> 00:17:16,800
+<b>{\an2}Yeah, whatever you want. OK,</b>
+<b>well, whatever you need, yeah.</b>
+ 
+498
+00:17:16,840 --> 00:17:18,000
+<b>{\an2}Thanks, guys.</b>
+ 
+499
+00:17:19,240 --> 00:17:21,680
+<b>{\an2}If I'm being honest,</b>
+<b>I had to get out of there.</b>
+ 
+500
+00:17:21,720 --> 00:17:24,200
+<b>{\an2}I was exhausted from having</b>
+<b>to dumb it down all day.</b>
+ 
+501
+00:17:24,240 --> 00:17:25,960
+<b>{\an2}Really? The neck?</b>
+ 
+502
+00:17:26,000 --> 00:17:28,680
+<b>{\an2}Yeah, a kiss on the neck</b>
+<b>opens all kinds of doors.</b>
+ 
+503
+00:17:28,720 --> 00:17:29,840
+<b>{\an2}Last one.</b>
+ 
+504
+00:17:33,160 --> 00:17:34,560
+<b>{\an2}Great job, champ.</b>
+ 
+505
+00:17:34,600 --> 00:17:35,840
+<b>{\an2}Who said you can't build anything?</b>
+ 
+506
+00:17:35,880 --> 00:17:37,920
+<b>{\an2}My dad, the police, a doctor.</b>
+ 
+507
+00:17:37,960 --> 00:17:40,400
+<b>{\an2}You got a gift. Trust me. Take shop.</b>
+ 
+508
+00:17:40,440 --> 00:17:42,240
+<b>{\an2}I think I'm going to.</b>
+ 
+509
+00:17:42,280 --> 00:17:44,520
+<b>{\an2}Hey, how'd you get to know</b>
+<b>so much about everything?</b>
+ 
+510
+00:17:44,560 --> 00:17:45,720
+<b>{\an2}From my dad, mostly.</b>
+ 
+511
+00:17:45,760 --> 00:17:47,640
+<b>{\an2}He taught me how to use</b>
+<b>a drill, change a tyre,</b>
+ 
+512
+00:17:47,680 --> 00:17:50,040
+<b>{\an2}fake an injury when a buddy</b>
+<b>asks you to help him move.</b>
+ 
+513
+00:17:50,080 --> 00:17:51,960
+<b>{\an2}Everything a man needs to get by.</b>
+ 
+514
+00:17:52,000 --> 00:17:54,040
+<b>{\an2}I'm just glad I have</b>
+<b>someone to pass it on to.</b>
+ 
+515
+00:17:54,080 --> 00:17:55,160
+<b>{\an2}You've got Manny.</b>
+ 
+516
+00:17:55,200 --> 00:17:56,560
+<b>{\an2}Mm.</b>
+ 
+517
+00:17:56,600 --> 00:17:59,440
+<b>{\an2}Manny came to me</b>
+<b>kind of fully cooked.</b>
+ 
+518
+00:17:59,480 --> 00:18:00,640
+<b>{\an2}And I was an idiot with Mitchell,</b>
+ 
+519
+00:18:00,680 --> 00:18:02,560
+<b>{\an2}and by the time this</b>
+<b>guy gets old enough,</b>
+ 
+520
+00:18:02,600 --> 00:18:03,960
+<b>{\an2}who knows how much I'll remember?</b>
+ 
+521
+00:18:04,000 --> 00:18:07,040
+<b>{\an2}These are my prime</b>
+<b>wisdom-giving years.</b>
+ 
+522
+00:18:07,080 --> 00:18:08,600
+<b>{\an2}You got any more questions, Luke?</b>
+ 
+523
+00:18:08,640 --> 00:18:10,640
+<b>{\an2}Just one - can I have a sip?</b>
+ 
+524
+00:18:10,680 --> 00:18:12,120
+<b>{\an2}The beer? Sure. What the hell.</b>
+ 
+525
+00:18:12,160 --> 00:18:13,840
+<b>{\an2}Awesome. My first drink of beer.</b>
+ 
+526
+00:18:13,880 --> 00:18:17,720
+<b>{\an2}I remember the day I gave Mitchell</b>
+<b>his first taste of beer.</b>
+ 
+527
+00:18:17,760 --> 00:18:19,160
+<b>{\an2}He winced and carried on</b>
+ 
+528
+00:18:19,200 --> 00:18:21,600
+<b>{\an2}like someone was digging</b>
+<b>a bullet out of his leg.</b>
+ 
+529
+00:18:23,400 --> 00:18:25,920
+<b>{\an2}I couldn't take that</b>
+<b>moment away from Phil.</b>
+ 
+530
+00:18:25,960 --> 00:18:27,560
+<b>{\an2}Hang on. Wait a second.</b>
+<b>Let me see that.</b>
+ 
+531
+00:18:28,920 --> 00:18:30,520
+<b>{\an2}No, this beer's skunked.</b>
+ 
+532
+00:18:30,560 --> 00:18:31,600
+<b>{\an2}It's no good.</b>
+ 
+533
+00:18:31,640 --> 00:18:33,520
+<b>{\an2}Damn fridge must be</b>
+<b>on the fritz again.</b>
+ 
+534
+00:18:33,560 --> 00:18:35,480
+<b>{\an2}Aw, man. Really?</b>
+ 
+535
+00:18:35,520 --> 00:18:36,840
+<b>{\an2}Sorry, buddy.</b>
+ 
+536
+00:18:36,880 --> 00:18:39,880
+<b>{\an2}It's probably time to call your dad</b>
+<b>anyway, right? OK. Wait a second.</b>
+ 
+537
+00:18:39,920 --> 00:18:42,040
+<b>{\an2}I want to give you something.</b>
+<b>But those are yours.</b>
+ 
+538
+00:18:42,080 --> 00:18:43,320
+<b>{\an2}What's a grandfather for</b>
+ 
+539
+00:18:43,360 --> 00:18:45,360
+<b>{\an2}if he can't give his grandson</b>
+<b>a couple of tools?</b>
+ 
+540
+00:18:45,400 --> 00:18:46,880
+<b>{\an2}Thanks, Grandpa.</b>
+ 
+541
+00:18:46,920 --> 00:18:47,920
+<b>{\an2}Good job.</b>
+ 
+542
+00:18:49,320 --> 00:18:51,040
+<b>{\an2}Joe...</b>
+ 
+543
+00:18:51,080 --> 00:18:53,160
+<b>{\an2}I know you're all about</b>
+<b>the boobs right now,</b>
+ 
+544
+00:18:53,200 --> 00:18:55,480
+<b>{\an2}but trust me...</b>
+ 
+545
+00:18:55,520 --> 00:18:56,960
+<b>{\an2}..the neck.</b>
+ 
+546
+00:18:58,880 --> 00:19:00,760
+<b>{\an2}Don't let go!</b>
+ 
+547
+00:19:00,800 --> 00:19:03,520
+<b>{\an2}Don't worry,</b>
+<b>George Clooney, I won't!</b>
+ 
+548
+00:19:03,560 --> 00:19:04,800
+<b>{\an2}You're too handsome!</b>
+ 
+549
+00:19:04,840 --> 00:19:08,120
+<b>{\an2}Watch out for incoming space junk!</b>
+ 
+550
+00:19:08,160 --> 00:19:09,680
+<b>{\an2}From where?</b>
+ 
+551
+00:19:09,720 --> 00:19:11,400
+<b>{\an2}Your zipper's down!</b>
+ 
+552
+00:19:11,440 --> 00:19:13,760
+<b>{\an2}Oh, is it? Yeah, it is. Just...</b>
+ 
+553
+00:19:13,800 --> 00:19:14,880
+<b>{\an2}What's Andy doing here?</b>
+ 
+554
+00:19:14,920 --> 00:19:16,720
+<b>{\an2}They're making a video</b>
+<b>for his girlfriend.</b>
+ 
+555
+00:19:16,760 --> 00:19:18,360
+<b>{\an2}Yeah? What's it called,</b>
+<b>Dorks in Space?</b>
+ 
+556
+00:19:18,400 --> 00:19:20,440
+<b>{\an2}Oh, it was actually sweet.</b>
+ 
+557
+00:19:20,480 --> 00:19:21,680
+<b>{\an2}It's weird.</b>
+ 
+558
+00:19:21,720 --> 00:19:23,920
+<b>{\an2}There's something about him.</b>
+<b>You know what I mean?</b>
+ 
+559
+00:19:23,960 --> 00:19:25,640
+<b>{\an2}Yeah, he's just like Dad.</b>
+ 
+560
+00:19:25,680 --> 00:19:27,640
+<b>{\an2}Ew, ew, ew!</b>
+ 
+561
+00:19:27,680 --> 00:19:30,560
+<b>{\an2}In space, no-one can</b>
+<b>hear you scream. What?!</b>
+ 
+562
+00:19:30,600 --> 00:19:33,840
+<b>{\an2}In space, no-one</b>
+<b>can hear you scream!</b>
+ 
+563
+00:19:33,880 --> 00:19:36,120
+<b>{\an2}I can't hear you! In space...</b>
+ 
+564
+00:19:36,160 --> 00:19:38,320
+<b>{\an2}Oh, I just got it.</b>
+<b>That's good. That's good.</b>
+ 
+565
+00:19:38,360 --> 00:19:40,400
+<b>{\an2}Thank you.</b>
+<b> </b>
+ 
+566
+00:19:42,360 --> 00:19:43,960
+<b>{\an2}There's no denying it is original,</b>
+ 
+567
+00:19:44,000 --> 00:19:45,960
+<b>{\an2}but you can see the</b>
+<b>influence of Pollock.</b>
+ 
+568
+00:19:46,000 --> 00:19:48,320
+<b>{\an8}While the pattern seems</b>
+<b>haphazard and random,</b>
+ 
+569
+00:19:48,360 --> 00:19:49,960
+<b>{\an8}it belies a purposefulness.</b>
+ 
+570
+00:19:50,000 --> 00:19:51,200
+<b>{\an8}An intentionality.</b>
+ 
+571
+00:19:51,240 --> 00:19:54,120
+<b>{\an8}You know, I think what I'm</b>
+<b>responding to is the clashing</b>
+ 
+572
+00:19:54,160 --> 00:19:57,960
+<b>{\an8}juxtaposition of colour - the bright</b>
+<b>yellow against the dark background.</b>
+ 
+573
+00:19:58,000 --> 00:19:59,760
+<b>{\an8}It's like a ray of sunshine</b>
+ 
+574
+00:19:59,800 --> 00:20:01,720
+<b>{\an8}in an otherwise bleak world.</b>
+ 
+575
+00:20:01,760 --> 00:20:04,320
+<b>{\an8}If I may take a contrary position,</b>
+ 
+576
+00:20:04,360 --> 00:20:08,360
+<b>{\an8}I think it speaks to the absurdity</b>
+<b>and folly of human endeavour. Mm!</b>
+ 
+577
+00:20:08,400 --> 00:20:11,320
+<b>{\an8}Like our futile struggle</b>
+<b>for perfection.</b>
+ 
+578
+00:20:11,360 --> 00:20:13,000
+<b>{\an8}I get it. I got mustard on my shirt.</b>
+ 
+579
+00:20:13,040 --> 00:20:14,040
+<b>{\an8}Get over it.</b>
+ 
+580
+00:20:14,080 --> 00:20:15,680
+<b>{\an9}I know we're joking,</b>
+<b>but all kidding aside,</b>
+ 
+581
+00:20:15,720 --> 00:20:17,200
+<b>{\an9}it really does remind me</b>
+<b>of Kandinsky's...</b>
+ 
+582
+00:20:17,240 --> 00:20:18,240
+<b>{\an9}Oh.</b>

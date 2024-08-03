@@ -65,6 +65,9 @@ def filter_doc(srt_txt: str, filter_flags: int = 0) -> str:
     :param filter_flags: Bitmask of flags FILTER_BRACKETS and FILTER_CAPS
 
     """
+    # Some srt docs have spaces on the lines that separate blocks.
+    srt_txt = re.sub(r'^\s+$', r'', srt_txt, flags=re.MULTILINE)
+
     if not filter_flags:
         return srt_txt
 
