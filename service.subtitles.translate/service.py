@@ -62,6 +62,7 @@ class PlayerMonitor(Player):
 
         if not subs_type:
             subs_type = file_extension
+        subs_type = subs_type.lstrip('.')
         if subs_type not in translate.supported_types:
             logger.info("Unsupported subtitle type '%s'", subs_type)
             return

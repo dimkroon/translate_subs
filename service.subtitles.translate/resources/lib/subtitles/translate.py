@@ -47,7 +47,7 @@ SUBS_CACHE_DIR = os.path.join(utils.addon_info.profile, 'subtitles')
 os.makedirs(SUBS_CACHE_DIR, exist_ok=True)
 
 
-supported_types = ('srt', '.srt')
+supported_types = ('srt', '.srt', 'vtt', '.vtt', 'ttml', '.ttml')
 
 
 def filter_doc(srt_txt: str, filter_flags: int = 0) -> str:
