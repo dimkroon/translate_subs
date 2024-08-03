@@ -377,3 +377,19 @@ LILY THOMAS: <font color="yellow">January the 8th, 1963.</font>
                                         translate.FILTER_BRACKETS |
                                         translate.FILTER_COLOURS)
         print(filtered)
+
+
+class TestReadSubtitles(TestCase):
+    def test_read_file(self):
+        for f_name in ('atomic blonde.en.srt', 'Auf dem Grund.de.srt'):
+            f_path = doc_path('srt/' + f_name)
+            subs = translate.read_subtitles_file(f_path)
+            self.assertIsInstance(subs, str)
+            self.assertGreater(len(subs), 1000)
+
+    def test_universal_newlines(self):
+        doc = "1\n\n2\r\r3\r\n\r\n4"
+        with patch('xbmcvfs.File', spec=True) as mocked_file:
+            mocked_file.return_value.__enter__.return_value.read.return_value = doc
+            subs = translate.read_subtitles_file('test doc')
+        self.assertEqual(subs, '1\n\n2\n\n3\n\n4')

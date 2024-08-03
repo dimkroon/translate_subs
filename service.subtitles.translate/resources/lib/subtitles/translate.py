@@ -47,7 +47,7 @@ SUBS_CACHE_DIR = os.path.join(utils.addon_info.profile, 'subtitles')
 os.makedirs(SUBS_CACHE_DIR, exist_ok=True)
 
 
-supported_types = ('srt', '.srt')
+supported_types = ('srt', '.srt', 'vtt', '.vtt', 'ttml', '.ttml')
 
 
 def filter_doc(srt_txt: str, filter_flags: int = 0) -> str:
@@ -323,13 +323,16 @@ def get_filter_flags(init_flags: int) -> int:
 
 def read_subtitles_file(file_path):
     # noinspection HttpUrlsUsage
-    if file_path.startswith('http://') or file_path.startswith('https://'):
+    if file_path.startswith('https://') or file_path.startswith('http://'):
         resp = requests.get(file_path)
         resp.raise_for_status()
         subs_text = resp.text
     else:
         with xbmcvfs.File(file_path, 'r') as f:
             subs_text = f.read()
+
+    # Convert new lines, like python's open() does
+    subs_text = re.sub(r'\r\n|\r', '\n', subs_text)
     return subs_text
 
 
