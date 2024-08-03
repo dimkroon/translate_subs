@@ -12,6 +12,7 @@ import unittest
 from unittest.mock import MagicMock, patch
 
 from resources.lib.subtitles import subtitle
+from resources.lib.subtitles.translate import filter_doc
 
 from test.support.testutils import open_doc
 
@@ -137,7 +138,14 @@ class TestSrtBlock(unittest.TestCase):
 
 class TestSrtDoc(unittest.TestCase):
     def test_create_doc(self):
-        srt = subtitle.SrtDoc(open_doc('srt/spy_among_friends.en.srt')())
+        subs_docs = (
+                'srt/spy_among_friends.en.srt',
+                'srt/srt_with_position.srt',
+
+        )
+        for fname in subs_docs:
+            srt_txt = filter_doc(open_doc(fname)())
+            srt = subtitle.SrtDoc(srt_txt)
 
     def test_stretch_time(self):
         srt = subtitle.SrtDoc(open_doc('srt/spy_among_friends.en.srt')())

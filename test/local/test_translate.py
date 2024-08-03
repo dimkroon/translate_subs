@@ -272,7 +272,16 @@ DOOR SLAMS
 Oh damn. (phone ringing)
 """
         result = translate.filter_doc(test_doc)
-        self.assertIs(result, test_doc)
+        self.assertEqual(result, test_doc)
+
+    def test_filter_space_on_separating_lines(self):
+        """ Some srt docs have a space on the line that separates blocks.
+        We rely on blocks being separated by a double newline, so filter will by default
+        remove those spaces
+        """
+        test_doc = 'line 1\n \nline 2'
+        result = translate.filter_doc(test_doc)
+        self.assertEqual(result, 'line 1\n\nline 2')
 
     def test_filter_brackets(self):
         srt = '1\n(Door slamed)\n\n2\nthis is a string'
