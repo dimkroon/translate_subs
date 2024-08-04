@@ -146,6 +146,8 @@ def vtt_to_srt(vtt_doc: str, colourize=True) -> str:
             if colour in ('white', 'yellow', 'green', 'cyan', 'red'):
                 # Named colours
                 return '<font color="{}">{}</font>'.format(colour, match[2])
+            elif colour == 'lime':  # Kodi doesn't know lime, but it's not uncommon; turn into green.
+                return '<font color="green">{}</font>'.format(match[2])
             elif colour.startswith('color'):
                 # RBG colour, ensure to strip the alpha channel if present.
                 result = '<font color="#{}">{}</font>'.format(colour[5:11], match[2])
