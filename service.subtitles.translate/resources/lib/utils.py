@@ -14,6 +14,7 @@ import os
 
 import xbmc
 import xbmcgui
+import xbmcvfs
 from xbmcvfs import translatePath
 import xbmcaddon
 
@@ -76,7 +77,7 @@ def mark_error():
     error_dir = os.path.join(addon_info.profile, 'errors', current_dt)
     os.makedirs(error_dir, exist_ok=True)
 
-    shutil.copy(orig_subs, error_dir)
+    shutil.copy(xbmcvfs.translatePath(orig_subs), error_dir)
     # shutil.copy(translated_subs, error_dir)
     try:
         shutil.copy(os.path.join(addon_info.profile, 'subtitles', 'orig.txt'), error_dir)
