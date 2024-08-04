@@ -339,8 +339,44 @@ Oh damn. (phone ringing)
         srt = '\n<font color="#ffffff"># I Love You</font>\n<font color="#ffffff"> so much #</font>\n'
         self.assertEqual('\n<font color="#ffffff"> </font>\n', translate.filter_doc(srt, flags))
 
+    def test_filter_asterisk(self):
+        flags = translate.FILTER_ASTERISK
+        srt = '1\n* I Love You *\n\n2\nthis is a string'
+        self.assertEqual('1\n \n\n2\nthis is a string', translate.filter_doc(srt, flags))
+        srt = '1\n* I Love You\n* so much *\nthis is a string'
+        self.assertEqual('1\n \nthis is a string', translate.filter_doc(srt, flags))
+        srt = '1\n*I Love You\n* so much*\nthis is a string'
+        self.assertEqual('1\n \nthis is a string', translate.filter_doc(srt, flags))
+        srt = '1\n* I Love You\n\n2\n so much *\nthis is a string'
+        self.assertEqual('1\n \nthis is a string', translate.filter_doc(srt, flags))
+        srt = '\n<font color="*ffffff">* I Love You</font>\n<font color="*ffffff"> so much *</font>\n'
+        self.assertEqual('\n<font color="*ffffff"> </font>\n', translate.filter_doc(srt, flags))
+
+    def test_filter_music_note(self):
+        flags = translate.FILTER_MUSIC_NOTE
+        srt = '1\n♪ I Love You ♪\n\n2\nthis is a string'
+        self.assertEqual('1\n \n\n2\nthis is a string', translate.filter_doc(srt, flags))
+        srt = '1\n♪ I Love You\n♪ so much ♪\nthis is a string'
+        self.assertEqual('1\n \nthis is a string', translate.filter_doc(srt, flags))
+        srt = '1\n♪I Love You\n♪ so much♪\nthis is a string'
+        self.assertEqual('1\n \nthis is a string', translate.filter_doc(srt, flags))
+        srt = '1\n♪ I Love You\n\n2\n so much ♪\nthis is a string'
+        self.assertEqual('1\n \nthis is a string', translate.filter_doc(srt, flags))
+        srt = '\n<font color="♪ffffff">♪ I Love You</font>\n<font color="♪ffffff"> so much ♪</font>\n'
+        self.assertEqual('\n<font color="♪ffffff"> </font>\n', translate.filter_doc(srt, flags))
+
+    def test_filter_all_lyrics(self):
+        flags = (translate.FILTER_HASHTAGS | translate.FILTER_ASTERISK | translate.FILTER_MUSIC_NOTE)
+        srt = '1\n♪ I Love You #\n'
+        self.assertEqual('1\n♪ I Love You #\n', translate.filter_doc(srt, flags))
+        srt = '1\n♪ I Love my #1 ♪\n'
+        self.assertEqual('1\n \n', translate.filter_doc(srt, flags))
+        srt = '1\n♪ I Love **\n\n2\n #14 times ♪\nthis is a string'
+        self.assertEqual('1\n \nthis is a string', translate.filter_doc(srt, flags))
+
     def test_filter_all(self):
-        flags = translate.FILTER_BRACKETS | translate.FILTER_CAPS | translate.FILTER_HASHTAGS
+        flags = (translate.FILTER_BRACKETS | translate.FILTER_CAPS | translate.FILTER_HASHTAGS |
+                 translate.FILTER_ASTERISK | translate.FILTER_MUSIC_NOTE )
         srt = '1\nDOOR SLAMMED\n\n2\nthis is a string'
         self.assertEqual('1\n \n\n2\nthis is a string', translate.filter_doc(srt, flags))
         srt = '1\n(Door slamed)\n\n2\nthis is a string'

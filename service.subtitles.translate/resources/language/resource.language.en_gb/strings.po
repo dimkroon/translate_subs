@@ -42,7 +42,15 @@ msgid "Filter sounds in all uppercase letters"
 msgstr ""
 
 msgctxt "#30106"
-msgid "Filter music between hashtags"
+msgid "Filter music between '#'"
+msgstr ""
+
+msgctxt "#30107"
+msgid "Filter music between '*'"
+msgstr ""
+
+msgctxt "#30108"
+msgid "Filter music between '♪'"
 msgstr ""
 
 msgctxt "#30131"
@@ -89,8 +97,8 @@ msgid "Some subtitles display non-spoken sounds in all uppercase letters.\n"
 msgstr ""
 
 msgctxt "#30306"
-msgid "Some subtitles display music and lyrics between hashtags.\n"
-"If this filter is enabled an attempt is made to remove this."
+msgid "Some subtitles display music and lyrics between special characters.\n"
+"When one or more of these filters are enabled an attempt is made to remove this."
 msgstr ""
 
 msgctxt "#30331"

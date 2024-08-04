@@ -56,6 +56,26 @@
 					</dependencies>
 					<control type="spinner" format="string"/>
 				</setting>
+
+				<setting id="filter_asterisk" label="30107" type="boolean" help="30306">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+					<dependencies>
+						<dependency type="enable" setting="subtitles_translate">true</dependency>
+					</dependencies>
+					<control type="spinner" format="string"/>
+				</setting>
+
+				<setting id="filter_note" label="30108" type="boolean" help="30306">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+					<dependencies>
+						<dependency type="enable" setting="subtitles_translate">true</dependency>
+					</dependencies>
+					<control type="spinner" format="string"/>
+				</setting>
 			</group>
 		</category>
 		<category id="Logging" label="30190" help="">

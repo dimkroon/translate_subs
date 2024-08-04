@@ -39,6 +39,8 @@ FILTER_NONE = 0
 FILTER_BRACKETS = 1
 FILTER_CAPS = 2
 FILTER_HASHTAGS = 4
+FILTER_ASTERISK = 8
+FILTER_MUSIC_NOTE = 16
 FILTER_COLOURS = 1024
 
 MAX_CHARS_PER_LINE = 42
@@ -80,10 +82,17 @@ def filter_doc(srt_txt: str, filter_flags: int = 0) -> str:
     if filter_flags & FILTER_CAPS:
         # Pattern to remove lines written entirely in uppercase letters.
         filter_patterns.append(r'(?<=\n|>)([A-Z :,]{3,})(?=$|<)')
+    between_chars = []
     if filter_flags & FILTER_HASHTAGS:
-        # Pattern to remove text between hashtags.
-        # Often used to show the lyrics of a song.
-        filter_patterns.append(r'(?<=\n|>)(#+.*?#)(?=$|<)')
+        between_chars.append('#')
+    if filter_flags & FILTER_ASTERISK:
+        between_chars.append('*')
+    if filter_flags & FILTER_MUSIC_NOTE:
+        between_chars.append('♪')
+    if between_chars:
+        # Pattern to remove text between special characters.
+        # Often used to show the lyrics of a song, or discriptons of music.
+        filter_patterns.append(r'(?<=\n|>)(?P<lyrics>[{0}])+.*?(?P=lyrics)(?=$|<)'.format(''.join(between_chars)))
     pattern = '|'.join(filter_patterns)
     if pattern:
         # Replace with a space to prevent sounds collapsing into double new-lines,
@@ -295,24 +304,24 @@ def get_filter_flags(init_flags: int) -> int:
     """
     addon = xbmcaddon.Addon()
     if init_flags >= 0:
-        filter_flags = init_flags & (FILTER_BRACKETS | FILTER_CAPS | FILTER_HASHTAGS)
+        filter_flags = init_flags & (FILTER_BRACKETS | FILTER_CAPS | FILTER_HASHTAGS |
+                                     FILTER_ASTERISK |FILTER_MUSIC_NOTE)
     else:
         # use filters set in the add-on's settings
+        filter_map = {
+            'filter_brackets': FILTER_BRACKETS,
+            'filter_all_caps': FILTER_CAPS,
+            'filter_hashtags': FILTER_HASHTAGS,
+            'filter_asterisk': FILTER_ASTERISK,
+            'filter_note': FILTER_MUSIC_NOTE
+        }
         filter_flags = FILTER_NONE
-        f_brackets = addon.getSetting('filter_brackets')
-        logger.debug("Filter brackets = %s", f_brackets)
-        if f_brackets == 'true':
-            filter_flags |= FILTER_BRACKETS
+        for filter_type in filter_map.keys():
+            filter_setting =  addon.getSetting(filter_type)
+            logger.debug("%s = %s", filter_type, filter_setting)
+            if filter_setting == 'true':
+                filter_flags |= filter_map[filter_type]
 
-        f_caps = addon.getSetting('filter_all_caps')
-        logger.debug("Filter capitals = %s", f_caps)
-        if f_caps == 'true':
-            filter_flags |= FILTER_CAPS
-
-        f_hashtags = addon.getSetting('filter_hashtags')
-        logger.debug("Filter hastags = %s", f_hashtags)
-        if f_hashtags == 'true':
-            filter_flags |= FILTER_HASHTAGS
 
     f_colour = addon.getSetting('filter_colour')
     logger.debug("Filter colour = %s", f_colour)
