@@ -70,7 +70,8 @@ class MergedDoc:
                 # An SrtDoc should not produce emtpy frases, but better be sure.
                 continue
             new_sentence.append_frase(frase)
-            if frase.text[-1] in ".!?":
+            # TODO: Only accept filter characters that are actually being used.
+            if frase.text[-1] in ".!?*#♪":
                 sentence_map[str(idx)] = new_sentence
                 new_sentence = Sentence()
                 idx += 1
@@ -92,6 +93,10 @@ class MergedDoc:
                     continue
                 except StopIteration:
                     return
+
+    def __iter__(self):
+        for idx, sentence_text in self._sentences:
+            yield idx, sentence_text
 
 
 def split_line(srt_frase: SrtFrase,
