@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------------------------------------------------------
-#  Copyright (c) 2023-2024 Dimitri Kroon.
+#  Copyright (c) 2023-2025 Dimitri Kroon.
 #  This file is part of service.subtitles.translate.
 #  SPDX-License-Identifier: GPL-2.0-or-later
 #  See LICENSE.txt
@@ -27,7 +27,12 @@ class PlayerMonitor(Player):
         self._cur_file = None
 
     def onAVStarted(self) -> None:
-        # noinspection PyBroadException
+        try:
+            self._cur_file = video_file = self.getPlayingFile()
+            li = self.getPlayingItem()
+        except RuntimeError:
+            return
+
         logger.debug("onAVStarted, playing file\n"
                      "%s file: %s\n"
                      "%s video streams: %s\n"
@@ -38,12 +43,10 @@ class PlayerMonitor(Player):
                      INDENT, self.getAvailableAudioStreams(),
                      INDENT, self.getSubtitles())
 
-        li = self.getPlayingItem()
         file_name = li.getProperty('subtitles.translate.file')
         if not file_name:
             return
 
-        self._cur_file = video_file = self.getPlayingFile()
         if not utils.addon_info.addon.getSettingBool('subtitles_translate'):
             logger.debug("Automatic translation disabled in settings.")
             return
@@ -96,8 +99,13 @@ class PlayerMonitor(Player):
         if not translated_fname:
             return
         # Translating can take some time, check if the file is still playing
-        if video_file != self.getPlayingFile():
-            logger.info("Abort. It looks like another file has been started while translation was in progress.")
+        try:
+            playing_file = self.getPlayingFile()
+        except RuntimeError:
+            playing_file = None
+
+        if video_file != playing_file:
+            logger.info("Abort. It looks like playing has stopped, or another file has been started while the translation was in progress.")
             return
         logger.debug("Using translated subtitles: '%s'", translated_fname)
         self.setSubtitles(translated_fname)
