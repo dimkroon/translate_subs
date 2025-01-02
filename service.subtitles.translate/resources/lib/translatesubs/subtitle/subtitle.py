@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------------------------------------------------------
-#  Copyright (c) 2023-2024 Dimitri Kroon.
+#  Copyright (c) 2023-2025 Dimitri Kroon.
 #  This file is part of service.subtitles.translate.
 #  SPDX-License-Identifier: GPL-2.0-or-later
 #  See LICENSE.txt
@@ -10,7 +10,7 @@ from __future__ import annotations
 import logging
 import re
 
-from resources.lib import utils
+from resources.lib.translatesubs import utils
 
 
 logger = logging.getLogger('.'.join((utils.logger_id, __name__.split('.', 2)[-1])))

@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------------------------------------------------------
-#  Copyright (c) 2023-2024 Dimitri Kroon.
+#  Copyright (c) 2023-2025 Dimitri Kroon.
 #  This file is part of service.subtitles.translate.
 #  SPDX-License-Identifier: GPL-2.0-or-later
 #  See LICENSE.txt
@@ -11,8 +11,8 @@ fixtures.global_setup()
 import unittest
 from unittest.mock import MagicMock, patch
 
-from resources.lib.subtitles import subtitle
-from resources.lib.subtitles.translate import filter_doc
+from resources.lib.translatesubs.subtitle import subtitle
+from resources.lib.translatesubs.translate import filter_doc
 
 from test.support.testutils import open_doc
 

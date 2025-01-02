@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------------------------------------------------------
-#  Copyright (c) 2023-2024 Dimitri Kroon.
+#  Copyright (c) 2023-2025 Dimitri Kroon.
 #  This file is part of service.subtitles.translate.
 #  SPDX-License-Identifier: GPL-2.0-or-later
 #  See LICENSE.txt
@@ -17,15 +17,15 @@ from concurrent import futures
 import requests
 import xbmcvfs
 
-from resources.lib.translatepy import Translator, Language
+from resources.lib.translatepy import Language
 from resources.lib.translatepy.translators.google import GoogleTranslateV2
 from resources.lib.translatepy.exceptions import UnknownLanguage, TranslatepyException
 from resources.lib.translatepy.exceptions import NoResult
 
-from resources.lib import utils
-from resources.lib import kodi_utils
-from resources.lib.subtitles import subtitle, merge
-from .convert import convert_subs
+from resources.lib.translatesubs import utils
+from resources.lib.translatesubs import kodi_utils
+from resources.lib.translatesubs.subtitle import subtitle, merge
+from resources.lib.translatesubs.subtitle.convert import convert_subs
 
 import xbmcaddon
 

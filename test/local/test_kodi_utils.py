@@ -1,6 +1,6 @@
 
 # ----------------------------------------------------------------------------------------------------------------------
-#  Copyright (c) 2022-2024 Dimitri Kroon.
+#  Copyright (c) 2022-2025 Dimitri Kroon.
 #  This file is part of service.subtitles.translate.
 #  SPDX-License-Identifier: GPL-2.0-or-later
 #  See LICENSE.txt
@@ -12,7 +12,7 @@ fixtures.global_setup()
 import unittest
 from unittest.mock import patch
 
-from resources.lib import kodi_utils
+from resources.lib.translatesubs import kodi_utils
 
 
 class TestKodiUtils(unittest.TestCase):

@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------------------------------------------------------
-#  Copyright (c) 2023-2024 Dimitri Kroon.
+#  Copyright (c) 2023-2025 Dimitri Kroon.
 #  This file is part of service.subtitles.translate.
 #  SPDX-License-Identifier: GPL-2.0-or-later
 #  See LICENSE.txt
@@ -11,8 +11,8 @@ fixtures.global_setup()
 import unittest
 from unittest.mock import MagicMock, patch
 
-from resources.lib.subtitles import merge
-from resources.lib.subtitles.subtitle import SrtFrase, SrtDoc
+from resources.lib.translatesubs.subtitle.subtitle import SrtFrase, SrtDoc
+from resources.lib.translatesubs.subtitle import merge
 
 from test.support.testutils import open_doc
 
@@ -69,12 +69,15 @@ class TestDocumentMerge(unittest.TestCase):
         merged_doc = merge.MergedDoc(srt_doc)
         merged_text = merged_doc.text
         merged_doc.text = merged_text
-        self.assertEqual(srt_text, str(srt_doc))
-        # Just to ensure that we have completed the whole cycle,
-        # a slightly changed merged text should not compare equal.
-        srt_doc = SrtDoc(srt_text)
-        merged_doc = merge.MergedDoc(srt_doc)
-        merged_text = merged_doc.text
-        merged_text = merged_text[:15] + 'xxx' + merged_text[18:]
-        merged_doc.text = merged_text
-        self.assertNotEqual(srt_text, str(srt_doc))
+        orig_blocks = srt_text.split('\n\n')
+        merged_blocks = str(srt_doc).split('\n\n')
+        self.assertEqual(len(orig_blocks), len(merged_blocks))
+        for i in range(len(orig_blocks) - 1):
+            _, orig_text = orig_blocks[i].split('\n', 1)
+            block_idx, new_text = merged_blocks[i].split('\n', 1)
+            # Merged text should have nice incrementing indices, regardless of the original file.
+            self.assertEqual(block_idx, str(i + 1))
+            self.assertEqual(orig_text, new_text)
+        # Both end with an empty line.
+        self.assertEqual('', orig_blocks[-1])
+        self.assertEqual('', merged_blocks[-1])

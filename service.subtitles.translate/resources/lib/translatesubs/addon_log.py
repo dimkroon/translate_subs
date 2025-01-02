@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------------------------------------------------------
-#  Copyright (c) 2022-2024 Dimitri Kroon.
+#  Copyright (c) 2022-2025 Dimitri Kroon.
 #  This file is part of service.subtitles.translate.
 #  SPDX-License-Identifier: GPL-2.0-or-later
 #  See LICENSE.txt
@@ -11,7 +11,7 @@ from logging.handlers import RotatingFileHandler
 import os
 import xbmc
 
-from resources.lib import utils
+from resources.lib.translatesubs import utils
 
 
 kodi_lvl_map = {

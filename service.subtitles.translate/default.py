@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------------------------------------------------------
-#  Copyright (c) 2022-2024 Dimitri Kroon.
+#  Copyright (c) 2022-2025 Dimitri Kroon.
 #  This file is part of service.subtitles.translate.
 #  SPDX-License-Identifier: GPL-2.0-or-later
 #  See LICENSE.txt
@@ -10,7 +10,7 @@ import sys
 import xbmc
 import xbmcaddon
 
-from resources.lib import utils
+from resources.lib.translatesubs import utils
 
 
 if __name__ == '__main__':

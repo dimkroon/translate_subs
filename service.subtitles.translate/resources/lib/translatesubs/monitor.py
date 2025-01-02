@@ -1,0 +1,117 @@
+# ----------------------------------------------------------------------------------------------------------------------
+#  Copyright (c) 2024-2025 Dimitri Kroon.
+#  This file is part of service.subtitles.translate.
+#  SPDX-License-Identifier: GPL-2.0-or-later
+#  See LICENSE.txt
+# ----------------------------------------------------------------------------------------------------------------------
+
+import os.path
+
+import xbmc
+from xbmc import Player, Monitor
+
+from resources.lib.translatesubs import addon_log
+from resources.lib.translatesubs import utils
+from resources.lib.translatesubs import translate
+
+
+logger = addon_log.logging.getLogger('.'.join((utils.logger_id, __name__.split('.', 2)[-1])))
+
+INDENT = ' ' * 60
+
+
+class PlayerMonitor(Player):
+    def __init__(self):
+        super(PlayerMonitor, self).__init__()
+        self.monitor = Monitor()
+        self._cur_file = None
+
+    def onAVStarted(self) -> None:
+        try:
+            self._cur_file = video_file = self.getPlayingFile()
+            li = self.getPlayingItem()
+        except RuntimeError:
+            return
+
+        logger.debug("onAVStarted, playing file\n"
+                     "%s file: %s\n"
+                     "%s video streams: %s\n"
+                     "%s audio streams: %s\n"
+                     "%s subtitles: %s",
+                     INDENT, self.getPlayingFile(),
+                     INDENT, self.getAvailableVideoStreams(),
+                     INDENT, self.getAvailableAudioStreams(),
+                     INDENT, self.getSubtitles())
+
+        file_name = li.getProperty('subtitles.translate.file')
+        if not file_name:
+            return
+
+        if not utils.addon_info.addon.getSettingBool('subtitles_translate'):
+            logger.debug("Automatic translation disabled in settings.")
+            return
+
+        base_name, file_extension = os.path.splitext(file_name)
+        subs_type = li.getProperty('subtitles.translate.type')
+        orig_lang = li.getProperty('subtitles.translate.orig_lang')
+        filter_flags = li.getProperty('subtitles.translate.filter_flags')
+        video_id = li.getProperty('subtitles.translate.video_id')
+
+        logger.info("Property file: '%s'", file_name)
+        logger.info("Property type: '%s'", subs_type)
+        logger.info("Property original language: '%s'", orig_lang)
+        logger.info("Property filter_flags: '%s'", filter_flags)
+
+        if not subs_type:
+            subs_type = file_extension
+        subs_type = subs_type.lstrip('.')
+        if subs_type not in translate.supported_types:
+            logger.info("Unsupported subtitle type '%s'", subs_type)
+            return
+
+        # Get the original langauge by property, or by a langauge id in the filename. Default to 'auto'
+        if not orig_lang:
+            orig_lang = os.path.splitext(base_name)[1] or 'auto'
+
+        try:
+            filter_flags = int(filter_flags)
+        except ValueError:
+            filter_flags = -1
+
+        if not video_id:
+            # If not provided, create a video_id from the url.
+            # Strip the querystring from the video url, because it may contain items unique to every instance played.
+            video_id = video_file.split('?')[0]
+        preferred_display_time = utils.addon_info.addon.getSettingNumber('display_time')
+
+        logger.info("Subtitles file: '%s'", file_name)
+        logger.info("Subtitles type: '%s'", subs_type)
+        logger.info("Subtitles original language: '%s'", orig_lang)
+        logger.info("Subtitles filter_flags: '%s'", filter_flags)
+        logger.info("Video ID: %s", video_id)
+        logger.info("Display time: %s", preferred_display_time)
+
+        translated_fname = translate.translate_file(file_name, subs_type,
+                                                    src_lang=orig_lang,
+                                                    video_id=video_id,
+                                                    filter_flags=filter_flags,
+                                                    display_time=preferred_display_time)
+        if not translated_fname:
+            return
+        # Translating can take some time, check if the file is still playing
+        try:
+            playing_file = self.getPlayingFile()
+        except RuntimeError:
+            playing_file = None
+
+        if video_file != playing_file:
+            logger.info("Abort. It looks like playing has stopped, or another file has been started while the translation was in progress.")
+            return
+        logger.debug("Using translated subtitles: '%s'", translated_fname)
+        self.setSubtitles(translated_fname)
+
+
+class SystemMonitor(xbmc.Monitor):
+    def onSettingsChanged(self) -> None:
+        logger.info("Settings have changed")
+        utils.addon_info.initialise()

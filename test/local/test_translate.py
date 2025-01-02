@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------------------------------------------------------
-#  Copyright (c) 2023-2024 Dimitri Kroon.
+#  Copyright (c) 2023-2025 Dimitri Kroon.
 #  This file is part of service.subtitles.translate.
 #  SPDX-License-Identifier: GPL-2.0-or-later
 #  See LICENSE.txt
@@ -14,8 +14,8 @@ import time
 from unittest import TestCase
 from unittest.mock import patch
 
-from resources.lib.subtitles import translate
-from resources.lib.subtitles import subtitle
+from resources.lib.translatesubs import translate
+from resources.lib.translatesubs.subtitle import subtitle
 
 from test.support.testutils import doc_path, open_doc, save_doc
 
@@ -34,8 +34,8 @@ class General(TestCase):
         self.assertEqual('nld', translate.get_language_id('dutch'))
         self.assertEqual('nld', translate.get_language_id('nl'))
         self.assertEqual('nld', translate.get_language_id('nld'))
-        self.assertRaises(translate.TranslatepyException, translate.get_language_id, 'nl_NL')
-        self.assertRaises(translate.TranslatepyException, translate.get_language_id, 'nl_nl')
+        self.assertRaises(translate.UnknownLanguage, translate.get_language_id, 'nl_NL')
+        self.assertRaises(translate.UnknownLanguage, translate.get_language_id, 'nl_nl')
 
 
 class AaTestCleanCache(TestCase):
@@ -210,8 +210,8 @@ class SrtBlock(TestCase):
 class TranslateDocObject(TestCase):
     def test_def_create_obj(self):
         orig_subs = open_doc('srt/atomic blonde.en.srt')()
-        orig_doc = translate.SrtDoc(orig_subs)
-        self.assertIsInstance(orig_doc, translate.SrtDoc)
+        orig_doc = subtitle.SrtDoc(orig_subs)
+        self.assertIsInstance(orig_doc, subtitle.SrtDoc)
         text = orig_doc.text
         # save_doc(orig_doc.text, 'srt/subs_brackets_orig.txt')
         self.assertIsInstance(text, str)
@@ -219,13 +219,13 @@ class TranslateDocObject(TestCase):
     def test_filtered_file(self):
         srt = open_doc('srt/atomic blonde.en.srt')()
         filtered_doc = translate.filter_doc(srt, translate.FILTER_CAPS | translate.FILTER_BRACKETS | translate.FILTER_HASHTAGS)
-        doc_obj = translate.SrtDoc(filtered_doc)
+        doc_obj = subtitle.SrtDoc(filtered_doc)
         doc_text = doc_obj.text
         self.assertTrue('\n\n' in doc_text)
 
 
-@patch("resources.lib.subtitles.translate.translate_file", new=open_doc('srt/orig_nl.txt'))
-class TranslateFile(TestCase):
+@patch("resources.lib.translatesubs.translate.translate_file", new=open_doc('srt/merge_test.srt'))
+class TranslateFileCache(TestCase):
     def setUp(self) -> None:
         translate.cleanup_cached_files(0)
 
