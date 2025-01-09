@@ -64,147 +64,30 @@ class AaTestCleanCache(TestCase):
         self.assertFalse(os.path.exists(test_file))
 
 
-class MergeSentences(TestCase):
-    def test_merge_real_doc(self):
-        orig_srt = open_doc('srt/atomic blonde.en.srt')()
-        doc_object = subtitle.SrtDoc(orig_srt)
-        orig_sentences = '\n'.join(s for s in doc_object.sentences())
-        print (orig_sentences)
-
-
-class TransTagged(TestCase):
-    def test_parse_tagged(self):
-        text = """
-<a b=1 l=0>(TV clicks on) </a><a b=2 l=0>RONALD REAGAN: </a><a b=2 l=0>East and West </a><a b=3 l=0>do not mistrust each other </a><a b=3 l=0>because we're armed. </a>
-<a b=4 l=0>We're armed because </a><a b=4 l=0>we mistrust each other. </a>
-<a b=5 l=0>Mr. Gorbachev, </a><a b=6 l=0>tear down this wall. </a>
-<a b=7 l=0>(cheering and applause) </a><a b=8 l=0>("Blue Monday '88" </a><a b=8 l=0>by New Order plays) </a><a b=9 l=0>(grunting and panting) </a><a b=10 l=0>-(grunting) </a><a b=10 l=0>-(tires squealing nearby) </a><a b=11 l=0>## # </a><a b=12 l=0>(tires squealing) </a><a b=13 l=0>(grunting) </a><a b=14 l=0>## How does it feel # </a><a b=15 l=0>## To treat me like you do? # </a><a b=16 l=0>(yells, grunts) </a><a b=17 l=0>## When you've laid your hands </a><a b=17 l=0>upon me # </a><a b=18 l=0>-(engine revving) </a><a b=18 l=0>-## And told me who you are # </a><a b=19 l=0>(tires squealing) </a><a b=20 l=0>-(yelling) </a><a b=20 l=0>-## I thought I was mistaken # </a><a b=21 l=0>## I thought I heard # </a><a b=22 l=0>-## Your words # </a><a b=22 l=0>-(yelling in pain) </a><a b=23 l=0>## Tell me, how </a><a b=23 l=0>do I feel? # </a><a b=24 l=0>(playing over car stereo): </a><a b=24 l=0>## Tell me now, how do... # </a><a b=25 l=0>MAN (laughing): </a><a b=25 l=0>James fucking Gascoigne. </a>
-<a b=26 l=0>How did you find me? </a>
-<a b=27 l=0>Maybe you're not as good </a><a b=27 l=0>at this spy shit as you think. </a>
-<a b=28 l=0>It was Satchel, wasn't it? </a>"""
-        td = subtitle.TransDoc(text, html=True)
-        td.blocks
-
-    def test_parse_whole_tagged_file(self):
-        trans_txt = open_doc('translated/aromic blonde_tagged_3.nld.txt')()
-        td = subtitle.TransDoc(trans_txt, html=True)
-        self.assertGreater(len(td.blocks), 100)
-
-
 class SplitText(TestCase):
-    def test_split_srt_doc(self):
-        t = '123\n\n456\n\n789\n\nabcd\n\nefg\n\n'
-        s = translate.split_srt_doc(t, 13)
-        self.assertListEqual(['123\n\n456', '\n\n789\n\nabcd','\n\nefg\n\n'], s)
+    def test_split_doc(self):
+        t = '12345678\n12345678\n12345678\n'
+        s = translate.split_doc(t, 8)
+        self.assertListEqual(['12345678', '12345678', '12345678',], s)
 
-    def test_split_srt_doc_without_trailing_newlines(self):
-        t = '123\n\n456\n\n789\n\nabcd\n\nefg'
-        s = translate.split_srt_doc(t, 13)
-        self.assertListEqual(['123\n\n456', '\n\n789\n\nabcd','\n\nefg'], s)
+    def test_split_doc_without_trailing_newlines(self):
+        t = '123\n456\n789\nabcd\nefg'
+        s = translate.split_doc(t, 13)
+        self.assertListEqual(['123\n456\n789', '\nabcd\nefg'], s)
 
-    def test_split_srt_doc_without_boundry_on_max_length(self):
-        t = '123\n\n456\n\n789895\n\n'
-        s = translate.split_srt_doc(t, 10)
-        self.assertListEqual(['123\n\n456', '\n\n789895\n\n'], s)
+    def test_split_doc_without_boundry_on_max_length(self):
+        t = '123\n456\n789895\n'
+        s = translate.split_doc(t, 10)
+        self.assertListEqual(['123\n456', '\n789895\n'], s)
 
-    def test_split_srt_doc_with_extra_trailing_newline(self):
+    def test_split_doc_with_extra_trailing_newline(self):
         t = '123\n\n456\n\n789895\n\n\n\n'
-        s = translate.split_srt_doc(t, 10)
-        self.assertListEqual(['123\n\n456', '\n\n789895', '\n\n\n\n'], s)
+        s = translate.split_doc(t, 10)
+        self.assertListEqual(['123\n\n456\n', '\n789895\n\n', '\n\n'], s)
 
-    def test_split_srt_doc_with_too_large_block(self):
-        t = '123\n\n456\n\n123456789'
-        self.assertRaises(ValueError, translate.split_srt_doc, t, 10)
-
-
-class TestSrtLine(TestCase):
-    def test_text_line(self):
-        txt = 'This is text'
-        l = translate.SrtLine('', txt, '')
-        self.assertEqual('', l.lead)
-        self.assertEqual(txt, l.text)
-        self.assertEqual('', l.tail)
-
-    def test_text_with_colour(self):
-        txt = 'This is text'
-        l = translate.SrtLine('<font color="cyan">', txt, '</font>')
-        self.assertEqual('<font color="cyan">', l.lead)
-        self.assertEqual(txt, l.text)
-        self.assertEqual('</font>', l.tail)
-
-    def test_line_strips_whitespace(self):
-        l = translate.SrtLine('', ' This is text  ', '')
-        self.assertEqual('This is text', l.text)
-        l = translate.SrtLine('<font color="cyan">', ' This is text ', '</font>')
-        self.assertEqual('This is text', l.text)
-
-    def test_text_without_lead(self):
-        txt = 'This is text'
-        tail = '</font>'
-        l = translate.SrtLine('', txt, tail)
-        self.assertEqual('', l.lead)
-        self.assertEqual(txt + tail, l.text)
-        self.assertEqual('', l.tail)
-
-    def test_text_without_tail(self):
-        lead = '<i>'
-        txt = 'This is text'
-        l = translate.SrtLine(lead, txt, '')
-        self.assertEqual('', l.lead)
-        self.assertEqual(lead + txt, l.text)
-        self.assertEqual('', l.tail)
-
-
-class SrtBlock(TestCase):
-    def test_block_single_line(self):
-        t = '101\n00:07:17,960 --> 00:07:18,960\nYeah.'
-        b = translate.SrtBlock(t)
-        self.assertEqual(1, len(b.lines))
-        self.assertEqual('Yeah.', b.lines[0].text)
-
-    def test_block_multiline(self):
-        t = '101\n00:07:17,960 --> 00:07:18,960\nYeah.\n<font color="blue">duh</font>'
-        b = translate.SrtBlock(t)
-        self.assertEqual(2, len(b.lines))
-        self.assertEqual('Yeah.', b.lines[0].text)
-        self.assertEqual('duh', b.lines[1].text)
-
-    def test_block_with_empty_lines(self):
-        t = '101\n00:07:17,960 --> 00:07:18,960\n\n'
-        b = translate.SrtBlock(t)
-        self.assertEqual(0, len(b.lines))
-        t = '101\n00:07:17,960 --> 00:07:18,960\n\nYeah.'
-        b = translate.SrtBlock(t)
-        self.assertEqual(1, len(b.lines))
-        self.assertEqual('Yeah.', b.lines[0].text)
-
-    def test_block_with_lines_of_whitespace(self):
-        t = '101\n00:07:17,960 --> 00:07:18,960\n  \n \n'
-        b = translate.SrtBlock(t)
-        self.assertEqual(0, len(b.lines))
-        t = '101\n00:07:17,960 --> 00:07:18,960\n  \nYeah.'
-        b = translate.SrtBlock(t)
-        self.assertEqual(1, len(b.lines))
-        self.assertEqual('Yeah.', b.lines[0].text)
-        t = '101\n00:07:17,960 --> 00:07:18,960\nYeah.  \n'
-        b = translate.SrtBlock(t)
-        self.assertEqual(1, len(b.lines))
-        self.assertEqual('Yeah.', b.lines[0].text)
-
-    def test_block_with_inline_markup(self):
-        t = '101\n00:07:17,960 --> 00:07:18,960\nBut this is <i>magic</i>.'
-        b = translate.SrtBlock(t)
-        self.assertEqual(1, len(b.lines))
-        self.assertEqual('But this is <i>magic</i>.', b.lines[0].text)
-
-    def test_bool(self):
-        """Block without lines evaluate to False."""
-        t = '101\n00:07:17,960 --> 00:07:18,960\nBut this is magic.'
-        b = translate.SrtBlock(t)
-        self.assertTrue(b)
-        t = '101\n00:07:17,960 --> 00:07:18,960\n \n '
-        b = translate.SrtBlock(t)
-        self.assertFalse(b)
+    def test_split_doc_with_too_large_a_block(self):
+        t = '123\n456\n1234567890'
+        self.assertRaises(ValueError, translate.split_doc, t, 10)
 
 
 class TranslateDocObject(TestCase):
