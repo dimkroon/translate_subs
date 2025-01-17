@@ -11,6 +11,7 @@ from typing import Dict, List, Tuple
 
 from unittest.mock import patch
 
+import xbmcvfs
 
 patch_g = None
 
@@ -25,13 +26,15 @@ def global_setup():
     """
     global patch_g
     if patch_g is None:
-        # Ensure that kodi's special://profile refers to a predefined folder. Just in case
-        # some code want to write, whether intentional or not.
-        profile_dir = os.path.normpath(os.path.join(os.path.dirname(__file__), '..', 'addon_profile_dir'))
+        # Ensure that this addon's profile dir refers to a predefined folder.
+        profile_dir = translate_path_mock('special://addon_data')
         patch_g = patch('xbmcaddon.Addon.getAddonInfo',
                          new=lambda self, item: profile_dir if item == 'profile' else '')
         patch_g.start()
 
+        # Translate path with special:// protocol to a path in the kodifs directory on the
+        # top of out test folder.
+        xbmcvfs.translatePath = translate_path_mock
         # Enable logging to file during tests with a new file each test run.
         try:
             os.remove(os.path.join(profile_dir, 'addon.log'))
@@ -161,3 +164,20 @@ def patch_listitem():
             return self._path
 
     xbmcgui.ListItem = LI
+
+
+def translate_path_mock(path: str):
+    """Translate 'special://' paths to folders in a directory named 'kodifs' in the top
+    test directory, assuming this file is in a folder directly under test/.
+
+    It is not accurate enough to reliably translate every possible special path, but it's
+    enough to suit our needs right now.
+    """
+    if not path.startswith('special://'):
+        return path
+    special_path = path[10:]
+    test_base = os.path.normpath(os.path.join(os.path.dirname(__file__), '..', 'kodifs'))
+    special_base_dir = special_path.split('/', 1)[0]
+    os.makedirs(os.path.join(test_base, special_base_dir), exist_ok=True)
+    local_dir = os.path.join(test_base, special_path)
+    return local_dir

@@ -28,7 +28,6 @@ class AddonInfo:
         self.name = self.addon.getAddonInfo("name")
         self.id = self.addon.getAddonInfo("id")
         self.profile = translatePath(self.addon.getAddonInfo('profile'))
-        self.addon_dir = os.path.join(translatePath('special://home'), self.id)
         self.temp_dir = os.path.join(translatePath('special://temp'), 'translated_subs')
         os.makedirs(self.temp_dir, exist_ok=True)
 

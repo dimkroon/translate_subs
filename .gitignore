@@ -134,4 +134,5 @@ dmypy.json
 #.idea/
 
 /test/addon_profile_dir/
+kodifs/
 !/service.subtitles.translate/resources/lib/

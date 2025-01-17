@@ -26,7 +26,7 @@ tearDownModule = fixtures.tear_down_local_tests
 
 class General(TestCase):
     def test_constants(self):
-        subs_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../addon_profile_dir/subtitles'))
+        subs_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../kodifs/addon_data/subtitles'))
         self.assertEqual(subs_dir, translate.SUBS_CACHE_DIR)
 
     def test_get_language_id(self):
