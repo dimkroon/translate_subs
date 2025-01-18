@@ -108,8 +108,8 @@ def filter_doc(srt_txt: str, filter_flags: int = 0) -> str:
 
 
 def split_doc(src_txt: str, max_len: int) -> list[str]:
-    """Split string `src_txt` into pieces of text with no more than `max_len` characters in such a way that
-    each part contains full sentences.
+    """Split string `src_txt` into pieces of text with no more than `max_len`
+    characters in such a way that each part contains full sentences.
 
     Returns a list of strings.
 
@@ -122,12 +122,14 @@ def split_doc(src_txt: str, max_len: int) -> list[str]:
     start_pos = 0
 
     while txt_len - start_pos > max_len:
-        split_pos = src_txt.rfind('\n', start_pos, start_pos + max_len)
+        end_pos = start_pos + max_len + 1
+        split_pos = src_txt.rfind('\n', start_pos, end_pos)
         if split_pos <= start_pos:
             raise ValueError("No position to split available in src_str")
         splits.append(src_txt[start_pos:split_pos])
-        start_pos = split_pos
-    splits.append(src_txt[start_pos:])
+        start_pos = split_pos + 1
+    if start_pos < txt_len:
+        splits.append(src_txt[start_pos:])
     return splits
 
 

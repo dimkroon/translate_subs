@@ -66,28 +66,35 @@ class AaTestCleanCache(TestCase):
 
 
 class SplitText(TestCase):
-    def test_split_doc(self):
-        t = '12345678\n12345678\n12345678\n'
+    def test_split_doc_of_exact_length(self):
+        t = '12345678\n'
         s = translate.split_doc(t, 8)
-        self.assertListEqual(['12345678', '12345678', '12345678',], s)
+        self.assertListEqual(['12345678'], s)
+
+    def test_split_doc_without_boundry_on_max_length(self):
+        t = '12345678\nabcdefgh\nABCDEFGH\n'
+        s = translate.split_doc(t, 8)
+        self.assertListEqual(['12345678', 'abcdefgh', 'ABCDEFGH',], s)
+
+    def test_split_doc_without_random_boundry(self):
+        t = '123\n456\n789895\n'
+        s = translate.split_doc(t, 10)
+        self.assertListEqual(['123\n456', '789895\n'], s)
 
     def test_split_doc_without_trailing_newlines(self):
         t = '123\n456\n789\nabcd\nefg'
         s = translate.split_doc(t, 13)
-        self.assertListEqual(['123\n456\n789', '\nabcd\nefg'], s)
-
-    def test_split_doc_without_boundry_on_max_length(self):
-        t = '123\n456\n789895\n'
-        s = translate.split_doc(t, 10)
-        self.assertListEqual(['123\n456', '\n789895\n'], s)
+        self.assertListEqual(['123\n456\n789', 'abcd\nefg'], s)
 
     def test_split_doc_with_extra_trailing_newline(self):
-        t = '123\n\n456\n\n789895\n\n\n\n'
+        """In the context of TranslateSubs we should never have to deal with
+        multiple newlines, but test just te be sure."""
+        t = '123\n\n456\n\n12345678\n\n\n\n'
         s = translate.split_doc(t, 10)
-        self.assertListEqual(['123\n\n456\n', '\n789895\n\n', '\n\n'], s)
+        self.assertListEqual(['123\n\n456\n', '12345678\n\n', '\n'], s)
 
     def test_split_doc_with_too_large_a_block(self):
-        t = '123\n456\n1234567890'
+        t = '123\n456\n1234567890abcde'
         self.assertRaises(ValueError, translate.split_doc, t, 10)
 
 
