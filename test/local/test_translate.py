@@ -32,6 +32,7 @@ class General(TestCase):
     def test_get_language_id(self):
         self.assertEqual('nld', translate.get_language_id('Dutch'))
         self.assertEqual('nld', translate.get_language_id('dutch'))
+        self.assertEqual('nld', translate.get_language_id('nederlands'))
         self.assertEqual('nld', translate.get_language_id('nl'))
         self.assertEqual('nld', translate.get_language_id('nld'))
         self.assertRaises(translate.UnknownLanguage, translate.get_language_id, 'nl_NL')
